@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat';
+}
+
+header{
+    background-color: #011526;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    margin-bottom: 3%;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+}
+
+header div:hover strong{
+    text-decoration: underline;
+}
+
+header div p{
+    max-width: 60%;
+}
+
+header  img{
+    width: 35px;
+}
+
+main{
+    margin: 0 auto;
+    display: flex;
+    border-radius: 30px;    
+    justify-content: space-between;
+    width: 90%;
+    background-color: #cfcfcf2d;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+    width: 40%;
+    background-color: #011526;
+    border-radius: 30px;
+    padding: 100px 0px;
+    gap: 50px;
+}
+
+.login img{
+    width: 200px;
+}
+.login div{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;    
+    gap: 15px;
+}
+
+.login button{
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: white 2px solid;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login button:hover{
+    color: black;
+    border: black 2px solid;
+    background-color: white;
+}
+
+.cadastrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+ }
+.cadastrar .container_cadastrar{
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 63%;
+    width: 100%;
+    gap: 20px;
+}
+
+.cadastrar p {
+    padding-bottom: 3px;
+}
+
+ .cadastrar .container_cadastrar button {
+    max-width: 60%;
+    width: 100%;
+    outline: none;
+}
+
+ .cadastrar .container_cadastrar input{
+    border-radius: 5px;
+    border: 2px solid #C9C9C9;
+        padding: 10px;
+    outline: none;
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+ }
+
+ .cadastrar input:focus{
+    border: 2px solid rgba(1, 118, 191, 0.326);
+ }
+
+ .cadastrar .container_cadastrar button{
+    margin: 0 auto;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: rgb(0, 0, 0) 2px solid;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;    
+
+    width: 60%;
+ }
+.cadastrar .container_cadastrar > button:hover{
+    opacity: 85%;
+}
+
+ .cadastrar .container_cadastrar > button:active {
+    margin-top: 1px;
+    border: #000000;
+    padding: 11px;
+    outline: 3px solid rgba(1, 118, 191, 0.578);
+ }
+
+ .cadastrar  .container_cadastrar .names{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+
+ .cadastrar .container_cadastrar div:not(.names, .names > div) {
+    width: 100%;
+
+    input{
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    header div{
+        display: none;
+    }
+
+    .login{
+        display: none;
+    }
+
+    main{
+        margin-top: 40px;
+    }
+
+    .cadastrar{
+        width: 100%;
+        padding: 50px 0px;
+    }
+
+    .container_cadastrar{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .container_cadastrar #cadastrar{
+        min-width: 100%;
+    }
+
+    .container_cadastrar .names{
+        flex-direction: column;
+        gap: 20px;
+        div{
+            width: 100%;
+        }
+        
+        input{
+            width: 100%;
+        }
+    }
+}
