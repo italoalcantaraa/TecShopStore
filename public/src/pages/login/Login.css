@@ -1,52 +1,57 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Montserrat';
 }
 
-header{
+header {
     background-color: #011526;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     color: white;
     margin-bottom: 3%;
+    padding: 0px 20px;
 }
 
-header div{
+header div {
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     gap: 8px;
 }
 
-header div:hover strong{
+header div:hover strong {
     text-decoration: underline;
 }
 
-header div p{
-    max-width: 60%;
+header div p {
+    max-width: 50%;
 }
 
-header  img{
+header img {
+    width: 130px;
+}
+
+header div img {
     width: 35px;
 }
 
-main{
+main {
     margin: 0 auto;
     display: flex;
-    border-radius: 30px;    
+    border-radius: 30px;
     justify-content: space-between;
     width: 90%;
     background-color: #cfcfcf2d;
 }
 
-.login{
+.login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,21 +60,27 @@ main{
     width: 40%;
     background-color: #011526;
     border-radius: 30px;
-    padding: 100px 0px;
-    gap: 50px;
+    padding: 70px 0px;
 }
 
-.login img{
-    width: 200px;
+.login img {
+    width: 45%;
+    min-width: 200px;
 }
-.login div{
+
+.login div {
     display: flex;
     flex-direction: column;
-    font-size: 25px;    
+    font-size: 25px;
     gap: 15px;
 }
 
-.login button{
+.login p {
+    text-align: center;
+    min-width: 250px;
+}
+
+.login button {
     width: 100%;
     outline: none;
     padding: 10px;
@@ -82,23 +93,24 @@ main{
     transition: 0.5s;
 }
 
-.login button:hover{
+.login button:hover {
     color: black;
     border: black 2px solid;
     background-color: white;
 }
 
-.cadastrar{
+.cadastrar {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 60%;
- }
-.cadastrar .container_cadastrar{
+}
+
+.cadastrar .container_cadastrar {
     display: flex;
     flex-direction: column;
-    
+
     max-width: 63%;
     width: 100%;
     gap: 20px;
@@ -108,27 +120,48 @@ main{
     padding-bottom: 3px;
 }
 
- .cadastrar .container_cadastrar button {
+.cadastrar .container_cadastrar button {
     max-width: 60%;
     width: 100%;
     outline: none;
 }
 
- .cadastrar .container_cadastrar input{
+.cadastrar .container_cadastrar input {
     border-radius: 5px;
     border: 2px solid #C9C9C9;
-        padding: 10px;
+    padding: 10px;
     outline: none;
     font-size: 18px;
     color: #000000;
     margin: 0;
- }
+    min-width: 221px;
+}
 
- .cadastrar input:focus{
+.cadastrar input:focus {
     border: 2px solid rgba(1, 118, 191, 0.326);
- }
+}
 
- .cadastrar .container_cadastrar button{
+.cadastrar .register-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    min-width: 221px;
+}
+
+.cadastrar .register-button p{
+    display: none;
+}
+
+.cadastrar .register-button a{
+    cursor: pointer;
+}
+
+.cadastrar .register-button a:hover{
+    text-decoration: underline;
+}
+.cadastrar .register-button button{
     margin: 0 auto;
     outline: none;
     padding: 10px;
@@ -137,78 +170,100 @@ main{
     background-color: black;
     color: white;
     font-size: 25px;
-    cursor: pointer;    
-
+    cursor: pointer;
+    box-shadow: 1px 3px 5px rgba(50, 50, 50, 0.556);
     width: 60%;
- }
-.cadastrar .container_cadastrar > button:hover{
+    min-width: 220px;
+}
+
+
+.cadastrar .register-button button:hover {
     opacity: 85%;
 }
 
- .cadastrar .container_cadastrar > button:active {
+.cadastrar .register-button button:active {
     margin-top: 1px;
     border: #000000;
     padding: 11px;
     outline: 3px solid rgba(1, 118, 191, 0.578);
- }
+}
 
- .cadastrar  .container_cadastrar .names{
+.cadastrar .container_cadastrar .names {
     display: flex;
     align-items: center;
     justify-content: space-between;
- }
+    width: 100%;
+}
 
 
- .cadastrar .container_cadastrar div:not(.names, .names > div) {
+.cadastrar .container_cadastrar div:not(.names, .names > div) {
     width: 100%;
 
-    input{
+    input {
         width: 100%;
     }
 }
 
 
 
-@media (max-width: 500px) {
-    header{
+
+@media (max-width: 1490px) {
+    .container_cadastrar .names {
+        flex-direction: column;
+        gap: 20px;
+
+        div {
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .cadastrar {
+        padding: 30px 0px;
+    }
+}
+
+@media (max-width: 850px) {
+    .login {
+        padding: 70px 150px;
+    }
+}
+
+@media (max-width: 710px) {
+    header {
         display: flex;
         justify-content: center;
     }
-    header div{
+
+    header div {
         display: none;
     }
 
-    .login{
+    .login {
         display: none;
     }
 
-    main{
+    main {
         margin-top: 40px;
     }
 
-    .cadastrar{
+    .cadastrar {
         width: 100%;
         padding: 50px 0px;
     }
 
-    .container_cadastrar{
+    .container_cadastrar {
         max-width: 100%;
         width: 100%;
     }
 
-    .container_cadastrar #cadastrar{
+    .container_cadastrar #cadastrar {
         min-width: 100%;
     }
-
-    .container_cadastrar .names{
-        flex-direction: column;
-        gap: 20px;
-        div{
-            width: 100%;
-        }
-        
-        input{
-            width: 100%;
-        }
+    .cadastrar .register-button p{
+        display: block;
     }
 }
