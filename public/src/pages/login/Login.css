@@ -8,39 +8,6 @@ body {
     font-family: 'Montserrat';
 }
 
-header {
-    background-color: #011526;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    margin-bottom: 3%;
-    padding: 0px 20px;
-}
-
-header div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    gap: 8px;
-}
-
-header div:hover strong {
-    text-decoration: underline;
-}
-
-header div p {
-    max-width: 50%;
-}
-
-header img {
-    width: 130px;
-}
-
-header div img {
-    width: 35px;
-}
 
 main {
     margin: 0 auto;
@@ -204,9 +171,6 @@ main {
     }
 }
 
-
-
-
 @media (max-width: 1490px) {
     .container_cadastrar .names {
         flex-direction: column;
@@ -233,15 +197,6 @@ main {
 }
 
 @media (max-width: 710px) {
-    header {
-        display: flex;
-        justify-content: center;
-    }
-
-    header div {
-        display: none;
-    }
-
     .login {
         display: none;
     }
