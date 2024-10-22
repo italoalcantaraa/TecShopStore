@@ -7,15 +7,15 @@
     <title>Tecshop</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
-    <link rel="icon" href="Img/logoF.png" type="image/x-icon">
-    <script src='main.js'></script>
+    <link rel="icon" href="/public/src/assets/images/LogoIcon.png" type="image/x-icon">
+    <script src='index.js'></script>
 </head>
 
 <body>
 
     <header class="header-container">
         <div class="logo">
-            <img src="/Img/logoP1.png" alt="">
+            <img src="/public/src/assets/images/logoP1.png" alt="">
         </div>
 
         <div class="busca">
@@ -23,29 +23,36 @@
             <button>Buscar</button>
         </div>
 
-        <div class="login">
+        <div class="icon">
             <img src="">
         </div>
-        <p>
-            <a class="stl1" href="">Entrar</a>
+
+        <a class="login" href="">Entrar</a>
         <p>ou</p>
-        <a class="stl1" href="">cadastra-se</a>
-        </p>
+        <a class="login" href="">Cadastra-se</a>
+
     </header>
 
     <div class="categorias">
-        <p>
-            Categoria 1
-        </p>
-        <p>
-            Categoria 2
-        </p>
-        <P>
-            Categoria 3
-        </P>
-        <p>
-            Categoria 4
-        </p>
+
+        <a class="menu-item" href="javascript:void(0);" onclick="toggleDropdown()">DEPARTAMENTOS</a>
+
+        <div id="dropdown" class="dropdown-content">
+            <a href="">Computador</a>
+            <a href="">Placa de video</a>
+            <a href="">Monitor</a>
+            <a href="">Celular</a>
+        </div>
+
+        <a class="menu-item" href="">OFERTAS</a>
+
+        <a class="menu-item" href="">CUPONS</a>
+
+        <a class="menu-item" href="">QUEM SOMOS ?</a>
+    </div>
+
+    <div class="carrossel">
+        <img src="/public/src/assets/images/carrossel2.jpg" alt="">
     </div>
 
 </body>
