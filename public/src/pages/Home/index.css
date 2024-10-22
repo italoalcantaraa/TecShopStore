@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #011526;
+}
+
+.logo img {
+    margin-left: 50px;
+    width: 100px;
+}
+
+.busca>input {
+    outline: none;
+    padding: 6px 12px;
+    padding-right: 300px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+}
+
+a.stl1:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.categorias {
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container p, a{
+    color: white;
+    text-decoration: none;
+}
