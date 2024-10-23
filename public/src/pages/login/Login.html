@@ -7,6 +7,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="Login.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="../../components.js" defer></script>
 </head>
 
 <body>
@@ -48,9 +49,13 @@
 
         </section>
     </main>
-    <footer>
+    
+    <div id="footer"></div>
 
-    </footer>
 </body>
-
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    CarregarComponente('../../components/footer/footer.html', 'footer'); // Chama a função após o carregamento do DOM
+});
+</script>
 </html>
