@@ -1,5 +1,115 @@
-*{
-    margin: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+
+@font-face {
+    font-family: 'font';
+    src: url('../../assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf');
+}
+
+body {
+    background-color: #EFEFEF;
+    font-family: 'font';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+ }
+
+section {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+    background-color: #EFEFEF;
+    width: 40%;
+    padding: 0px 100px 30px 100px;
+    border-radius: 30px;
+    min-width: 500px;
+    box-shadow: 
+    8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.913);}
+
+section img{
+    width: 250px;
+}
+
+section div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+section div input, button{
+    outline: none;
+    width: 100%;
+    font-size: 23px;
+    padding: 17px 20px;
+    border-radius: 20px;
+}
+
+section div input{
+    border: none;
+    background-color: #F3F3F3;
+    box-shadow: inset 0px 4px 5px 0px #838383a8;
+}
+
+section div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+section div:nth-child(4) p {
+    font-size: 14px;
+}
+
+section div:nth-child(4) button{
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.712);
+    font-size: 28px;
+    width: 80%;
+    background-color: #125671;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    box-shadow: -2px 6px 5px 0px  #838383;
+}
+
+
+section div:nth-child(4) button:hover{
+    width: 78%;
+    opacity: 80%;
+}
+
+section p strong{
+    cursor: pointer;
+    display: inline-block;
+    
+}
+
+section p strong:hover{
+    text-decoration: underline;
+    transform: scale(1.06);
+
+    margin-left: 1px;
+}  
+
+
+@media (max-width:620px) {
+    section{
+        padding: 0px 50px 30px 50px;
+        width: 90%;
+        min-width: 0px;
+    }
+}
