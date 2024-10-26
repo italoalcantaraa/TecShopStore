@@ -1,136 +1,133 @@
 <head>
     <style>
-footer {
-    background-color: #011526;
-    color: white;
-    padding: 60px;
-    width: 100%;
-    margin-top: 120px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.informacoes {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 92%;
-    margin: 0 auto;
-}
-
-.informacoes>div>div {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-
-}
-
-a {
-    cursor: pointer;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-footer img {
-    max-width: 70px;
-    border-radius: 3px;
-    width: 100%;
-}
-
-#pag {
-    display: flex;
-    justify-content: center;
-    background: white;
-    padding: 10px 5px 10px 5px;
-    border-radius: 3px;
-
-    img {
-        width: 60px;
-    }
-}
-
-h1 {
-    font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-
-.pagamento .formas_pagamento {
-    gap: 5px;
-    max-width: 250px;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-#linha {
-    width: 92%;
-    padding: 0.3px;
-    margin: 0 auto;
-    background: white;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-#direitos_reservados {
-    font-size: 11px;
-    width: 92%;
-    margin: 0 auto;
-}
-
-.siga-nos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.siga-nos div {
-    flex-direction: row !important;
-    align-items: center;
-    cursor: pointer;
-
-    img {
-        width: 30px;
-    }
-
-    h1 {
-        margin-bottom: 0px;
-    }
-}
-
-
-.siga-nos div:hover {
-    a {
-        text-decoration: underline;
-    }
-}
-
-@media (max-width: 500px) {
-	body{
-	background: red;
-	}
-    .informacoes>div {
-        margin-top: 50px;
-    }
-
-    #direitos_reservados p {
-        text-align: center;
-    }
-
-    .pagamento .formas_pagamento {
-        gap: 10px;
-        max-width: 400px;
-    }
-
-    #pag {
-        img {
-            width: 110px;
+        footer {
+            background-color: #011526;
+            color: white;
+            padding: 60px;
+            width: 100%;
+            margin-top: 120px;
+            font-family: "Montserrat", sans-serif;
         }
-    }
-}
+
+        .informacoes {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 92%;
+            margin: 0 auto;
+        }
+
+        .informacoes>div>div {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer img {
+            max-width: 70px;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        #pag {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px 5px 10px 5px;
+            border-radius: 3px;
+
+            img {
+                width: 60px;
+            }
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+
+        .pagamento .formas_pagamento {
+            gap: 5px;
+            max-width: 250px;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        #linha {
+            width: 92%;
+            padding: 0.3px;
+            margin: 0 auto;
+            background: white;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        #direitos_reservados {
+            font-size: 11px;
+            width: 92%;
+            margin: 0 auto;
+        }
+
+        .siga-nos {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .siga-nos div {
+            flex-direction: row !important;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 30px;
+            }
+
+            h1 {
+                margin-bottom: 0px;
+            }
+        }
+
+
+        .siga-nos div:hover {
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .informacoes>div {
+                margin-top: 50px;
+            }
+
+            #direitos_reservados p {
+                text-align: center;
+            }
+
+            .pagamento .formas_pagamento {
+                gap: 10px;
+                max-width: 400px;
+            }
+
+            #pag {
+                img {
+                    width: 110px;
+                }
+            }
+        }
     </style>
 </head>
 <footer>
@@ -160,7 +157,7 @@ h1 {
             <h1>Pagamento</h1>
             <div class="formas_pagamento">
                 <div id="pag">
-                    <img src="${pageContext.request.contextPath}/img/rodape/visa.png"/>
+                    <img src="${pageContext.request.contextPath}/img/rodape/visa.png" />
                 </div>
                 <div id="pag">
                     <img src="${pageContext.request.contextPath}/img/rodape/master-card.png" />
@@ -168,7 +165,7 @@ h1 {
                 <div id="pag">
                     <img src="${pageContext.request.contextPath}/img/rodape/hipercard.png" />
                 </div>
-                
+
                 <div id="pag">
                     <img src="${pageContext.request.contextPath}/img/rodape/elo-logo.png" />
                 </div>
@@ -179,7 +176,7 @@ h1 {
                     <img src="${pageContext.request.contextPath}/img/rodape/boleto.png" />
                 </div>
                 <div id="pag">
-                    <img src="${pageContext.request.contextPath}/img/rodape/pix.png"  />
+                    <img src="${pageContext.request.contextPath}/img/rodape/pix.png" />
                 </div>
             </div>
         </div>
@@ -205,4 +202,4 @@ h1 {
         <p>© 2024 Instrument Store. Todos os direitos reservados</p>
 
     </div>
-</footer> 
+</footer>
