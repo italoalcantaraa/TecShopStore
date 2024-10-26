@@ -19,7 +19,7 @@
 
 .logo img {
     margin-left: 50px;
-    width: 100px;
+    width: 130px;
 }
 
 .busca>input {
@@ -31,8 +31,8 @@
     color: black;
 }
 
-a.stl1:hover {
-    color: black;
+.header-container p, a {
+    color: white;
     text-decoration: none;
 }
 
@@ -42,12 +42,6 @@ a.stl1:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header-container p,
-a {
-    color: white;
-    text-decoration: none;
 }
 
 .categorias a {
@@ -72,10 +66,10 @@ a {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 130px;
+    top: 187px;
     left: 200px;
     background-color: #011526;
-    min-width: 177px;
+    min-width: 174px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
     border-radius: 5px;
@@ -104,7 +98,7 @@ a {
 
 .carrossel img {
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 80%;
     height: auto;
     display: block;
 }
@@ -121,4 +115,56 @@ a {
 
 .icon img{
     width: 35px;
+}
+
+.title{
+    margin: 70px;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 90px;
+    padding: 50px;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #011526;
+    padding: 15px;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 8px;
+
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    
+}
+
+.produto h2 {
+    margin: 20px 0;
+}
+
+.preco {
+    color: #105773;
+}
+
+.botao {
+    color: white;
+    background-color: #011526;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 70px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #010a13;
+    color: #9c9c9c;
 }
