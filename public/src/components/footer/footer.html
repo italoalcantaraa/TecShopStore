@@ -3,10 +3,11 @@
         footer {
             background-color: #011526;
             color: white;
-            padding: 60px;
+            padding: 60px 0;
             width: 100%;
             margin-top: 120px;
             font-family: "Montserrat", sans-serif;
+            animation: fadeIn 1.2s ease-in-out;
         }
 
         .informacoes {
@@ -17,20 +18,25 @@
             gap: 20px;
             max-width: 92%;
             margin: 0 auto;
+            opacity: 0;
+            animation: slideIn 1.5s ease forwards;
+            animation-delay: 0.5s;
         }
 
-        .informacoes>div>div {
+        .informacoes > div > div {
             display: flex;
             flex-direction: column;
             gap: 9px;
-
         }
 
         a {
             cursor: pointer;
+            color: #87ceeb;
+            transition: color 0.3s ease;
         }
 
         a:hover {
+            color: #ffdd57;
             text-decoration: underline;
         }
 
@@ -38,18 +44,19 @@
             max-width: 70px;
             border-radius: 3px;
             width: 100%;
+            transition: transform 0.3s ease;
         }
 
         #pag {
             display: flex;
             justify-content: center;
-            background: white;
-            padding: 10px 5px 10px 5px;
+            padding: 10px 5px;
             border-radius: 3px;
+            transition: transform 0.3s ease;
+        }
 
-            img {
-                width: 60px;
-            }
+        #pag:hover img {
+            transform: scale(1.1);
         }
 
         h1 {
@@ -57,7 +64,6 @@
             font-size: 15px;
             margin-bottom: 20px;
         }
-
 
         .pagamento .formas_pagamento {
             gap: 5px;
@@ -68,17 +74,19 @@
 
         #linha {
             width: 92%;
-            padding: 0.3px;
-            margin: 0 auto;
+            height: 1px;
             background: white;
-            margin-top: 40px;
-            margin-bottom: 10px;
+            margin: 40px auto 10px;
         }
 
         #direitos_reservados {
             font-size: 11px;
             width: 92%;
             margin: 0 auto;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+            animation-delay: 1.5s;
         }
 
         .siga-nos {
@@ -87,45 +95,37 @@
             gap: 20px;
         }
 
-        .siga-nos div {
-            flex-direction: row !important;
-            align-items: center;
-            cursor: pointer;
-
-            img {
-                width: 30px;
-            }
-
-            h1 {
-                margin-bottom: 0px;
-            }
-        }
-
 
         .siga-nos div:hover {
-            a {
-                text-decoration: underline;
+            transform: translateX(5px);
+        }
+
+        .siga-nos div img {
+            width: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .siga-nos div:hover img {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
             }
         }
 
-        @media (max-width: 500px) {
-            .informacoes>div {
-                margin-top: 50px;
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
             }
-
-            #direitos_reservados p {
-                text-align: center;
-            }
-
-            .pagamento .formas_pagamento {
-                gap: 10px;
-                max-width: 400px;
-            }
-
-            #pag {
-                img {
-                    width: 110px;
-                }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -134,65 +134,49 @@
     <div class="informacoes">
         <div>
             <h1>ATENDIMENTO AO CLIENTE</h1>
-
             <div>
-                <a>Central de ajuda</a>
-                <a>Garantia Strument Store</a>
-                <a>Ouvidoria</a>
-                <a>Fale Conosco</a>
+                <a href="#">Central de ajuda</a>
+                <a href="#">Garantia Strument Store</a>
+                <a href="#">Ouvidoria</a>
+                <a href="#">Fale Conosco</a>
             </div>
         </div>
 
         <div>
             <h1>SOBRE A INSTRUMENT STORE</h1>
-
             <div>
-                <a>Central de ajuda</a>
-                <a>Garantia Strument Store</a>
-                <a>Ouvidoria</a>
-                <a>Fale Concosco</a>
+                <a href="#">Central de ajuda</a>
+                <a href="#">Garantia Strument Store</a>
+                <a href="#">Ouvidoria</a>
+                <a href="#">Fale Conosco</a>
             </div>
         </div>
+
         <div class="pagamento">
             <h1>Pagamento</h1>
             <div class="formas_pagamento">
-                <div id="pag">
-                    <img src="${pageContext.request.contextPath}/img/rodape/visa.png" />
-                </div>
-                <div id="pag">
-                    <img src="${pageContext.request.contextPath}/img/rodape/master-card.png" />
-                </div>
-                <div id="pag">
-                    <img src="${pageContext.request.contextPath}/img/rodape/hipercard.png" />
-                </div>
-
-                <div id="pag">
-                    <img src="${pageContext.request.contextPath}/img/rodape/elo-logo.png" />
-                </div>
-                <div id="pag">
-                    <img src="${pageContext.request.contextPath}/img/rodape/american-express.png" />
-                </div>
-                <div id="pag">
-                    <img src="${pageContext.request.contextPath}/img/rodape/boleto.png" />
-                </div>
-                <div id="pag">
-                    <img src="${pageContext.request.contextPath}/img/rodape/pix.png" />
-                </div>
+                <div id="pag"><img src="https://www.svgrepo.com/show/357255/visa.svg" alt="Visa" /></div>
+                <div id="pag"><img src="https://www.svgrepo.com/show/394275/mastercard.svg" alt="Mastercard" /></div>
+                <div id="pag"><img src="../../assets/icons/elo-svgrepo-com.svg" alt="Elo" /></div>
+                <div id="pag"><img src="https://www.svgrepo.com/show/394338/paypal.svg" alt="Paypal" /></div>
+                <div id="pag"><img src="https://img.icons8.com/?size=64&id=F77TABNQzR3w&format=png" alt="Boleto"/></div>
+                <div id="pag"><img src="https://img.icons8.com/?size=50&id=uqpbD9vhCDEQ&format=png" alt="Pix" style="width: 150%; padding: 12px;"/></div>
             </div>
         </div>
+
         <div class="siga-nos">
             <h1>SIGA-NOS</h1>
             <div>
-                <img src="${pageContext.request.contextPath}/img/redesSociais/instagram (2).png" />
-                <a>Instagram</a>
+                <img src="../../assets/icons/instagram-svgrepo-com.svg" alt="Instagram" />
+                <a href="#">Instagram</a>
             </div>
             <div>
-                <img src="${pageContext.request.contextPath}/img/redesSociais/facebook.png" />
-                <a>Facebook</a>
+                <img src="../../assets/icons/facebook-svgrepo-com.svg" alt="Facebook" />
+                <a href="#">Facebook</a>
             </div>
             <div>
-                <img src="${pageContext.request.contextPath}/img/redesSociais/linkedin (1).png" />
-                <a>Linkedin</a>
+                <img src="../../assets/icons/linkedin-svgrepo-com.svg" alt="Linkedin" />
+                <a href="#">Linkedin</a>
             </div>
         </div>
     </div>
@@ -200,6 +184,5 @@
     <div id="linha"></div>
     <div id="direitos_reservados">
         <p>© 2024 Instrument Store. Todos os direitos reservados</p>
-
     </div>
 </footer>
