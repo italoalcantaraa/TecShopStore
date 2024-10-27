@@ -18,7 +18,10 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #011526;
+    background: linear-gradient(145deg, #EFEFEF, #afcfeb);
+    box-shadow:  9px 9px 29px #939393,
+             -9px -9px 29px #ffffff;
+             border-radius: 0 0 30px 30px;
 }
 
 .logo img {
@@ -33,6 +36,11 @@ body{
     border: none;
     border-radius: 5px;
     color: black;
+    box-shadow: -2px 2px 5px 0px #838383;
+}
+
+.pes{
+    background-color: #125671;
 }
 
 .header-container p, a {
