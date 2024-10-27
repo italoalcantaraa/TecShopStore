@@ -1,0 +1,24 @@
+# Ignorar dependências do Node.js
+node_modules/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar dados de cache de pacote
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar diretórios de compilação
+/dist
+/build
+/out
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos específicos de IDEs e editores
+.vscode/
+.idea/
+*.swp

@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "simplebar": "^6.2.7",
     "toastify-js": "^1.12.0"
   }
 }
