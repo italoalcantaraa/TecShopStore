@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'font';
+}
+@font-face {
+    font-family: 'font';
+    src: url('../../assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf');
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+header h6,hr{
+    font-size: 15px;
+    color:lightgrey;
+    margin: 10px;
+}
+
+h6 strong{
+    font-weight: bold;
+    color: black;
+}
+
+hr{
+    width: 5%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background: linear-gradient(67deg, #EFEFEF, #afcfeb);
+    box-shadow:  18px 18px 49px #939393,
+                 -3px -3px 49px #ffffff;
+    height: auto;
+    border-radius: 10px;
+}
+
+.pagamentos{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: solid black 1px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#cartao{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.cartao{
+    display: flex;
+    width: 7%;
+    justify-content: space-between;
+}
+
+.debito{
+    display: flex;
+}
+
+.credito{
+    display: flex;
+}
+
+.ocult{
+    display: none;
+}
+
+.debito-f{
+    display: none;
+}
+
+.credito-f{
+    display: none;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+}
+
+
+input[type="radio"] {
+    -webkit-appearance: none; /* Remove a aparência padrão no Chrome/Safari */
+    -moz-appearance: none; /* Remove a aparência padrão no Firefox */
+    appearance: none; /* Remove a aparência padrão em navegadores compatíveis */
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: #fff; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+/* Estilo para quando o botão está selecionado */
+input[type="radio"]:checked {
+    background-color: #29ff37; 
+    border-color: #fff; 
+}
+
+/* Efeito ao passar o mouse */
+input[type="radio"]:hover {
+    border-color: #29ff37; 
+}
+
+/* Estilo do rótulo */
+label {
+    margin-left: 10px; /* Espaçamento entre o botão e o texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse sobre o rótulo */
+}
+
+
+article button {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  article button:hover {
+    background: linear-gradient(45deg, #29ff37, #43ff14);
+    box-shadow: rgba(67, 255, 20, 0.7) 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+  
+  article button:active {
+    transform: scale(1.025);
+  }
+  

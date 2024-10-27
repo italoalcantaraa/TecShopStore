@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src='../../plugin/components.js'></script>
+    <link rel="stylesheet" href="pagamento.css">
+</head>
+<body>
+
+    <header>
+        <h6>[CARRINHO]</h6>
+        <hr>
+        <h6>[ENDEREÇO]</h6>
+        <hr>
+        <h6><strong>[PAGAMENTO]</strong></h6>
+        <hr>
+        <h6>[CONCLUIR]</h6>
+    </header>
+
+    <main>
+        <section class="pagamentos">
+            <input type="radio">
+            <label for="option1">Pix:</label>
+
+            <div class="ocult">
+                <div class="copia">
+                    <input type="text" id="pix" value="função gerar pix" readonly> 
+                    <button onclick="">Copiar</button>
+                </div>
+                <div class="qrcode">
+
+                </div>
+            </div>
+        </section>
+            
+        <section class="pagamentos">
+            <input type="radio">
+            <label for="option2">BOLETO:</label>
+
+            <div class="ocult">
+
+            </div>
+        </section>
+
+        <section id="cartao" class="pagamentos">
+            <div class="cartao">
+                <label for="option3">CARTÃO:</label>
+            </div>
+
+            <div class="debito">
+                <input type="radio">
+                <p>DEBITO</p>
+                <div class="debito-f">
+                    <input type="text">
+                    <input type="number">
+                    <input type="number">
+                </div>
+            </div>
+            <div class="credito">
+                <input type="radio">
+                <p>CRÉDITO</p>
+                <div class="credito-f">
+                    <input type="text">
+                    <input type="number">
+                    <input type="number">
+                    <input type="number">
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <button type="submit">Confirmar Compra!</button>
+        </article>
+    </main>
+
+    <div id="footer"></div>
+</body>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    CarregarComponente('../../components/footer/footer.html', 'footer'); // Chama a função após o carregamento do DOM
+});
+</script>
+</html>
+
+<!--<script src="../../components/header/simpleHeader.js"></script>  
+    class="animate__animated animate__backInRight"--!
