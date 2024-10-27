@@ -4,10 +4,13 @@
     font-family: 'font';
 }
 
+body{
+    background-color: #EFEFEF;
+}
 
 @font-face {
     font-family: 'font';
-    src: url('../../assets/fonts/font.woff2');
+    src: url('../../assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf');
 }
 
 .header-container {
@@ -55,13 +58,16 @@
     color: black;
     text-decoration: none;
     position: relative;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    border-radius: 6px;
+    
 }
 
 .menu-item:hover {
-    background-color: #011526;
+    background-color: #125671;
     color: white;
-    border-radius: 5px;
+    box-shadow: -2px 6px 5px 0px #838383;
+    text-decoration: none;
 }
 
 .dropdown-content {
@@ -69,23 +75,24 @@
     position: absolute;
     top: 187px;
     left: 200px;
-    background-color: #011526;
+    background-color: #125671;
     min-width: 174px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
     border-radius: 5px;
+    box-shadow: -1px 2px 15px 0px #838383;
 }
 
 .dropdown-content a {
     padding: 12px 16px;
     display: block;
     color: white;
-    text-decoration: none;
     text-align: center;
 }
 
 .dropdown-content a:hover {
-    background-color: #105773;
+    background-color: #011526;
+    border-radius: 6px;
+    text-decoration: none;
 }
 
 .show {
@@ -133,23 +140,41 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #011526;
-    padding: 15px;
+    border: 1px;
+    padding: 20px;
+    align-items: center;
     text-align: center;
-    background-color: #fafafa;
+    background-color: #EFEFEF;
+    transition: 0.3s;
     border-radius: 8px;
+    box-shadow:
+    8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.913);
+
+}
+
+.imgProduto{
+    background-color: red;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 
 }
 
 .produto img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.produto:hover{
+    transform: scale(1.1);
 }
 
 .produto h2 {
     margin: 20px 0;
+    font-size: 15px;
 }
 
 .preco {
@@ -158,14 +183,17 @@
 
 .botao {
     color: white;
-    background-color: #011526;
+    background-color: #125671;
     border: none;
     border-radius: 5px;
-    padding: 5px 70px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    transition: 0.3s;
+    box-shadow: -2px 3px 5px 0px #838383;
 }
 
 .botao:hover {
-    background-color: #010a13;
-    color: #9c9c9c;
+    width: 95%;
+    opacity: 80%;
 }

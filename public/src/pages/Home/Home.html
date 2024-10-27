@@ -2,144 +2,167 @@
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Tecshop</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
-    <link rel="icon" href="/public/src/assets/images/LogoIcon.png" type="image/x-icon">
-    <script src='index.js'></script>
-    <script src='../../components.js'></script>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Tecshop</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+  <link rel="icon" href="/public/src/assets/images/LogoIcon.png" type="image/x-icon">
+  <script src='index.js'></script>
+  <script src='../../components.js'></script>
 </head>
 
 <body>
 
-    <header class="header-container">
-        <div class="logo">
-            <img src="../../assets/images/logoP1.png" alt="">
-        </div>
-
-        <div class="busca">
-            <input type="text" , placeholder="Barra de Pesquisa">
-            <button>Buscar</button>
-        </div>
-
-        <div class="icon">
-            <img src="../../assets/images/user-svgrepo-com.svg">
-
-            <p>
-                <a class="login" href="">Entrar</a>
-                ou
-                <a class="login" href="">Cadastra-se</a>
-            </p>
-
-        </div>
-
-
-    </header>
-
-    <div class="categorias">
-
-        <a class="menu-item" href="javascript:void(0);" onclick="toggleDropdown()">DEPARTAMENTOS</a>
-
-        <div id="dropdown" class="dropdown-content">
-            <a href="">Computador</a>
-            <a href="">Placa de video</a>
-            <a href="">Monitor</a>
-            <a href="">Celular</a>
-        </div>
-
-        <a class="menu-item" href="">OFERTAS</a>
-
-        <a class="menu-item" href="">CUPONS</a>
-
-        <a class="menu-item" href="">QUEM SOMOS ?</a>
+  <header class="header-container">
+    <div class="logo">
+      <img src="../../assets/images/logoP1.png" alt="">
     </div>
 
-    <div class="carrossel">
-        <img src="../../assets/images/carrossel2.jpg" alt="">
+    <div class="busca">
+      <input type="text" , placeholder="Barra de Pesquisa">
+      <button>Buscar</button>
     </div>
 
-    <h2 class="title">Mais Vendidos</h2>
+    <div class="icon">
+      <img src="../../assets/images/user-svgrepo-com.svg">
 
-    <div class="produtos-grid">
-        <div class="produto">
-          <img src="../../assets/images/produtos/INTEL _CORE I9.png" alt="Produto 1">
-          <h2>PROCESSADOR INTEL CORE I9</h2>
-          <h3 class="preco">R$2.974,00</h3>
-          <button class="botao">COMPRAR</button>
-        </div>
-        
-        <div class="produto">
-          <img src="../../assets/images/produtos/AMD_Ryzen_7.png" alt="Produto 2">
-          <h2>AMD RYZEN 7 5700X 8-CORE</h2>
-          <h3 class="preco">R$1.125,30</h3>
-          <button class="botao">COMPRAR</button>
-        </div>
+      <p>
+        <a class="login" href="">Entrar</a>
+        ou
+        <a class="login" href="">Cadastra-se</a>
+      </p>
 
-        <div class="produto">
-          <img src="../../assets/images/produtos/Sobrecoxa.png" alt="Produto 3">
-          <h2>Coxa com Sobrecoxa de Frango Congelada sem Osso Sadia 2kg</h2>
-          <h3 class="preco">R$8.99</h3>
-          <button class="botao">COMPRAR</button>
-        </div>
-        
-        <div class="produto">
-          <img src="../../assets/images/produtos/RTX 4060 8GB.png" alt="Produto 4">
-          <h2>PLACA DE VIDEO RTX 4060 8GB</h2>
-          <h3 class="preco">R$2.397,90</h3>
-          <button class="botao">COMPRAR</button>
-        </div>
+    </div>
 
-        <div class="produto">
-          <img src="../../assets/images/produtos/SSD, Kingston.png" alt="Produto 5">
-          <h2>SSD, KINGSTON 960G</h2>
-          <h3 class="preco">R$410,00</h3>
-          <button class="botao">COMPRAR</button>
-        </div>
 
-        <div class="produto">
-            <img src="../../assets/images/produtos/Kingston Memória 16GB.png" alt="Produto 6">
-            <h2>KINGSTON MEMÓRIA DE COMPUTADOR FURY BEAST RGB 16GB</h2>
-            <h3 class="preco">R$340,00</h3>
-            <button class="botao">COMPRAR</button>
-          </div>
-          
-          <div class="produto">
-            <img src="../../assets/images/produtos/Corsair 32GB (2 x 16GB).png" alt="Produto 7">
-            <h2>CORSAIR VENGEANCE RGB PRO DDR4 32GB (2 x 16GB)</h2>
-            <h3 class="preco">R$799,00</h3>
-            <button class="botao">COMPRAR</button>
-          </div>
-  
-          <div class="produto">
-            <img src="../../assets/images/produtos/Gabinete Gamer.png" alt="Produto 8">
-            <h2>GABINETE GAMER REDRAGON WIDELOAD PRO</h2>
-            <h3 class="preco">R$465,45</h3>
-            <button class="botao">COMPRAR</button>
-          </div>
-          
-          <div class="produto">
-            <img src="../../assets/images/produtos/GABINETE GAMER K-MEX.png" alt="Produto 9">
-            <h2>GABINETE GAMER K-MEX AQUARIO MICRO ATX POSEIDON WHITE CG</h2>
-            <h3 class="preco">R$319,49</h3>
-            <button class="botao">COMPRAR</button>
-          </div>
-  
-          <div class="produto">
-            <img src="../../assets/images/produtos/Teclado Mecânico Gamer.png" alt="Produto 10">
-            <h2>TECLADO MECÂNICO GAMER REDRAGON KUMARA PRO RGB</h2>
-            <h3 class="preco">R$304,95</h3>
-            <button class="botao">COMPRAR</button>
-          </div>
-        
+  </header>
+
+  <div class="categorias">
+
+    <a class="menu-item" href="javascript:void(0);" onclick="toggleDropdown()">DEPARTAMENTOS</a>
+
+    <div id="dropdown" class="dropdown-content">
+      <a href="">GABINETE</a>
+      <a href="">PLACA DE VIDEO</a>
+      <a href="">MEMORIA RAM</a>
+      <a href="">SSD</a>
+      <a href="">TECLADO</a>
+      <a href="">PROCESSADOR</a>
+    </div>
+
+    <a class="menu-item" href="">OFERTAS</a>
+
+    <a class="menu-item" href="">CUPONS</a>
+
+    <a class="menu-item" href="">QUEM SOMOS ?</a>
+  </div>
+
+  <div class="carrossel">
+    <img src="../../assets/images/carrossel2.jpg" alt="">
+  </div>
+
+  <h2 class="title">Mais Vendidos</h2>
+
+  <div class="produtos-grid">
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/INTEL _CORE I9.png" alt="Produto 1">
       </div>
-      
-      <div id="footer"></div>
+      <h2>PROCESSADOR INTEL CORE I9</h2>
+      <h3 class="preco">R$2.974,00</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/AMD_Ryzen_7.png" alt="Produto 2">
+      </div>
+      <h2>AMD RYZEN 7 5700X 8-CORE</h2>
+      <h3 class="preco">R$1.125,30</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/Sobrecoxa.png" alt="Produto 3">
+      </div>
+      <h2>Coxa com Sobrecoxa de Frango Congelada sem Osso Sadia 2kg</h2>
+      <h3 class="preco">R$8.99</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/RTX 4060 8GB.png" alt="Produto 4">
+      </div>
+      <h2>PLACA DE VIDEO RTX 4060 8GB</h2>
+      <h3 class="preco">R$2.397,90</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/SSD, Kingston.png" alt="Produto 5">
+      </div>
+      <h2>SSD, KINGSTON 960G</h2>
+      <h3 class="preco">R$410,00</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/Kingston Memória 16GB.png" alt="Produto 6">
+      </div>
+      <h2>KINGSTON MEMÓRIA DE COMPUTADOR FURY BEAST RGB 16GB</h2>
+      <h3 class="preco">R$340,00</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/Corsair 32GB (2 x 16GB).png" alt="Produto 7">
+      </div>
+      <h2>CORSAIR VENGEANCE RGB PRO DDR4 32GB (2 x 16GB)</h2>
+      <h3 class="preco">R$799,00</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/Gabinete Gamer.png" alt="Produto 8">
+      </div>
+      <h2>GABINETE GAMER REDRAGON WIDELOAD PRO</h2>
+      <h3 class="preco">R$465,45</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/GABINETE GAMER K-MEX.png" alt="Produto 9">
+      </div>
+      <h2>GABINETE GAMER K-MEX AQUARIO MICRO ATX POSEIDON WHITE CG</h2>
+      <h3 class="preco">R$319,49</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/Teclado Mecânico Gamer.png" alt="Produto 10">
+      </div>
+      <h2>TECLADO MECÂNICO GAMER REDRAGON KUMARA PRO RGB</h2>
+      <h3 class="preco">R$304,95</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
+
+  </div>
+
+  <div id="footer"></div>
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     CarregarComponente('../../components/footer/footer.html', 'footer'); // Chama a função após o carregamento do DOM
-});
+  });
 </script>
+
 </html>
