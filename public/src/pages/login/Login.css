@@ -16,6 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -41,7 +42,7 @@ section {
 }
 
 section img {
-    width: 250px;
+    width: 50%;
 }
 
 section div {
