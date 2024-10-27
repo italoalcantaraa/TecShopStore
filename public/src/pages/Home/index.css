@@ -4,7 +4,7 @@
     font-family: 'font';
 }
 
-body{
+body {
     background-color: #EFEFEF;
 }
 
@@ -19,9 +19,9 @@ body{
     justify-content: space-around;
     align-items: center;
     background: linear-gradient(145deg, #EFEFEF, #afcfeb);
-    box-shadow:  9px 9px 29px #939393,
-             -9px -9px 29px #ffffff;
-             border-radius: 0 0 30px 30px;
+    box-shadow: 9px 9px 29px #939393,
+        -9px -9px 29px #ffffff;
+    border-radius: 0 0 30px 30px;
 }
 
 .logo img {
@@ -29,7 +29,7 @@ body{
     width: 130px;
 }
 
-.busca>input {
+.busca .pes>input {
     outline: none;
     padding: 6px 12px;
     padding-right: 300px;
@@ -39,12 +39,27 @@ body{
     box-shadow: -2px 2px 5px 0px #838383;
 }
 
-.pes{
+.pes {
+    display: flex;
+
+}
+
+.pes button {
     background-color: #125671;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px 0px #838383;
+    transition: 0.3s;
+}
+
+.pes button:hover {
+    width: 95%;
+    opacity: 80%;
 }
 
 .header-container p, a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -54,6 +69,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .categorias a {
@@ -68,7 +84,7 @@ body{
     position: relative;
     transition: background-color 0.5s ease, color 0.5s ease;
     border-radius: 6px;
-    
+
 }
 
 .menu-item:hover {
@@ -81,10 +97,10 @@ body{
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 187px;
+    top: 167px;
     left: 200px;
     background-color: #125671;
-    min-width: 174px;
+    min-width: 180px;
     z-index: 1;
     border-radius: 5px;
     box-shadow: -1px 2px 15px 0px #838383;
@@ -108,8 +124,11 @@ body{
 }
 
 .carrossel {
-    display: flex;
-    padding: 50px 0px;
+    background-image: url('../../assets/images/CarrosselTes.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
 }
 
 .carrossel img {
@@ -125,15 +144,15 @@ body{
     max-width: 10%;
 }
 
-.icon a:hover{
+.icon a:hover {
     text-decoration: underline;
 }
 
-.icon img{
+.icon img {
     width: 35px;
 }
 
-.title{
+.title {
     margin: 70px;
 }
 
@@ -156,18 +175,17 @@ body{
     transition: 0.3s;
     border-radius: 8px;
     box-shadow:
-    8px 8px 15px rgba(0, 0, 0, 0.1),
-    -8px -8px 15px rgba(255, 255, 255, 0.913);
+        8px 8px 15px rgba(0, 0, 0, 0.1),
+        -8px -8px 15px rgba(255, 255, 255, 0.913);
 
 }
 
-.imgProduto{
-    background-color: red;
+.imgProdto { 
     height: 200px;
     display: flex;
     align-items: center;
     justify-items: center;
-
+    
 }
 
 .produto img {
@@ -176,7 +194,7 @@ body{
     margin: 0 auto;
 }
 
-.produto:hover{
+.produto:hover {
     transform: scale(1.1);
 }
 
@@ -187,6 +205,12 @@ body{
 
 .preco {
     color: #105773;
+}
+
+.produto .preco:nth-child(4){
+    color: black;
+    font-size: 12px;
+    text-decoration: line-through;
 }
 
 .botao {
