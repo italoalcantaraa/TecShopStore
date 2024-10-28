@@ -6,6 +6,7 @@
     <title>Pagamento</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src='../../plugin/components.js'></script>
+    <script src="pagamento.js"></script>
     <link rel="stylesheet" href="pagamento.css">
 </head>
 <body>
@@ -22,14 +23,14 @@
 
     <main>
         <section class="pagamentos">
-            <input type="radio">
+            <input type="radio" onclick="radioOn(this, 1)">
             <label for="option1">Pix:</label>
 
-            <div class="ocult">
-                <div class="copia">
+            <div id="ocult1">
+               
                     <input type="text" id="pix" value="função gerar pix" readonly> 
                     <button onclick="">Copiar</button>
-                </div>
+
                 <div class="qrcode">
 
                 </div>
@@ -37,10 +38,10 @@
         </section>
             
         <section class="pagamentos">
-            <input type="radio">
+            <input type="radio" onclick="radioOn(this, 2)">
             <label for="option2">BOLETO:</label>
 
-            <div class="ocult">
+            <div class="ocult2">
 
             </div>
         </section>
@@ -48,25 +49,27 @@
         <section id="cartao" class="pagamentos">
             <div class="cartao">
                 <label for="option3">CARTÃO:</label>
+                <p>DEBITO</p>
+                <input type="radio" onclick="radioOn(this, 3)">
+                <p>CREDITO</p>
+                <input type="radio" onclick="radioOn(this, 4)">
             </div>
 
-            <div class="debito">
-                <input type="radio">
+            <div id="ocult3">
                 <p>DEBITO</p>
-                <div class="debito-f">
-                    <input type="text">
-                    <input type="number">
-                    <input type="number">
-                </div>
+
+                    <input type="text" placeholder="NOME">
+                    <input type="number" placeholder="N°">
+                    <input type="number" placeholder="CV">
+
             </div>
-            <div class="credito">
-                <input type="radio">
+            <div id="ocult4">
                 <p>CRÉDITO</p>
                 <div class="credito-f">
-                    <input type="text">
-                    <input type="number">
-                    <input type="number">
-                    <input type="number">
+                    <input type="text" placeholder="NOME">
+                    <input type="number" placeholder="N°">
+                    <input type="number" placeholder="CV">
+                    <input type="number" placeholder="Parcelas">
                 </div>
             </div>
         </section>
