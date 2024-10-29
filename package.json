@@ -1,7 +1,7 @@
 {
-  "name": "public",
+  "name": "tecshop(web)",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000T\u0000e\u0000c\u0000S\u0000h\u0000o\u0000p\u0000S\u0000t\u0000o\u0000r\u0000e\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "animate.css": "^4.1.1",
-    "public": "file:",
-    "simplebar": "^6.2.7",
-    "toastify-js": "^1.12.0"
+    "tecshop(web)": "file:"
   }
 }

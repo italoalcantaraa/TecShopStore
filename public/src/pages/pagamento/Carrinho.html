@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
+    <link rel="stylesheet" href="Carrinho.css">
 </head>
 
 <body>
-    <nav>
+    <nav class="estado">
         <p>Carrinho</p>
         <div id="linha"></div>
         <p>Endereço</p>
@@ -17,27 +18,122 @@
         <div id="linha"></div>
         <p>Pagamento</p>
     </nav>
-    <section>
-        <nav>
-            <p>10</p>
-            <button>Remover produtos</button>
-        </nav>
+    <main>
+        <section class="detalhes_produto">
+            <nav>
+                <p>10</p>
+                <button>Remover produtos</button>
+            </nav>
 
-        <div>
-            <div>
-                <img src="" alt=".">
-                <p>Sdd 2tb</p>
-                <div>
-                    <p>QTD</p>
-                    <p>-<strong>1</strong>+</p>
+            <div class="carrinho_produto">
+                <div class="informacoes_produto">
+                    <img src="../../assets/images/produtos/AMD_Ryzen_7.png" alt=".">
+                    <p>Sdd 2tb</p>
+                    <div>
+                        <p>QTD</p>
+                        <div class="botao_quantidade">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>  
+                        </div>
+                    </div>
+                    <div>
+                        <p>À vista ou no pix por:</p>
+                        <strong>R$ 200,00</strong>
+                    </div>
                 </div>
-                <div>
-                    <p>À vista ou no pix por:</p>
-                    <strong>R$ 200,00</strong>
+                <div class="servicos">
+                    <h1>Serviços</h1>
+                    <p>Garantia do produto</p>
+
+                    <div class="opcoes">
+                        <div>
+                            <input type="radio">
+                            <p>Sem garantia</p>
+                        </div>
+                        <div>
+                            <input type="radio">
+                            <p>12 meses de garantia estendida</p>
+                        </div>
+                        <div>
+                            <input type="radio">
+                            <p>24 meses de garantia estendida</p>
+                        </div>
+                    </div>
+                    <p>Subtotal de serviços: <strong>R$ 200,00</strong></p>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="carrinho_produto">
+                <div class="informacoes_produto">
+                    <img src="../../assets/images/produtos/AMD_Ryzen_7.png" alt=".">
+                    <p>Sdd 2tb</p>
+                    <div>
+                        <p>QTD</p>
+                        <div class="botao_quantidade">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>  
+                        </div>
+                    </div>
+                    <div>
+                        <p>À vista ou no pix por:</p>
+                        <strong>R$ 200,00</strong>
+                    </div>
+                </div>
+                <div class="servicos">
+                    <h1>Serviços</h1>
+                    <p>Garantia do produto</p>
+
+                    <div class="opcoes">
+                        <div>
+                            <input type="radio">
+                            <p>Sem garantia</p>
+                        </div>
+                        <div>
+                            <input type="radio">
+                            <p>12 meses de garantia estendida</p>
+                        </div>
+                        <div>
+                            <input type="radio">
+                            <p>24 meses de garantia estendida</p>
+                        </div>
+                    </div>
+                    <p>Subtotal de serviços: <strong>R$ 200,00</strong></p>
+                </div>
+            </div>
+        </section>
+        <section class="resumo">
+            <div class="resumo_carrinho">
+                <h1>Resumo</h1>
+                <div>
+                    <p>Valor dos produtos: </p>
+                    <p><strong>R$ 200,00</strong></p>
+                </div>
+                <div>
+                    <p>Serviços adicionais: </p>
+                    <p><strong>R$ 10,00</strong></p>
+                </div>
+                <div>
+                    <p>Frete: </p>
+                    <p><strong>R$ 10,00</strong></p>
+                </div>
+                <div class="total">
+                    <p>Total à prazo: </p>
+                    <p><strong>R$ 220,00</strong></p>
+                </div>
+                <div>
+                    <p>Total à vista no pix: </p>
+                    <p><strong>R$ 220,00</strong></p>
+                </div>
+            </div>
+
+            <div class="finalizar_compra">
+                <button>Finalizar compra</button>
+                <button>Continuar comprando</button>
+            </div>
+        </section>
+    </main>
+
 </body>
 
 </html>
