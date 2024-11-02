@@ -20,6 +20,8 @@ header{
     padding: 20px;
     align-items: center;
     justify-content: center;
+    animation: slideIn 1.5s ease forwards;
+    animation-delay: 0.5s;
 }
 
 header h6,hr{
@@ -46,15 +48,19 @@ main{
                  -3px -3px 49px #ffffff;
     height: auto;
     border-radius: 10px;
+    animation: slideIn 1.5s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .pagamentos{
+    margin-top: 30px;
     display: flex;
     align-items: center;
     padding: 15px;
     border: solid black 1px;
     border-radius: 10px;
-    margin: 20px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 #cartao{
@@ -62,34 +68,35 @@ main{
     flex-direction: row;
     justify-content: flex-start;
     align-items: start;
-    justify-content: space-between;
-    width: 40%;
+    justify-content: space-evenly;
+    width: auto;
+    border: none;
 }
 
 .cartao{
     display: flex;
-    width: 7%;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    border: solid black 1px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 40%;
 }
 
-.debito{
-    display: flex;
-}
 
-.credito{
-    display: flex;
-}
-
-.ocult{
+#ocult1,#ocult2,#ocult3,#ocult4{
     display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    border: solid black 1px;
+    border-radius: 10px;
+    justify-content: space-around;
 }
 
-.debito-f{
-    display: none;
-}
-
-.credito-f{
-    display: none;
+#ocult3,#ocult4{
+    width: 50%;
+    height: 70%;
+    gap: 10px;
 }
 
 article{
@@ -112,23 +119,32 @@ input[type="radio"] {
 
 /* Estilo para quando o botão está selecionado */
 input[type="radio"]:checked {
-    background-color: #29ff37; 
+    background: linear-gradient(67deg, #50ffe8, #2e75b4);
     border-color: #fff; 
 }
 
-/* Efeito ao passar o mouse */
 input[type="radio"]:hover {
     border-color: #29ff37; 
 }
 
 /* Estilo do rótulo */
 label {
-    margin-left: 10px; /* Espaçamento entre o botão e o texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
-    cursor: pointer; /* Cursor de ponteiro ao passar o mouse sobre o rótulo */
+    margin-left: 10px; 
+    font-size: 1rem; 
+    color: #333; 
+    cursor: pointer; 
 }
 
+@keyframes slideIn{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 article button {
     appearance: none;
@@ -156,8 +172,8 @@ article button {
   }
   
   article button:hover {
-    background: linear-gradient(45deg, #29ff37, #43ff14);
-    box-shadow: rgba(67, 255, 20, 0.7) 0 -6px 8px inset;
+    background: linear-gradient(67deg, #50ffe8, #2e75b4);
+    box-shadow: rgba(91, 85, 255, 0.7) 0 -6px 8px inset;
     transform: scale(1.125);
 }
 
@@ -165,4 +181,37 @@ article button {
   article button:active {
     transform: scale(1.025);
   }
-  
+
+  input[type="text"] {
+    padding: 4px 10px; 
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"]:focus {
+    border-color: #0077cc; 
+    box-shadow: 0 0 10px rgba(41, 194, 255, 0.5);
+}
+
+input[type="number"]{
+    padding: 4px 10px; 
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+input[type="number"]:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+input[type="number"]:focus {
+    border-color: #0077cc; 
+    box-shadow: 0 0 10px rgba(41, 194, 255, 0.5);
+}
