@@ -16,11 +16,16 @@ body{
 
 .estado{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     width: 50%;
+    min-width: 500px;
     padding: 30px;
+}
+
+.estado p{
+    padding: 10px;
 }
 
 .estado p:nth-child(1){
@@ -50,7 +55,7 @@ nav #linha{
 
 .detalhes_produto nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 30px 20px;
     font-size: 22px;
     font-weight: bold;
@@ -61,6 +66,13 @@ nav #linha{
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.detalhes_produto nav button:hover{
+    background-color: red;
 }
 
 .carrinho_produto{

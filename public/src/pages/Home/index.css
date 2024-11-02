@@ -41,6 +41,7 @@ body {
 
 .pes {
     display: flex;
+    gap: 10px;
 
 }
 
@@ -54,13 +55,89 @@ body {
 }
 
 .pes button:hover {
-    width: 95%;
     opacity: 80%;
 }
 
 .header-container p, a {
     color: black;
     text-decoration: none;
+}
+
+.carrinho{
+    background-color: #125671;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px 0px #838383;
+    transition: 0.3s;
+    width: 10%;
+    padding: 8px;
+}
+
+.carrinho:hover{
+    opacity: 80%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-conteudo {
+    background-color: white;
+    padding: 100px;
+    margin: 10px 0 10px 910px;
+    border-radius: 8px;
+    width: 450px;
+    max-width: 100%;
+}
+
+.fechar {
+    position: absolute;
+    top: 45px;
+    right: 260px;
+    font-size: 20px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar p {
+    color: #125671;
+}
+
+.popup h2 {
+    text-align: center;
+    margin: 150px 0 0 0;
+    line-height: 2.5;
+}
+
+.car {
+    background-color: #125671;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px 0px #838383;
+    transition: 0.3s;
+    width: 50%;
+    padding: 10px;
+    margin:0 1px 0 63px;
+}
+
+.car:hover {
+    opacity: 80%;
+}
+
+.bloqueado {
+    overflow: hidden;
 }
 
 .categorias {
@@ -97,7 +174,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 167px;
+    top: 177px;
     left: 200px;
     background-color: #125671;
     min-width: 180px;
@@ -153,7 +230,17 @@ body {
 }
 
 .title {
-    margin: 70px;
+    margin: 60px;
+    gap: 20px;
+    align-items: center;
+    display: flex;
+}
+
+#barra-reta {
+    border-radius: 4px;
+    width: 7px;
+    height: 50px;
+    background-color: #125671;
 }
 
 .produtos-grid {
@@ -180,12 +267,12 @@ body {
 
 }
 
-.imgProdto { 
+.imgProdto {
     height: 200px;
     display: flex;
     align-items: center;
     justify-items: center;
-    
+
 }
 
 .produto img {
@@ -207,7 +294,7 @@ body {
     color: #105773;
 }
 
-.produto .preco:nth-child(4){
+.produto .preco:nth-child(4) {
     color: black;
     font-size: 12px;
     text-decoration: line-through;

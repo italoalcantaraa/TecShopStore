@@ -5,6 +5,22 @@
 }
 
 
+#sucess{
+    display: none;
+    transition: 0.6s;
+    color: rgb(107, 255, 94);
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    bottom: 40px;
+    font-size: 20px;
+}
+
+#login-senha{
+    display: none;
+    color: red;
+}
+
 @font-face {
     font-family: 'font';
     src: url('../../assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf');
@@ -36,9 +52,11 @@ section {
     padding: 0px 100px 30px 100px;
     border-radius: 30px;
     min-width: 500px;
+
     box-shadow:
         8px 8px 15px rgba(0, 0, 0, 0.1),
         -8px -8px 15px rgba(255, 255, 255, 0.913);
+        
 }
 
 section img {
