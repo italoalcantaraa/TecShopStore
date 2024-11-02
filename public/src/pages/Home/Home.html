@@ -37,6 +37,17 @@
 
     </div>
 
+    <button class="carrinho" onclick="abrirPopup()">Carrinho</button>
+
+    <div id="meuPopup" class="popup">
+      <div class="popup-conteudo">
+        <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
+        <h2>Seu carrinho está vazio</h2>
+        <button class="car">COMPRAR</button>
+      </div>
+    </div>
+
+
 
   </header>
 
@@ -57,14 +68,16 @@
 
     <a class="menu-item" href="">CUPONS</a>
 
-    <a class="menu-item" href="">QUEM SOMOS ?</a>
+    <a class="menu-item" href="../Quem somos/quem.html">QUEM SOMOS ?</a>
   </div>
 
   <div class="carrossel">
-    
-  </div>
 
-  <h2 class="title">Mais Vendidos</h2>
+  </div>
+  <div class="title">
+    <div id="barra-reta"></div>
+    <h2>Mais Vendidos</h2>
+  </div>
 
   <div class="produtos-grid">
     <div class="produto">
@@ -90,7 +103,7 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Amd_Ryzen_Pro.png" alt="Produto 3">
       </div>
-      <h2>PROCESSADOR AMD RYZEN THREADRIPPER   PRO</h2>
+      <h2>PROCESSADOR AMD RYZEN THREADRIPPER PRO</h2>
       <h3 class="preco">R$55.999,99</h3>
       <button class="botao">COMPRAR</button>
     </div>
@@ -168,6 +181,14 @@
       <button class="botao">COMPRAR</button>
     </div>
 
+    <div class="produto">
+      <div class="imgProduto">
+        <img src="../../assets/images/produtos/Placa_de_Vídeo_Quadro_A800.png" alt="Produto 11">
+      </div>
+      <h2>PLACA DE VÍDEO QUADRO A800 PNY NVIDIA</h2>
+      <h3 class="preco">R$89.999,99</h3>
+      <button class="botao">COMPRAR</button>
+    </div>
   </div>
 
   <div id="footer"></div>
