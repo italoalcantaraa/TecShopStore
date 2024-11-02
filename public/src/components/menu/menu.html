@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main.menu {
+            font-family: 'font';
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: red;
+            width: 100%;
+            min-width: 300px;
+            padding: 10px;
+            background: linear-gradient(145deg, #EFEFEF, #afcfeb);
+            box-shadow: 9px 9px 29px #939393,
+                -9px -9px 29px #ffffff;
+
+        }
+
+        main.menu section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+
+        main.menu section button {
+            width: 100%;
+            padding: 20px;
+
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.712);
+            font-size: 23px;
+            background-color: #125671;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: -2px 6px 5px 0px #838383;
+            border-radius: 20px;
+        }
+
+        main.menu a {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 35px;
+            text-decoration: none;
+            color: #125671;
+
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        main.menu a:hover {
+            color: white;
+            transform: scale(1.02);
+        }
+
+        main.menu a img {
+            width: 15%;
+            min-width: 50px;
+        }
+
+        main.menu section button:hover {
+            width: 95%;
+            opacity: 80%;
+        }
+
+        main.menu img {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="menu">
+        <section>
+            <img src="../../../assets/images/logo.png" alt="">
+            <button>Adicionar</button>
+            <button>Produtos</button>
+        </section>
+        <a href="">
+            <img src="../../../assets/images/adm/exit-svgrepo-com.svg" alt="">
+            <p>Sair</p>
+        </a>
+    </main>
+</body>
+
+</html>
