@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'font';
+}
+
+main{
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 99%;
+    height: 30%;
+    padding: 20px;
+    gap: 80px;
+    animation: fadeIn 7.0s ease forwards;
+}
+
+nav img{
+    width: 60px;
+    height: 4%;
+}
+
+nav p{
+    width: 11%;
+    font-size: 30px; 
+    color: gold;
+}
+
+.share{
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    justify-content: space-between;
+}
+
+.share img{
+    width:  40px;
+    cursor: pointer;
+}
+
+.share p{
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    font-size: 32px;
+}
+
+main{
+    display: flex;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(67deg, #EFEFEF, #afcfeb);
+    box-shadow:  18px 18px 49px #939393,
+                 -3px -3px 49px #ffffff;
+    border-radius: 10px;
+    animation: flipInY 2.0s ease forwards;
+    animation-delay: 0.5s;
+    color:#f8f8f8;
+}
+
+figure{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+    10px 10px 30px rgba(0, 0, 0, 0.2), 
+    -10px -10px 30px rgba(255, 255, 255, 0.8), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.1), 
+    inset -5px -5px 15px rgba(255, 255, 255, 0.5);
+border-radius: 15px;
+border: 2px solid #ddeff2;
+}
+
+figure img{
+    height: 80%;
+    width: 60%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    padding: 30px;
+    justify-content: space-between;
+    box-shadow: 
+    10px 10px 30px rgba(0, 0, 0, 0.2), 
+    -10px -10px 30px rgba(255, 255, 255, 0.8), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.1), 
+    inset -5px -5px 15px rgba(255, 255, 255, 0.5);
+border-radius: 15px;
+border: 2px solid #ddeff2;  
+}
+
+.preco1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 30px;
+    padding: 10px;
+}
+
+button{
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover {
+    background: linear-gradient(67deg, #50ffe8, #2e75b4);
+    box-shadow: rgba(91, 85, 255, 0.7) 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+.opcoes div{
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    background-color: #2e75b4;
+    padding: 30px;
+    box-shadow: 
+    10px 10px 30px rgba(0, 0, 0, 0.2), 
+    -10px -10px 30px rgba(255, 255, 255, 0.8), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.1), 
+    inset -5px -5px 15px rgba(255, 255, 255, 0.5);
+border-radius: 15px;
+border: 2px solid #ddeff2;
+animation: fadeIn 7.0s ease forwards;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+}
+
+header input[type="button"]{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.descricao,.tecnico{
+    text-align: center;
+    font-size: 25px;
+    color: wheat;
+}
+
+@keyframes flipInY {
+    0% {
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: perspective(400px) rotateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
