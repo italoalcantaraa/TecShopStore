@@ -10,6 +10,7 @@
   <link rel="icon" href="/public/src/assets/images/LogoIcon.png" type="image/x-icon">
   <script src='index.js'></script>
   <script src='../../plugin/components.js'></script>
+  <script src="../../script/ProductObj.js"></script>
 </head>
 
 <body>
@@ -79,119 +80,137 @@
   </div>
 
   <div class="produtos-grid">
-    <div class="produto">
+    <div class="produto" id="1" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/INTEL _CORE I9.png" alt="Produto 1">
       </div>
       <h2>PROCESSADOR INTEL CORE I9</h2>
-      <h3 class="preco">R$2.974,00</h3>
+      <h3 class="preco1">R$2.974,00</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="2" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/AMD_Ryzen_7.png" alt="Produto 2">
       </div>
       <h2>AMD RYZEN 7 5700X 8-CORE</h2>
-      <h3 class="preco">R$1.000,00</h3>
-      <h3 class="preco">R$1.125,30</h3>
+      <h3 class="preco1">R$1.000,00</h3>
+      <h3 class="preco2">R$1.125,30</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="3" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Amd_Ryzen_Pro.png" alt="Produto 3">
       </div>
       <h2>PROCESSADOR AMD RYZEN THREADRIPPER PRO</h2>
-      <h3 class="preco">R$55.999,99</h3>
+      <h3 class="preco1">R$55.999,99</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="4" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/RTX 4060 8GB.png" alt="Produto 4">
       </div>
       <h2>PLACA DE VIDEO RTX 4060 8GB</h2>
-      <h3 class="preco">R$2.397,90</h3>
+      <h3 class="preco1">R$2.397,90</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="5" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/SSD, Kingston.png" alt="Produto 5">
       </div>
       <h2>SSD, KINGSTON 960G</h2>
-      <h3 class="preco">R$410,00</h3>
+      <h3 class="preco1">R$410,00</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="6" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Kingston Memória 16GB.png" alt="Produto 6">
       </div>
       <h2>KINGSTON MEMÓRIA DE COMPUTADOR FURY BEAST RGB 16GB</h2>
-      <h3 class="preco">R$340,00</h3>
+      <h3 class="preco1">R$340,00</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="7" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Corsair 32GB (2 x 16GB).png" alt="Produto 7">
       </div>
       <h2>CORSAIR VENGEANCE RGB PRO DDR4 32GB (2 x 16GB)</h2>
-      <h3 class="preco">R$699,00</h3>
-      <h3 class="preco">R$799,00</h3>
+      <h3 class="preco1">R$699,00</h3>
+      <h3 class="preco2">R$799,00</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="8" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Gabinete Gamer.png" alt="Produto 8">
       </div>
       <h2>GABINETE GAMER REDRAGON WIDELOAD PRO</h2>
-      <h3 class="preco">R$465,45</h3>
+      <h3 class="preco1">R$465,45</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="9" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/GABINETE GAMER K-MEX.png" alt="Produto 9">
       </div>
       <h2>GABINETE GAMER K-MEX AQUARIO MICRO ATX POSEIDON WHITE CG</h2>
-      <h3 class="preco">R$319,49</h3>
+      <h3 class="preco1">R$319,49</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="10" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Teclado Mecânico Gamer.png" alt="Produto 10">
       </div>
       <h2>TECLADO MECÂNICO GAMER REDRAGON KUMARA PRO RGB</h2>
-      <h3 class="preco">R$304,95</h3>
+      <h3 class="preco1">R$304,95</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="11" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Teclado_mk2.png" alt="Produto 10">
       </div>
       <h2>TECLADO MECANICO GAMER MANCER SHADE MK2 RGB</h2>
-      <h3 class="preco">R$164,90</h3>
+      <h3 class="preco1">R$164,90</h3>
       <button class="botao">COMPRAR</button>
     </div>
 
-    <div class="produto">
+    <div class="produto" id="12" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Placa_de_Vídeo_Quadro_A800.png" alt="Produto 11">
       </div>
       <h2>PLACA DE VÍDEO QUADRO A800 PNY NVIDIA</h2>
-      <h3 class="preco">R$89.999,99</h3>
+      <h3 class="preco1">R$89.999,99</h3>
       <button class="botao">COMPRAR</button>
     </div>
   </div>
 
   <div id="footer"></div>
 </body>
+
+<script>
+  function EnvioProduto(element){
+  const id = element.getAttribute('id');
+  const image = element.querySelector('.imgProduto img')
+  const nomeP = element.querySelector('h2')
+  const preco1 = element.querySelector('.preco1')
+  const preco2 = element.querySelector('.preco2') || null
+
+  // Criando o objeto produto e salvando no localStorage
+  const product = Produto(id, image, nomeP, preco1, preco2)
+  localStorage.setItem('produto', JSON.stringify(product))
+
+  // Redireciona para a próxima página
+  window.location.href = "../product/product.html";
+  }
+</script>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     CarregarComponente('../../components/footer/footer.html', 'footer'); // Chama a função após o carregamento do DOM

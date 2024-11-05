@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <nav>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F318%2F793%2Fpng-transparent-amd-logo-logos-logos-and-brands-icon.png&f=1&nofb=1&ipt=16bc6ee85242e22d5bc168df2f06ddcccf706db787b32ef0759ab319892eb0ad&ipo=images" alt="logo">
+
+        <p>&#9733; &#9733; &#9733; &#9733; &#9734;</p>
+
+        <div class="share">
+            <p onclick="favoritar()">&#9825;</p> <!-- &#10084; -->
+            <img src="../../assets/icons/share-svgrepo-com.svg" alt="">
+        </div>
+    </nav>
+
+    <main>
+
+        <figure class="imgProduto">
+            <img src="" alt="product">
+         </figure>
+
+        <section class="body">
+
+            <div class="nome">
+                <h2></h2>
+            </div>
+
+            <div class="preco1">
+                <h3 id="preco1"></h3>
+                <button>COMPRA</button>
+            </div>
+
+            <div class="opcoes">
+                <div>
+                    <p>12X VEZES de <span id="p"></span> SEM JUROS</p>
+                    <p>UM X VEZEN COM 2% OFF</p>
+                </div>
+
+                <button>CARRINHO</button>
+            </div>
+
+            <div class="promocao">
+                <p></p>
+            </div>
+        </section>
+    </main>
+
+    <article>
+       <header>
+            <input type="button" value="[Descrição do produto]">
+            <input type="button" value="[Informações Técnicas]">
+       </header>
+
+       <footer>
+        <div class="descricao">
+            <p></p>
+        </div>
+
+        <div class="tecnico">
+            <p></p>
+        </div>
+       </footer>
+    </article>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    // Recupere o produto do localStorage
+    const produto = JSON.parse(localStorage.getItem('produto'));
+
+    if (produto) {
+
+        produto.descricaoProduto = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
+        produto.InformacoesTecnica = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
+
+        document.querySelector('.imgProduto img').src = produto.Image;
+        document.querySelector('.nome h2').innerText = produto.NomeProduto;
+        document.querySelector('#preco1').innerText = produto.preco;
+        document.querySelector('.descricao p').innerText = produto.descricaoProduto;
+        document.querySelector('.tecnico p').innerText = produto.InformacoesTecnica;
+
+        // Cálculo do valor parcelado
+        const precoFloat = parseFloat(produto.preco.replace('R$', '').replace('.', '').replace(',', '.'));
+        const parcelado = (precoFloat / 12).toFixed(2).replace('.', ',');
+
+        // Exibe o valor parcelado
+        document.querySelector('#p').innerText = parcelado;
+    } else {
+        console.log("ERRO (>_<)");
+    }
+});
+
+function favoritar(){
+    const coracao = document.querySelector('.share p');
+                coracao.addEventListener("click", () => {
+                    // Use os caracteres diretamente
+                    if (coracao.innerText === '♡') { // Coração vazio
+                        coracao.innerText = '❤'; // Muda para coração cheio
+                    } else {
+                        coracao.innerText = '♡'; // Muda para coração vazio
+                    }
+                });
+}
+    </script>
+
+</body>
+</html>
