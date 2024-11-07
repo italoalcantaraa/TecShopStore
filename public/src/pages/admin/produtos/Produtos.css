@@ -95,7 +95,7 @@ section:nth-child(1) {
     background-color: #125671;
     cursor: pointer;
     transition: 0.3s;
-    
+    min-width: 575px;
 }
 
 .product:hover{
