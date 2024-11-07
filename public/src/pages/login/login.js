@@ -1,3 +1,4 @@
+// Função para iniciar a sessão com o usuário logado
 function toEnter() {
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -8,6 +9,7 @@ function toEnter() {
     }       
 }
 
+// função para validar os campos
 function validateFields(email, password) {
     
     // Validação dos dados (email e senha)
@@ -17,3 +19,10 @@ function validateFields(email, password) {
     }
     return true;
 }
+
+// Efeitos
+window.sr=ScrollReveal({reset:true});
+sr.reveal('img',{duration:1500});
+sr.reveal('#form',{duration:2000});
+sr.reveal('#form2',{duration:3000});
+sr.reveal('#confirm',{duration:4000});

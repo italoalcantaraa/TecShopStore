@@ -10,11 +10,19 @@
     src: url('../../assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf');
 }
 
+html{
+    height: 100%;
+}
+
 a{
     text-decoration: none;
     color: black;
 }
 
+#erro{
+    visibility: hidden;
+    color: red;
+}
 
 body {
     background-color: #EFEFEF;
