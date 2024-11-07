@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
 
 #sucess{
     display: none;
@@ -19,6 +22,10 @@
 #login-senha{
     display: none;
     color: red;
+}
+
+#form, #confirm{
+    visibility: hidden;
 }
 
 @font-face {
