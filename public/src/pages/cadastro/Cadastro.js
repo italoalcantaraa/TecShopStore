@@ -36,8 +36,7 @@ function register() {
             /* Converte o usersList da localStorage 
             em objeto para armazenar no array */
             users = JSON.parse(localStorage.getItem('usersList'));
-
-        // Cria um objeto da classe User    
+    
         let user = new User(name, email, password);
 
         // Insere o objeto user no array
@@ -49,8 +48,12 @@ function register() {
     } else {
         /* Caso identifique algum erro, lança uma resposta
          indicando o erro ocorrido */
+       
         errorMessage.innerHTML = error;
-        errorMessage.style = "visibility: visible;";
+        errorMessage.style = "visibility: visible; top: 0px;";
+        setTimeout(() => {  
+            errorMessage.style = window.getComputedStyle(errorMessage);    
+        }, 3000);
     }
 }
     
@@ -59,7 +62,6 @@ function userExist(email) {
     
     let value = false
 
-    // Percorre todos os usuários e verifica se o mesmo já se encontra no array
     users.forEach(element => {
         // Retorna true caso o email já exista
         if (element.email == email){
