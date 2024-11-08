@@ -46,12 +46,10 @@ body {
 }
 
 .pes button {
-    background-color: #125671;
-    color: white;
+    background: none;
     border: none;
-    border-radius: 5px;
-    box-shadow: -2px 2px 5px 0px #838383;
-    transition: 0.3s;
+    padding: 1px;
+    cursor: pointer;
 }
 
 .pes button:hover {
@@ -64,14 +62,10 @@ body {
 }
 
 .carrinho{
-    background-color: #125671;
-    color: white;
+    background: none;
     border: none;
-    border-radius: 5px;
-    box-shadow: -2px 2px 5px 0px #838383;
-    transition: 0.3s;
-    width: 10%;
-    padding: 8px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .carrinho:hover{
@@ -91,21 +85,20 @@ body {
 
 .popup-conteudo {
     background-color: white;
-    padding: 100px;
-    margin: 10px 0 10px 910px;
+    margin: 0.5% 0 0.5% 67%;
     border-radius: 8px;
-    width: 450px;
+    width: 33%;
     max-width: 100%;
 }
 
 .fechar {
-    position: absolute;
-    top: 45px;
-    right: 260px;
+    position: static;
+    padding: 5%;
+    top: 8%;
+    right: 15%;
     font-size: 20px;
     gap: 10px;
     display: flex;
-    justify-content: space-between;
     font-weight: bold;
     cursor: pointer;
 }
@@ -129,8 +122,8 @@ body {
     box-shadow: -2px 2px 5px 0px #838383;
     transition: 0.3s;
     width: 50%;
-    padding: 10px;
-    margin:0 1px 0 63px;
+    padding: 2%;
+    margin:0 0 0 118px;
 }
 
 .car:hover {

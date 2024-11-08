@@ -14,15 +14,20 @@
 </head>
 
 <body>
+
   <header class="header-container">
-    <div class="logo">
-      <img src="../../assets/images/logoP1.png" alt="">
-    </div>
+    <a href="../Home/Home.html">
+      <div class="logo">
+        <img src="../../assets/images/logoP1.png" alt="">
+      </div>
+    </a>
 
     <div class="busca">
       <div class="pes">
         <input type="text" , placeholder="Barra de Pesquisa">
-        <button>Buscar</button>
+        <button>
+          <img src="../../assets/icons/search.png">
+        </button>
       </div>
     </div>
 
@@ -37,13 +42,17 @@
 
     </div>
 
-    <button class="carrinho" onclick="abrirPopup()">Carrinho</button>
+    <button class="carrinho" onclick="abrirPopup()">
+      <img src="../../assets/icons/shopping-cart.png">
+    </button>
 
     <div id="meuPopup" class="popup">
       <div class="popup-conteudo">
         <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
         <h2>Seu carrinho está vazio</h2>
-        <button class="car">COMPRAR</button>
+        <a href="../Home/Home.html">
+          <button class="car">COMPRAR</button>
+        </a>
       </div>
     </div>
 
@@ -195,19 +204,19 @@
 </body>
 
 <script>
-  function EnvioProduto(element){
-  const id = element.getAttribute('id');
-  const image = element.querySelector('.imgProduto img')
-  const nomeP = element.querySelector('h2')
-  const preco1 = element.querySelector('.preco1')
-  const preco2 = element.querySelector('.preco2') || null
+  function EnvioProduto(element) {
+    const id = element.getAttribute('id');
+    const image = element.querySelector('.imgProduto img')
+    const nomeP = element.querySelector('h2')
+    const preco1 = element.querySelector('.preco1')
+    const preco2 = element.querySelector('.preco2') || null
 
-  // Criando o objeto produto e salvando no localStorage
-  const product = Produto(id, image, nomeP, preco1, preco2)
-  localStorage.setItem('produto', JSON.stringify(product))
+    // Criando o objeto produto e salvando no localStorage
+    const product = Produto(id, image, nomeP, preco1, preco2)
+    localStorage.setItem('produto', JSON.stringify(product))
 
-  // Redireciona para a próxima página
-  window.location.href = "../product/product.html";
+    // Redireciona para a próxima página
+    window.location.href = "../product/product.html";
   }
 </script>
 

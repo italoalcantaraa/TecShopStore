@@ -14,39 +14,45 @@
 <body>
 
     <header class="header-container">
-        <div class="logo">
-            <img src="../../assets/images/logoP1.png" alt="">
-        </div>
+        <a href="../Home/Home.html">
+            <div class="logo">
+                <img src="../../assets/images/logoP1.png" alt="">
+            </div>
+        </a>
 
         <div class="busca">
             <div class="pes">
-                <input type="text" , placeholder="Barra de Pesquisa">
-                <button>Buscar</button>
+              <input type="text" , placeholder="Barra de Pesquisa">
+              <button>
+                <img src="../../assets/icons/search.png">
+              </button>
             </div>
-        </div>
-
-        <div class="icon">
+          </div>
+      
+          <div class="icon">
             <img src="../../assets/images/user-svgrepo-com.svg">
-
+      
             <p>
-                <a class="login" href="">Entrar</a>
-                ou
-                <a class="login" href="">Cadastra-se</a>
+              <a class="login" href="">Entrar</a>
+              ou
+              <a class="login" href="">Cadastra-se</a>
             </p>
+      
+          </div>
 
-        </div>
-
-        <button class="carrinho" onclick="abrirPopup()">Carrinho</button>
-
-        <div id="meuPopup" class="popup">
+          <button class="carrinho" onclick="abrirPopup()">
+            <img src="../../assets/icons/shopping-cart.png">
+          </button>
+      
+          <div id="meuPopup" class="popup">
             <div class="popup-conteudo">
-                <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
-                <h2>Seu carrinho está vazio</h2>
+              <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
+              <h2>Seu carrinho está vazio</h2>
+              <a href="../Home/Home.html">
                 <button class="car">COMPRAR</button>
+              </a>
             </div>
-        </div>
-
-
+          </div>
 
     </header>
 
