@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="product.css">
+    <script src="../../plugin/notify.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.11.2/Toastify.min.css"> <!-- Link para Toastify -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.11.2/Toastify.min.js"></script> <!-- Script para Toastify -->
+</head>
 </head>
 <body>
     <nav>
@@ -14,7 +18,7 @@
 
         <div class="share">
             <p onclick="favoritar()">&#9825;</p> <!-- &#10084; -->
-            <img src="../../assets/icons/share-svgrepo-com.svg" alt="">
+            <img onclick="compartinhar()" src="../../assets/icons/share-svgrepo-com.svg" alt="">
         </div>
     </nav>
 
@@ -104,6 +108,21 @@ function favoritar(){
                         coracao.innerText = '♡'; // Muda para coração vazio
                     }
                 });
+}
+
+function compartinhar() {
+    const button = document.querySelector('.share img')
+
+    button.addEventListener("click", () => {
+        const link = window.location.href
+        navigator.clipboard.writeText(link)
+        .then(() => {
+            NotifySuccess("Link copiada com Sucesso 👍") //NÃO FUNCIONA :(
+        })
+        .catch(err => {
+                            console.error('Erro ao copiar o link: ', err);
+                        });
+    })
 }
     </script>
 

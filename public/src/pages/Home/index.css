@@ -37,6 +37,7 @@ body {
     border-radius: 5px;
     color: black;
     box-shadow: -2px 2px 5px 0px #838383;
+    width: 100%;
 }
 
 .pes {
@@ -85,7 +86,12 @@ body {
 
 .popup-conteudo {
     background-color: white;
+<<<<<<< HEAD
     margin: 0.5% 0 0.5% 67%;
+=======
+    padding: 100px;
+    margin: 0.5% 0 1% 70.5%;
+>>>>>>> 5941605b4d93a2c071851363b47ae813081798e1
     border-radius: 8px;
     width: 33%;
     max-width: 100%;
