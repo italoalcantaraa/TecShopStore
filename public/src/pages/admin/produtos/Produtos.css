@@ -12,13 +12,53 @@
 body{
     display: flex;
     background: #EFEFEF;
+    gap: 30px;
 }
 
-#menu{
-    width: 25%;
-    max-width: 450px;
-    min-width: 200px;
+.popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 999;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
 }
+
+
+.popup div{
+    display: flex;
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.popup div.informacoes{
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.popup img{
+    width: 200px;
+}
+
+#overlay{
+    visibility: visible;
+    position: fixed;
+    z-index: 998;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.details{
+    z-index: 999;
+}
+
 
 .crud-products{
     margin: 0 auto;
