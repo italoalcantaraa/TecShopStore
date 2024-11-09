@@ -29,33 +29,34 @@ body {
     width: 130px;
 }
 
-.busca .pes>input {
-    outline: none;
-    padding: 6px 12px;
-    padding-right: 300px;
+.search img{
+    width: 30px;
+    cursor: pointer;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 12px 20px;
+    width: 40%;
+    min-width: 200px;
+    min-width: 400px;
+    border-radius: 10px;
+}
+
+.search input{
+    font-size: 20px;
     border: none;
-    border-radius: 5px;
-    color: black;
-    box-shadow: -2px 2px 5px 0px #838383;
+    outline: none;
     width: 100%;
 }
 
-.pes {
-    display: flex;
-    gap: 10px;
-
+.icon {
+    background-color: #011526;
+    min-width: 139px;
 }
 
-.pes button {
-    background: none;
-    border: none;
-    padding: 1px;
-    cursor: pointer;
-}
-
-.pes button:hover {
-    opacity: 80%;
-}
 
 .header-container p, a {
     color: black;
@@ -75,6 +76,7 @@ body {
 
 .popup {
     display: none;
+    justify-content: flex-end;
     position: fixed;
     top: 0;
     left: 0;
@@ -86,12 +88,9 @@ body {
 
 .popup-conteudo {
     background-color: white;
-    margin: 0.5% 0 0.5% 67%;
-    padding: 100px;
-    margin: 0.5% 0 1% 70.5%;
     border-radius: 8px;
     width: 33%;
-    max-width: 100%;
+    min-width: 375px;
 }
 
 .fechar {
@@ -106,28 +105,38 @@ body {
     cursor: pointer;
 }
 
+.teste{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 50%;
+}
+
 .fechar p {
     color: #125671;
 }
 
 .popup h2 {
     text-align: center;
-    margin: 150px 0 0 0;
+    
     line-height: 2.5;
-    min-width: 300px;
 }
 
 .car {
+    text-align: center;
     background-color: #125671;
     color: white;
     border: none;
     border-radius: 5px;
     box-shadow: -2px 2px 5px 0px #838383;
     transition: 0.3s;
-    width: 50%;
-    padding: 2%;
-    margin:0 0 0 118px;
+    padding: 12px 40px;
+    display: flex;
+    margin: 0 auto;
+    font-size: 23px;
+    
 }
+
 
 .car:hover {
     opacity: 80%;
@@ -298,6 +307,7 @@ body {
 }
 
 .botao {
+    
     color: white;
     background-color: #125671;
     border: none;
@@ -312,4 +322,9 @@ body {
 .botao:hover {
     width: 95%;
     opacity: 80%;
+}
+
+
+@media (max-width: 500px) {
+    
 }

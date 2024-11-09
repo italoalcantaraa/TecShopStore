@@ -4,20 +4,33 @@ function toEnter() {
     let password = document.getElementById("password").value;
 
     // Redireciona para a página home caso o retorna da função seja verdadeira
-    if(validateFields(email, password)){
-        window.location.href = "http://127.0.0.1:5501/public/src/pages/Home/Home.html";
-    }       
+    if(validateFields(email, password))
+        window.location.href = "../Home/Home.html";
+    else 
+        console.log("Login e/ou senha inválidos.")
 }
+
+
+let users = [];
 
 // função para validar os campos
 function validateFields(email, password) {
+    let value = false;
     
-    // Validação dos dados (email e senha)
-    if(email != "italo" || password != "123"){
-        document.getElementById("login-senha").style = "display: flex;";
-        return false;
+    
+    if(localStorage.usersList) {
+        users = JSON.parse(localStorage.getItem('usersList'));
+
+        users.forEach(element => {
+            if(element.email = email && element.password == password) {
+                console.log("Opa")
+                value = true;
+                return;
+            }
+        })
     }
-    return true;
+
+    return value;
 }
 
 // Efeitos

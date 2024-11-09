@@ -7,7 +7,7 @@
   <title>Tecshop</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
-  <link rel="icon" href="/public/src/assets/images/LogoIcon.png" type="image/x-icon">
+  <link rel="icon" href="../../assets/images/LogoIcon.png" type="image/x-icon">
   <script src='index.js'></script>
   <script src='../../plugin/components.js'></script>
   <script src="../../script/ProductObj.js"></script>
@@ -22,14 +22,10 @@
       </div>
     </a>
 
-    <div class="busca">
-      <div class="pes">
-        <input type="text" , placeholder="Barra de Pesquisa">
-        <button>
-          <img src="../../assets/icons/search.png">
-        </button>
-      </div>
-    </div>
+    <div class="search">
+      <input placeholder="Nome do produto" type="text">
+      <img src="../../assets/images/adm/search.svg" alt="">
+  </div>
 
     <div class="icon">
       <img src="../../assets/images/user-svgrepo-com.svg">
@@ -49,10 +45,14 @@
     <div id="meuPopup" class="popup">
       <div class="popup-conteudo">
         <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
-        <h2>Seu carrinho está vazio</h2>
-        <a href="../Home/Home.html">
-          <button class="car">COMPRAR</button>
-        </a>
+          
+        <div class="teste">
+          <h2>Seu carrinho está vazio</h2>  
+          <a href="../Home/Home.html">
+            <button class="car">COMPRAR</button>
+          </a>
+  
+        </div>
       </div>
     </div>
 

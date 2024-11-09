@@ -60,7 +60,7 @@ function register() {
         message.style = window.getComputedStyle(message);
 
         if(!error) 
-            window.location.href = "http://127.0.0.1:5501/public/src/pages/Home/Home.html";
+            window.location.href = "../Home/Home.html";
             
     }, 1000);
 }
