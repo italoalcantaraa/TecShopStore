@@ -9,50 +9,51 @@
     <link rel='stylesheet' type='text/css' media='screen' href='quem.css'>
     <link rel="icon" href="../Img/LogoIcon.png" type="image/x-icon">
     <script src='quem.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
 
-    <header class="header-container">
-        <a href="../Home/Home.html">
-            <div class="logo">
-                <img src="../../assets/images/logoP1.png" alt="">
-            </div>
-        </a>
+  <header class="header-container">
+    <a href="../Home/Home.html">
+      <div class="logo">
+        <img src="../../assets/images/logoP1.png" alt="">
+      </div>
+    </a>
 
-        <div class="busca">
-            <div class="pes">
-              <input type="text" , placeholder="Barra de Pesquisa">
-              <button>
-                <img src="../../assets/icons/search.png">
-              </button>
-            </div>
-          </div>
-      
-          <div class="icon">
-            <img src="../../assets/images/user-svgrepo-com.svg">
-      
-            <p>
-              <a class="login" href="">Entrar</a>
-              ou
-              <a class="login" href="">Cadastra-se</a>
-            </p>
-      
-          </div>
+    <div class="search">
+      <input placeholder="Nome do produto" type="text">
+      <img src="../../assets/images/adm/search.svg" alt="">
+  </div>
 
-          <button class="carrinho" onclick="abrirPopup()">
-            <img src="../../assets/icons/shopping-cart.png">
-          </button>
-      
-          <div id="meuPopup" class="popup">
-            <div class="popup-conteudo">
-              <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
-              <h2>Seu carrinho está vazio</h2>
-              <a href="../Home/Home.html">
-                <button class="car">COMPRAR</button>
-              </a>
-            </div>
-          </div>
+    <div class="icon">
+      <img src="../../assets/images/user-svgrepo-com.svg">
+
+      <p>
+        <a class="login" href="">Entrar</a>
+        ou
+        <a class="login" href="">Cadastre-se</a>
+      </p>
+
+    </div>
+
+    <button class="carrinho" onclick="abrirPopup()">
+      <img src="../../assets/icons/shopping-cart.png">
+    </button>
+
+    <div id="meuPopup" class="popup">
+      <div class="popup-conteudo">
+        <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
+          
+        <div class="teste">
+          <h2>Seu carrinho está vazio</h2>  
+          <a href="../Home/Home.html">
+            <button class="car">COMPRAR</button>
+          </a>
+  
+        </div>
+      </div>
+    </div>
 
     </header>
 
@@ -64,7 +65,7 @@
         </div>
 
         <div class="text">
-            <p>
+            <p class="animate__animated animate__fadeInUp">
                 Bem-vindo à Tecshop, a sua loja de confiança para componentes de computador de alta qualidade.
                 Somos apaixonados por tecnologia e dedicados a oferecer os melhores produtos e soluções para quem,
                 assim como nós, valoriza o desempenho e a inovação.

@@ -15,7 +15,7 @@ function register() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    let errorMessage = document.getElementById('erro');
+    let message = document.getElementById('erro');
 
     let error = null;
 
@@ -25,10 +25,10 @@ function register() {
     else if (email == null || email == "")
         error = "Informe o e-mail";
     else if (password <= 3)
-        error = "A senha deve ter no mínimo 4 caracters";
+        error = "A senha deve ter no mínimo 4 caracteres";
     else if(userExist(email))
         error = "Usuário já existe";
-    
+        
     // Verifica se houve erros 
     if (error == null) {
         // Verifica se usersList já existe no localStorage 
@@ -45,30 +45,49 @@ function register() {
         /* Converte os dados da do array em JSON
          para armazelá-los na localStorage*/
         localStorage.usersList = JSON.stringify(users);
+
+        message.innerHTML = "Cadastro realizado com sucesso!";
+        message.style = "visibility: visible; top: 0px; background: rgb(0, 255, 0)";
     } else {
         /* Caso identifique algum erro, lança uma resposta
          indicando o erro ocorrido */
        
-        errorMessage.innerHTML = error;
-        errorMessage.style = "visibility: visible; top: 0px;";
-        setTimeout(() => {  
-            errorMessage.style = window.getComputedStyle(errorMessage);    
-        }, 3000);
+        message.innerHTML = error;
+        message.style = "visibility: visible; top: 0px; background: red";
     }
+
+    setTimeout(() => {  
+        message.style = window.getComputedStyle(message);
+
+        if(!error) 
+            window.location.href = "../Home/Home.html";
+            
+    }, 1000);
 }
     
+
 // Função para verificar se o usuário já existe
 function userExist(email) {
-    
-    let value = false
+    let value = false;
 
-    users.forEach(element => {
-        // Retorna true caso o email já exista
-        if (element.email == email){
-            value = true;
-            return;
-        }           
-    });
+    // Vefifica se há usuários na localStorage
+    if(localStorage.usersList) {
+
+        // Converte os elementos da localStorage em objetos
+        let listaUsers = JSON.parse(localStorage.getItem('usersList'));
+        
+        if(listaUsers[0].nome != "") {
+            listaUsers.forEach(element => {
+                
+                // Retorna true caso o email já exista
+                if(element.email == email){
+                    value = true;
+                    return;
+                }
+            });
+        }
+    }
+
     return value;
 }
 

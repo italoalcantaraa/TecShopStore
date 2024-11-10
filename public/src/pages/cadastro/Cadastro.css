@@ -30,14 +30,14 @@ a{
     font-size: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 25px;
+    padding: 20px;
     width: 20%;
-    background-color: red;
     top: -100px;
+    visibility: hidden;
     position: absolute;
     transition: all 0.4s;
-    visibility: hidden;
 }
+
 
 body {
     background-color: #EFEFEF;
