@@ -1,19 +1,20 @@
 
-class Produto{
-    constructor(img, nome, preco) {
-      this.img = img;
-      this.nome = nome;
-      this.preco = preco;
-    }
+class Produto {
+  constructor(img, nome, preco) {
+    this.img = img;
+    this.nome = nome;
+    this.preco = preco;
+  }
 }
 
-var produtosCarrinho = [];
+var arrayProdutoCarrinho = [];
 
 
 function abrirPopup() {
   document.getElementById("meuPopup").style.display = "flex";
   document.body.classList.add("bloqueado");
 
+  verificaProdutosCarrinho();
 }
 
 function fecharPopup() {
@@ -32,21 +33,40 @@ function addCarrinho() {
   let price = document.getElementById('preco').innerHTML;
   let img = document.querySelector('#img');
   let urlImg = img.src;
-  
+
   let produto = new Produto(urlImg, title, price);
 
-  produtosCarrinho.push(produto);
+  if (localStorage.produtoCarrinho)
+    arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
 
-  produtosCarrinho.forEach(element => {
-    console.log(element);
-  });
+  arrayProdutoCarrinho.push(produto);
 
+  localStorage.produtoCarrinho = JSON.stringify(arrayProdutoCarrinho);
 }
 
 
+function verificaProdutosCarrinho() {
+  const classProdutoItem = document.getElementById('produto-item');
 
 
+  arrayProdutoCarrinho.forEach(element => {
+    const produtoHTML = `
+    <div class="produtoPopup">
+            <img id="produto" src="${element.img}">
+            <strong>${element.nome}</strong>
+            <p>R$${element.preco}</p>
+            <p>1</p>
+            <button>
+              <img src="../../assets/icons/trash.png">
+            </button>
+          </div>
+      </div>`
 
+    classProdutoItem.innerHTML += produtoHTML;
+
+  });
+
+}
 
 
 
