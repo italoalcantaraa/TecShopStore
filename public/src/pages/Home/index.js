@@ -9,18 +9,18 @@ class Produto{
 
 var produtosCarrinho = [];
 
-
+// função para abrir o popup
 function abrirPopup() {
   document.getElementById("meuPopup").style.display = "flex";
   document.body.classList.add("bloqueado");
 
 }
-
+// função para fechar o popup
 function fecharPopup() {
   document.getElementById("meuPopup").style.display = "none";
   document.body.classList.remove("bloqueado");
 }
-
+// função para abrir as opções de categorias 
 function toggleDropdown() {
   var dropdown = document.getElementById("dropdown");
   dropdown.classList.toggle("show");

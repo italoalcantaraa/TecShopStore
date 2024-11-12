@@ -15,6 +15,7 @@
 
 <body>
 
+  <!-- Logo do inicio da página -->
   <header class="header-container">
     <a href="../Home/Home.html">
       <div class="logo">
@@ -22,30 +23,36 @@
       </div>
     </a>
 
+    <!-- Barra de pesquisa -->
     <div class="search">
       <input placeholder="Nome do produto" type="text">
       <img src="../../assets/images/adm/search.svg" alt="">
     </div>
 
+    <!-- Icone e botão de login -->
     <div class="icon">
       <img src="../../assets/images/user-svgrepo-com.svg">
-
       <p>
         <a class="login" href="">Entrar</a>
         ou
         <a class="login" href="">Cadastre-se</a>
       </p>
-
     </div>
 
+    <!-- Popup com carrinho de produtos e botão de abrir -->
     <button class="carrinho" onclick="abrirPopup()">
       <img src="../../assets/icons/shopping-cart.png">
     </button>
 
+    <!-- Opção para fechar o popup -->
     <div id="meuPopup" class="popup">
       <div class="popup-conteudo">
-        <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
+        <span class="fechar" onclick="fecharPopup()">
+          &times;
+          <p>MEU CARRINHO</p>
+        </span>
 
+        <!-- Carrinho com protudos -->
         <div class="container_produtos">
 
           <div class="infoPopup">
@@ -55,8 +62,6 @@
               <p>Quantidade</p>
             </div>
           </div>
-
-          
 
           <div class="produtoPopup">
             <img id="produto" src="../../assets/images/produtos/INTEL _CORE I9.png">
@@ -68,27 +73,28 @@
             </button>
           </div>
         </div>
-      
-          <button class="botaoCarrinho" type="button">Finalizar Compra</button>
 
+        <button class="botaoCarrinho" type="button">Finalizar Compra</button>
 
+        <!-- Opção quando o carrinho estiver vazio -->
         <!-- <div class="carrinhoVazio">
           <h2>Seu carrinho está vazio</h2>
           <a href="../Home/Home.html">
             <button class="car">COMPRAR</button>
           </a>
-
         </div> -->
       </div>
     </div>
-
-
-
   </header>
 
+  <!-- Categorias de produtos -->
   <div class="categorias">
 
-    <a class="menu-item" href="javascript:void(0);" onclick="toggleDropdown()">DEPARTAMENTOS</a>
+    <a class="menu-item" 
+       href="javascript:void(0);" 
+       onclick="toggleDropdown()">
+      DEPARTAMENTOS
+    </a>
 
     <div id="dropdown" class="dropdown-content">
       <a href="">GABINETE</a>
@@ -106,28 +112,34 @@
     <a class="menu-item" href="../Quem somos/quem.html">QUEM SOMOS ?</a>
   </div>
 
+  <!-- Carrosel de imagens -->
   <div class="carrossel">
 
   </div>
+
+  <!-- Paginas com s produtos mais vendidos -->
   <div class="title">
     <div id="barra-reta"></div>
     <h2>Mais Vendidos</h2>
   </div>
 
+  <!-- Grid com os produtos -->
   <div class="produtos-grid">
     <div class="produto" id="1" onclick="EnvioProduto(this)">
       <div class="imgProduto">
         <img id="img" src="../../assets/images/produtos/INTEL _CORE I9.png" alt="Produto 1">
       </div>
-      <h2 id="title" >PROCESSADOR INTEL CORE I9</h2>
+
+      <h2 id="title">PROCESSADOR INTEL CORE I9</h2>
       <h3 id="preco" class="preco1">R$2.974,00</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
           <button id="button-carrinho" onclick="addCarrinho()">
             <img src="../../assets/icons/shopping-cart-add.png">
           </button>
-          </div>
+        </div>
       </div>
     </div>
 
@@ -135,9 +147,11 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/AMD_Ryzen_7.png" alt="Produto 2">
       </div>
+
       <h2>AMD RYZEN 7 5700X 8-CORE</h2>
       <h3 class="preco1">R$1.000,00</h3>
       <h3 class="preco2">R$1.125,30</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -152,8 +166,10 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Amd_Ryzen_Pro.png" alt="Produto 3">
       </div>
+
       <h2>PROCESSADOR AMD RYZEN THREADRIPPER PRO</h2>
       <h3 class="preco1">R$55.999,99</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -168,8 +184,10 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/RTX 4060 8GB.png" alt="Produto 4">
       </div>
+
       <h2>PLACA DE VIDEO RTX 4060 8GB</h2>
       <h3 class="preco1">R$2.397,90</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -184,8 +202,10 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/SSD, Kingston.png" alt="Produto 5">
       </div>
+
       <h2>SSD, KINGSTON 960G</h2>
       <h3 class="preco1">R$410,00</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -200,8 +220,10 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Kingston Memória 16GB.png" alt="Produto 6">
       </div>
+
       <h2>KINGSTON MEMÓRIA DE COMPUTADOR FURY BEAST RGB 16GB</h2>
       <h3 class="preco1">R$340,00</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -216,9 +238,11 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Corsair 32GB (2 x 16GB).png" alt="Produto 7">
       </div>
+
       <h2>CORSAIR VENGEANCE RGB PRO DDR4 32GB (2 x 16GB)</h2>
       <h3 class="preco1">R$699,00</h3>
       <h3 class="preco2">R$799,00</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -233,8 +257,10 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Gabinete Gamer.png" alt="Produto 8">
       </div>
+
       <h2>GABINETE GAMER REDRAGON WIDELOAD PRO</h2>
       <h3 class="preco1">R$465,45</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -249,8 +275,10 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/GABINETE GAMER K-MEX.png" alt="Produto 9">
       </div>
+      
       <h2>GABINETE GAMER K-MEX AQUARIO MICRO ATX POSEIDON WHITE CG</h2>
       <h3 class="preco1">R$319,49</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -265,8 +293,10 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Teclado Mecânico Gamer.png" alt="Produto 10">
       </div>
+
       <h2>TECLADO MECÂNICO GAMER REDRAGON KUMARA PRO RGB</h2>
       <h3 class="preco1">R$304,95</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -281,8 +311,10 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Teclado_mk2.png" alt="Produto 10">
       </div>
+
       <h2>TECLADO MECANICO GAMER MANCER SHADE MK2 RGB</h2>
       <h3 class="preco1">R$164,90</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
@@ -297,8 +329,10 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/Placa_de_Vídeo_Quadro_A800.png" alt="Produto 11">
       </div>
+
       <h2>PLACA DE VÍDEO QUADRO A800 PNY NVIDIA</h2>
       <h3 class="preco1">R$89.999,99</h3>
+
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
