@@ -46,84 +46,39 @@
       <div class="popup-conteudo">
         <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
 
-        <div class="carrinhoPreenchido">
+        <div class="container_produtos">
 
-          <table class="cardCarrinho">
+          <div class="infoPopup">
+            <p>Item</p>
+            <div>
+              <p>Preço</p>
+              <p>Quantidade</p>
+            </div>
+          </div>
 
-            <head>
-              <tr>
-                <th class="tableItens first">Item</th>
-                <th class="tableItens second">Preço</th>
-                <th class="tableItens third">Quantidade</th>
-              </tr>
-            </head>
+          
 
-            <body>
-              <tr class="cardProduto">
-                <td class="produtoCarrinho">
-                  <img class="cardImg" src="../../assets/images/produtos/INTEL _CORE I9.png">
-                  <strong class="nomeProduto">PROCESSADOR INTEL CORE I9</strong>
-                </td>
-
-                <td>
-                  <span class="valorProduto">R$2.974,00</span>
-                </td>
-
-                <td>
-                  <input class="qtdProduto" type="number" value="1" min="0">
-                  <a class="removerProduto" type="button">
-                   
-                      <img src="../../assets/icons/trash.png">
-                  
-                  </a>
-                </td>
-              </tr>
-
-              <tr class="cardProduto">
-                <td class="produtoCarrinho">
-                  <img class="cardImg" src="../../assets/images/produtos/AMD_Ryzen_7.png">
-                  <strong class="nomeProduto">AMD RYZEN 7 5700X 8-CORE</strong>
-                </td>
-
-                <td>
-                  <span class="valorProduto">R$1.000,00</span>
-                </td>
-
-                <td>
-                  <input class="qtdProduto" type="number" value="1" min="0">
-                  <a class="removerProduto" type="button">
-                    
-                      <img src="../../assets/icons/trash.png">
-                   
-                  </a>
-                </td>
-              </tr>
-            </body>
-
-            <footer>
-              <tr>
-                <td colspan="3" class="totalProduto">
-                  <strong>Total</strong>
-                  <span>R$3.974,00</span>
-                </td>
-              </tr>
-            </footer>
-          </table>
-
-          <button class="botaoCarrinho" type="button">Finalizar Compra</button>
+          <div class="produtoPopup">
+            <img id="produto" src="../../assets/images/produtos/INTEL _CORE I9.png">
+            <strong>PROCESSADOR INTEL CORE I9</strong>
+            <p>R$2.974,00</p>
+            <p>1</p>
+            <button>
+              <img src="../../assets/icons/trash.png">
+            </button>
+          </div>
         </div>
+      
+          <button class="botaoCarrinho" type="button">Finalizar Compra</button>
 
 
-
-
-
-        <div class="carrinhoVazio">
+        <!-- <div class="carrinhoVazio">
           <h2>Seu carrinho está vazio</h2>
           <a href="../Home/Home.html">
             <button class="car">COMPRAR</button>
           </a>
 
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -162,17 +117,17 @@
   <div class="produtos-grid">
     <div class="produto" id="1" onclick="EnvioProduto(this)">
       <div class="imgProduto">
-        <img src="../../assets/images/produtos/INTEL _CORE I9.png" alt="Produto 1">
+        <img id="img" src="../../assets/images/produtos/INTEL _CORE I9.png" alt="Produto 1">
       </div>
-      <h2>PROCESSADOR INTEL CORE I9</h2>
-      <h3 class="preco1">R$2.974,00</h3>
+      <h2 id="title" >PROCESSADOR INTEL CORE I9</h2>
+      <h3 id="preco" class="preco1">R$2.974,00</h3>
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
-          <a href="">
+          <button id="button-carrinho" onclick="addCarrinho()">
             <img src="../../assets/icons/shopping-cart-add.png">
-          </a>
-        </div>
+          </button>
+          </div>
       </div>
     </div>
 
