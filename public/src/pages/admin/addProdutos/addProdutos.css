@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'font';
+    font-size: 18px;
+}
+
+body {
+    background-color: #EFEFEF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'font';
+    src: url('../../../assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf');
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:60%;
+    border: 1px;
+    border-radius: 8px;
+    background-color: red;
+    gap: 30px;
+}
+
+.linha1, .linha2, .linha3 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+    padding: 10px;
+}
+
+
+.linha1 input, .linha2 input{
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.linha3 textarea{
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    height: 100px;
+}
