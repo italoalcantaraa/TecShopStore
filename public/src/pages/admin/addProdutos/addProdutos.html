@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -10,31 +11,42 @@
     <script src="../../../plugin/components.js"></script>
     <script src='addProdutos.js'></script>
 </head>
+
 <body>
 
-    <div  id="menu"></div>
+    <div id="menu"></div>
 
     <div class="container">
         <div class="linha1">
-            <input class="categoria" type="text" placeholder="Categoria">
+            <input id="categoria" class="categoria" type="text" placeholder="Categoria">
 
-            <input class="name" type="text" placeholder="Nome">
+            <input id="name" class="name" type="text" placeholder="Nome">
 
-            <input class="fabricante" type="text" placeholder="Fabricante">
+            <input id="fabricante" class="fabricante" type="text" placeholder="Fabricante">
         </div>
 
         <div class="linha2">
-            <input class="condicao" type="text" placeholder="Condição">
 
-            <input class="valor" type="number" placeholder="Valor">
+            <select class="condicao" name="Condição" id="condicao">
+                <option id="titulo" selected disabled>Condição</option>
+                <option value="Novo">Novo</option>
+                <option value="Usado">Usado</option>
+            </select>
 
-            <input class="estoque" type="number" placeholder="Estoque">
+            <div>
+                <input id="valor" class="valor" type="number" placeholder="Valor">
+
+                <input id="estoque" class="estoque" type="number" placeholder="Estoque">
+            </div>
+            <input type="text" placeholder="URL da imagem">
+
         </div>
 
         <div class="linha3">
-        <textarea name="" id="descrcao" placeholder="Informe a descrição do produto"></textarea> 
-        
-        <textarea name="" id="infoTec" placeholder="Informe a descrição tecnica do produto"></textarea>
+            <textarea name="" id="descrcao" placeholder="Informe a descrição do produto"></textarea>
+
+            <textarea name="" id="infoTec" placeholder="Informe a descrição tecnica do produto"></textarea>
+
         </div>
 
         <button class="confirmar">Adicionar</button>
@@ -42,8 +54,9 @@
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-    CarregarComponente('../../../components/menu/menu.html', 'menu');
-});
+        CarregarComponente('../../../components/menu/menu.html', 'menu');
+    });
 </script>
 <script src="addProdutos.js"></script>
+
 </html>

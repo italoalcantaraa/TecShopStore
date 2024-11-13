@@ -23,10 +23,14 @@ body {
     align-items: center;
     flex-direction: column;
     width:60%;
+    box-shadow:
+    12px 8px 10px rgba(0, 0, 0, 0.274),
+    -12px -8px 15px rgb(255, 255, 255);
     border: 1px;
     border-radius: 8px;
-    background-color: red;
+    background: linear-gradient(145deg, #EFEFEF, #afcfeb);
     gap: 30px;
+    padding: 20px;
 }
 
 .linha1, .linha2, .linha3 {
@@ -38,11 +42,22 @@ body {
 }
 
 
-.linha1 input, .linha2 input{
+.linha1 input, .linha2 input, select{
     border: none;
     border-radius: 5px;
     width: 100%;
     padding: 10px;
+    outline: none;
+}
+
+select option:nth-child(1){
+    color: #959595;
+}
+
+.linha2 div {
+    display: flex;
+    gap: 5px;
+    width: 106%;
 }
 
 .linha3 textarea{
@@ -51,4 +66,6 @@ body {
     width: 100%;
     padding: 10px;
     height: 100px;
+    outline: none;
 }
+ 
