@@ -4,6 +4,210 @@
     font-family: 'font';
 }
 
+@font-face {
+    font-family: 'font';
+    src: url('../../assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf');
+}
+
+.header-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(145deg, #EFEFEF, #afcfeb);
+    box-shadow: 9px 9px 29px #939393,
+        -9px -9px 29px #ffffff;
+    border-radius: 0 0 30px 30px;
+}
+
+.logo img {
+    margin-left: 50px;
+    width: 130px;
+}
+
+.search img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 12px 20px;
+    width: 40%;
+    min-width: 200px;
+    min-width: 400px;
+    border-radius: 10px;
+}
+
+.search input {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.icon {
+    min-width: 139px;
+}
+
+.icon img{
+    width: 35px;
+}
+
+.icon {
+    gap: 8px;
+    display: flex;
+    max-width: 10%;
+}
+
+.icon a:hover {
+    text-decoration: underline;
+}
+
+
+.header-container p,
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.carrinho {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carrinho:hover {
+    opacity: 80%;
+}
+
+.popup {
+    display: none;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-conteudo {
+    padding: 20px;
+    background-color: white;
+    margin: 0.5% 0 0.5% 67%;
+    border-radius: 8px;
+    width: 33%;
+    min-width: 375px;
+}
+
+.fechar {
+    position: static;
+    top: 8%;
+    right: 15%;
+    font-size: 20px;
+    gap: 10px;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container_produtos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 25px;
+}
+
+.infoPopup{
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoPopup div{
+    display: flex;
+    gap: 25px;
+}
+
+#produto{
+    width: 70px;
+}
+
+.produtoPopup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.produtoPopup strong{
+    font-size: 15px;
+    max-width: 120px;
+}
+
+.botaoCarrinho{
+    background-color: #125671;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px 0px #838383;
+    transition: 0.3s;
+    padding: 16px 20px;
+    display: flex;
+    margin: 24px auto 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.botaoCarrinho:hover{
+    opacity: 80%;
+}
+
+.carrinhoVazio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 50%;
+}
+
+.fechar p {
+    color: #125671;
+}
+
+.popup h2 {
+    text-align: center;
+
+    line-height: 2.5;
+}
+
+.car {
+    text-align: center;
+    background-color: #125671;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px 0px #838383;
+    transition: 0.3s;
+    padding: 12px 40px;
+    display: flex;
+    margin: 0 auto;
+    font-size: 23px;
+
+}
+
+.car:hover {
+    opacity: 80%;
+}
+
+.bloqueado {
+    overflow: hidden;
+}
+
+
 main{
     width: 100%;
 }
@@ -56,11 +260,11 @@ main{
     display: flex;
     justify-content: space-around;
     background: linear-gradient(67deg, #EFEFEF, #afcfeb);
-    box-shadow:  18px 18px 49px #939393,
-                 -3px -3px 49px #ffffff;
-    border-radius: 10px;
-    animation: flipInY 0.5s ease forwards;
-    animation-delay: 0.5s;
+    box-shadow: 
+    8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.913); 
+    border-radius: 8px;
+    border: 1px;
     color:#f8f8f8;
 }
 
@@ -70,12 +274,11 @@ figure{
     justify-content: center;
     align-items: center;
     box-shadow: 
-    10px 10px 30px rgba(0, 0, 0, 0.2), 
-    -10px -10px 30px rgba(255, 255, 255, 0.8), 
-    inset 5px 5px 15px rgba(0, 0, 0, 0.1), 
-    inset -5px -5px 15px rgba(255, 255, 255, 0.5);
-border-radius: 15px;
-border: 2px solid #ddeff2;
+    8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.913); 
+    border-radius: 8px;
+    border: 1px;
+    background-color: #EFEFEF;
 }
 
 figure img{
@@ -84,6 +287,7 @@ figure img{
 }
 
 section{
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,22 +295,60 @@ section{
     padding: 30px;
     justify-content: space-between;
     box-shadow: 
-    10px 10px 30px rgba(0, 0, 0, 0.2), 
-    -10px -10px 30px rgba(255, 255, 255, 0.8), 
-    inset 5px 5px 15px rgba(0, 0, 0, 0.1), 
-    inset -5px -5px 15px rgba(255, 255, 255, 0.5);
-border-radius: 15px;
-border: 2px solid #ddeff2;  
+    8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.913); 
+    border-radius: 8px;
+    border: 1px;
+    background-color: #EFEFEF;
 }
 
 .preco1{
     display: flex;
     width: 100%;
-    justify-content: space-between;
     font-size: 30px;
     padding: 10px;
+    color: #125671;
 }
 
+.botaoComprar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    box-shadow: -2px 3px 5px 0px #838383;
+    border-radius: 8px;
+    border: none;
+}
+
+.botao {
+    color: white;
+    background-color: #125671;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    opacity: 85%;
+}
+
+.addCarrinho {
+    background: linear-gradient(145deg, #EFEFEF, #afcfeb);
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.10s;
+    border-radius: 0 8px 8px 0;
+    border: none;
+}
+
+.addCarrinho:hover {
+    opacity: 85%;
+}
+/* 
 button{
     appearance: none;
     background-color: #FFFFFF;
@@ -133,7 +375,7 @@ button:hover {
     background: linear-gradient(67deg, #50ffe8, #2e75b4);
     box-shadow: rgba(91, 85, 255, 0.7) 0 -6px 8px inset;
     transform: scale(1.125);
-}
+} */
 
 .opcoes{
     display: flex;
@@ -149,7 +391,7 @@ button:hover {
 }
 
 article{
-    background-color: #2e75b4;
+    background-color: #125671;
     padding: 30px;
     box-shadow: 
     10px 10px 30px rgba(0, 0, 0, 0.2), 
@@ -158,7 +400,6 @@ article{
     inset -5px -5px 15px rgba(255, 255, 255, 0.5);
 border-radius: 15px;
 border: 2px solid #ddeff2;
-animation: fadeIn 7.0s ease forwards;
 }
 
 header{

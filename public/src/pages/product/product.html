@@ -1,18 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produtos</title>
     <link rel="stylesheet" href="product.css">
+    <link rel="icon" href="../../assets/images/LogoIcon.png" type="image/x-icon">
     <script src="../../plugin/notify.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.11.2/Toastify.min.css"> <!-- Link para Toastify -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.11.2/Toastify.min.js"></script> <!-- Script para Toastify -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.11.2/Toastify.min.css">
+    <!-- Link para Toastify -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.11.2/Toastify.min.js"></script>
+    <!-- Script para Toastify -->
 </head>
 </head>
+
 <body>
+
+    <!-- Logo do inicio da página -->
+    <header class="header-container">
+        <a href="../Home/Home.html">
+            <div class="logo">
+                <img src="../../assets/images/logoP1.png" alt="">
+            </div>
+        </a>
+
+        <!-- Barra de pesquisa -->
+        <div class="search">
+            <input placeholder="Nome do produto" type="text">
+            <img src="../../assets/images/adm/search.svg" alt="">
+        </div>
+
+        <!-- Icone e botão de login -->
+        <div class="icon">
+            <img src="../../assets/images/user-svgrepo-com.svg">
+            <p>
+                <a class="login" href="">Entrar</a>
+                ou
+                <a class="login" href="">Cadastre-se</a>
+            </p>
+        </div>
+
+        <!-- Popup com carrinho de produtos e botão de abrir -->
+        <button class="carrinho" onclick="abrirPopup()">
+            <img src="../../assets/icons/shopping-cart.png">
+        </button>
+
+        <!-- Opção para fechar o popup -->
+        <div id="meuPopup" class="popup">
+            <div class="popup-conteudo">
+                <span class="fechar" onclick="fecharPopup()">
+                    &times;
+                    <p>MEU CARRINHO</p>
+                </span>
+
+                <!-- Carrinho com protudos -->
+                <div class="container_produtos">
+
+                    <div class="infoPopup">
+                        <p>Item</p>
+                        <div>
+                            <p>Preço</p>
+                            <p>Quantidade</p>
+                        </div>
+                    </div>
+
+                    <div class="produtoPopup">
+                        <img id="produto" src="../../assets/images/produtos/INTEL _CORE I9.png">
+                        <strong>PROCESSADOR INTEL CORE I9</strong>
+                        <p>R$2.974,00</p>
+                        <p>1</p>
+                        <button>
+                            <img src="../../assets/icons/trash.png">
+                        </button>
+                    </div>
+                </div>
+
+                <button class="botaoCarrinho" type="button">Finalizar Compra</button>
+
+                <!-- Opção quando o carrinho estiver vazio -->
+                <!-- <div class="carrinhoVazio">
+          <h2>Seu carrinho está vazio</h2>
+          <a href="../Home/Home.html">
+            <button class="car">COMPRAR</button>
+          </a>
+        </div> -->
+            </div>
+        </div>
+    </header>
+
     <nav>
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F318%2F793%2Fpng-transparent-amd-logo-logos-logos-and-brands-icon.png&f=1&nofb=1&ipt=16bc6ee85242e22d5bc168df2f06ddcccf706db787b32ef0759ab319892eb0ad&ipo=images" alt="logo">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F318%2F793%2Fpng-transparent-amd-logo-logos-logos-and-brands-icon.png&f=1&nofb=1&ipt=16bc6ee85242e22d5bc168df2f06ddcccf706db787b32ef0759ab319892eb0ad&ipo=images"
+            alt="logo">
 
         <p>&#9733; &#9733; &#9733; &#9733; &#9734;</p>
 
@@ -26,7 +105,7 @@
 
         <figure class="imgProduto">
             <img src="" alt="product">
-         </figure>
+        </figure>
 
         <section class="body">
 
@@ -36,13 +115,21 @@
 
             <div class="preco1">
                 <h3 id="preco1"></h3>
-                <button>COMPRA</button>
+                <div class="botaoComprar">
+                    <button class="botao">COMPRAR</button>
+                    <div class="addCarrinho">
+                      <a href="">
+                        <img src="../../assets/icons/shopping-cart-add.png">
+                      </a>
+                    </div>
+                  </div>
+
             </div>
 
             <div class="opcoes">
                 <div>
                     <p>12X VEZES de <span id="p"></span> SEM JUROS</p>
-                    <p>UM X VEZEN COM 2% OFF</p>
+                    <p>À VISTA COM 2% DESCONTO</p>
                 </div>
 
                 <button>CARRINHO</button>
@@ -55,76 +142,92 @@
     </main>
 
     <article>
-       <header>
+        <header>
             <input type="button" value="[Descrição do produto]">
             <input type="button" value="[Informações Técnicas]">
-       </header>
+        </header>
 
-       <footer>
-        <div class="descricao">
-            <p></p>
-        </div>
+        <footer>
+            <div class="descricao">
+                <p></p>
+            </div>
 
-        <div class="tecnico">
-            <p></p>
-        </div>
-       </footer>
+            <div class="tecnico">
+                <p></p>
+            </div>
+            
+        </footer>
     </article>
 
+    
     <script>
-       document.addEventListener('DOMContentLoaded', () => {
-    // Recupere o produto do localStorage
-    const produto = JSON.parse(localStorage.getItem('produto'));
 
-    if (produto) {
+        // função para abrir o popup
+        function abrirPopup() {
+            document.getElementById("meuPopup").style.display = "flex";
+            document.body.classList.add("bloqueado");
 
-        produto.descricaoProduto = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
-        produto.InformacoesTecnica = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
+        }
+        // função para fechar o popup
+        function fecharPopup() {
+            document.getElementById("meuPopup").style.display = "none";
+            document.body.classList.remove("bloqueado");
+        }
 
-        document.querySelector('.imgProduto img').src = produto.Image;
-        document.querySelector('.nome h2').innerText = produto.NomeProduto;
-        document.querySelector('#preco1').innerText = produto.preco;
-        document.querySelector('.descricao p').innerText = produto.descricaoProduto;
-        document.querySelector('.tecnico p').innerText = produto.InformacoesTecnica;
+        document.addEventListener('DOMContentLoaded', () => {
+            // Recupere o produto do localStorage
+            const produto = JSON.parse(localStorage.getItem('produto'));
 
-        // Cálculo do valor parcelado
-        const precoFloat = parseFloat(produto.preco.replace('R$', '').replace('.', '').replace(',', '.'));
-        const parcelado = (precoFloat / 12).toFixed(2).replace('.', ',');
+            if (produto) {
 
-        // Exibe o valor parcelado
-        document.querySelector('#p').innerText = parcelado;
-    } else {
-        console.log("ERRO (>_<)");
-    }
-});
+                produto.descricaoProduto = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
+                produto.InformacoesTecnica = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
 
-function favoritar(){
-    const coracao = document.querySelector('.share p');
-                coracao.addEventListener("click", () => {
-                    // Use os caracteres diretamente
-                    if (coracao.innerText === '♡') { // Coração vazio
-                        coracao.innerText = '❤'; // Muda para coração cheio
-                    } else {
-                        coracao.innerText = '♡'; // Muda para coração vazio
-                    }
-                });
-}
+                document.querySelector('.imgProduto img').src = produto.Image;
+                document.querySelector('.nome h2').innerText = produto.NomeProduto;
+                document.querySelector('#preco1').innerText = produto.preco;
+                document.querySelector('.descricao p').innerText = produto.descricaoProduto;
+                document.querySelector('.tecnico p').innerText = produto.InformacoesTecnica;
 
-function compartinhar() {
-    const button = document.querySelector('.share img')
+                // Cálculo do valor parcelado
+                const precoFloat = parseFloat(produto.preco.replace('R$', '').replace('.', '').replace(',', '.'));
+                const parcelado = (precoFloat / 12).toFixed(2).replace('.', ',');
 
-    button.addEventListener("click", () => {
-        const link = window.location.href
-        navigator.clipboard.writeText(link)
-        .then(() => {
-            NotifySuccess("Link copiada com Sucesso 👍") //NÃO FUNCIONA :(
-        })
-        .catch(err => {
-                            console.error('Erro ao copiar o link: ', err);
-                        });
-    })
-}
+                // Exibe o valor parcelado
+                document.querySelector('#p').innerText = parcelado;
+            } else {
+                console.log("ERRO (>_<)");
+            }
+        });
+
+        function favoritar() {
+            const coracao = document.querySelector('.share p');
+            coracao.addEventListener("click", () => {
+                // Use os caracteres diretamente
+                if (coracao.innerText === '♡') { // Coração vazio
+                    coracao.innerText = '❤'; // Muda para coração cheio
+                } else {
+                    coracao.innerText = '♡'; // Muda para coração vazio
+                }
+            });
+        }
+
+        function compartinhar() {
+            const button = document.querySelector('.share img')
+
+            button.addEventListener("click", () => {
+                const link = window.location.href
+                navigator.clipboard.writeText(link)
+                    .then(() => {
+                        NotifySuccess("Link copiada com Sucesso 👍") //NÃO FUNCIONA :(
+                    })
+                    .catch(err => {
+                        console.error('Erro ao copiar o link: ', err);
+                    });
+            })
+        }
     </script>
 
 </body>
+
 </html>

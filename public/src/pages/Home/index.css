@@ -57,6 +57,19 @@ body {
     min-width: 139px;
 }
 
+.icon img {
+    width: 35px;
+}
+
+.icon {
+    gap: 8px;
+    display: flex;
+    max-width: 10%;
+}
+
+.icon a:hover {
+    text-decoration: underline;
+}
 
 .header-container p,
 a {
@@ -271,20 +284,6 @@ a {
     max-width: 80%;
     height: auto;
     display: block;
-}
-
-.icon {
-    gap: 8px;
-    display: flex;
-    max-width: 10%;
-}
-
-.icon a:hover {
-    text-decoration: underline;
-}
-
-.icon img {
-    width: 35px;
 }
 
 .title {
