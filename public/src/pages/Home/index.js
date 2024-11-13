@@ -1,14 +1,13 @@
-
 class Produto {
-  constructor(img, nome, preco) {
-    this.img = img;
+  constructor(id, image, nome, preco1, preco2) {
+    this.id = id;
+    this.image = image;
     this.nome = nome;
-    this.preco = preco;
+    this.preco1 = preco1;
+    this.preco2 = preco2;
   }
 }
-
 var arrayProdutoCarrinho = [];
-
 
 function abrirPopup() {
   document.getElementById("meuPopup").style.display = "flex";
@@ -29,12 +28,13 @@ function toggleDropdown() {
 
 
 function addCarrinho() {
-  let title = document.getElementById('title').innerHTML;
-  let price = document.getElementById('preco').innerHTML;
-  let img = document.querySelector('#img');
-  let urlImg = img.src;
+  const id = element.getAttribute('id');
+  const image = element.querySelector('.imgProduto img')
+  const nomeP = document.getElementById('title');
+  const preco1 = element.querySelector('.preco1')
+  const preco2 = element.querySelector('.preco2') || null;
 
-  let produto = new Produto(urlImg, title, price);
+  let produto = new Produto(id, image, nomeP, preco1, preco2);
 
   if (localStorage.produtoCarrinho)
     arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
@@ -48,23 +48,24 @@ function addCarrinho() {
 function verificaProdutosCarrinho() {
   const classProdutoItem = document.getElementById('produto-item');
 
-
   arrayProdutoCarrinho.forEach(element => {
     const produtoHTML = `
     <div class="produtoPopup">
-            <img id="produto" src="${element.img}">
+            <img id="produto" src="${element.image}">
             <strong>${element.nome}</strong>
-            <p>R$${element.preco}</p>
+            <p>R$${element.preco1}</p>
             <p>1</p>
-            <button>
+            <button onclick='remove()'>
               <img src="../../assets/icons/trash.png">
             </button>
           </div>
       </div>`
 
     classProdutoItem.innerHTML += produtoHTML;
-
   });
+}
+
+function remove() {
 
 }
 
