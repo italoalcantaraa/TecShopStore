@@ -54,24 +54,24 @@
               <p>Preço</p>
               <p>Quantidade</p>
             </div>
-          </div>         
-      
-          <div class="produto-item" id="produto-item">
-
           </div>
+
+
+
+
 
           <button class="botaoCarrinho" type="button">Finalizar Compra</button>
 
 
-        <!-- <div class="carrinhoVazio">
+          <!-- <div class="carrinhoVazio">
           <h2>Seu carrinho está vazio</h2>
           <a href="../Home/Home.html">
             <button class="car">COMPRAR</button>
           </a>
 
         </div> -->
+        </div>
       </div>
-    </div>
 
 
 
@@ -110,15 +110,15 @@
       <div class="imgProduto">
         <img id="img" src="../../assets/images/produtos/INTEL _CORE I9.png" alt="Produto 1">
       </div>
-      <h2 id="title" >PROCESSADOR INTEL CORE I9</h2>
+      <h2 id="title">PROCESSADOR INTEL CORE I9</h2>
       <h3 id="preco" class="preco1">R$2.974,00</h3>
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
-          <button id="button-carrinho" onclick="addCarrinho()">
+          <button id="button-carrinho" onclick="addCarrinho(event, this)">
             <img src="../../assets/icons/shopping-cart-add.png">
           </button>
-          </div>
+        </div>
       </div>
     </div>
 
@@ -126,13 +126,13 @@
       <div class="imgProduto">
         <img src="../../assets/images/produtos/AMD_Ryzen_7.png" alt="Produto 2">
       </div>
-      <h2 id="title">AMD RYZEN 7 5700X 8-CORE</h2>
+      <h2>AMD RYZEN 7 5700X 8-CORE</h2>
       <h3 class="preco1">R$1.000,00</h3>
       <h3 class="preco2">R$1.125,30</h3>
       <div class="comprar">
         <button class="botao">COMPRAR</button>
         <div class="addCarrinho">
-          <button id="button-carrinho" onclick="addCarrinho()">
+          <button id="button-carrinho" onclick="addCarrinho(event, this)">
             <img src="../../assets/icons/shopping-cart-add.png">
           </button>
         </div>

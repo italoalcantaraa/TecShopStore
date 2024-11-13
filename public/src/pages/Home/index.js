@@ -1,13 +1,14 @@
-class Produto {
-  constructor(id, image, nome, preco1, preco2) {
-    this.id = id;
-    this.image = image;
+
+class ProdutoCarrinho {
+  constructor(img, nome, preco) {
+    this.img = img;
     this.nome = nome;
-    this.preco1 = preco1;
-    this.preco2 = preco2;
+    this.preco = preco;
   }
 }
+
 var arrayProdutoCarrinho = [];
+
 
 function abrirPopup() {
   document.getElementById("meuPopup").style.display = "flex";
@@ -27,47 +28,53 @@ function toggleDropdown() {
 }
 
 
-function addCarrinho() {
-  const id = element.getAttribute('id');
-  const image = element.querySelector('.imgProduto img')
-  const nomeP = document.getElementById('title');
-  const preco1 = element.querySelector('.preco1')
-  const preco2 = element.querySelector('.preco2') || null;
+function addCarrinho(event, element) {
 
-  let produto = new Produto(id, image, nomeP, preco1, preco2);
+// Impede que outros elementos executem (função da div pai)
+ event.stopPropagation();
 
-  if (localStorage.produtoCarrinho)
-    arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
+// Pega o elemento pai .produto e captura o id
+const id = element.closest('.produto').id;
 
-  arrayProdutoCarrinho.push(produto);
+let arrayProduto = JSON.parse(localStorage.getItem('produto'));
 
-  localStorage.produtoCarrinho = JSON.stringify(arrayProdutoCarrinho);
+console.log(arrayProduto);
+
+
+  // let produto = new Produto(urlImg, title, price);
+
+  // if (localStorage.produtoCarrinho)
+  //   arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
+
+  // arrayProdutoCarrinho.push(produto);
+
+  // localStorage.produtoCarrinho = JSON.stringify(arrayProdutoCarrinho);
 }
 
 
-function verificaProdutosCarrinho() {
-  const classProdutoItem = document.getElementById('produto-item');
+// function verificaProdutosCarrinho() {
+//   const classContainerProdutos = document.getElementById('container_produtos');
 
-  arrayProdutoCarrinho.forEach(element => {
-    const produtoHTML = `
-    <div class="produtoPopup">
-            <img id="produto" src="${element.image}">
-            <strong>${element.nome}</strong>
-            <p>R$${element.preco1}</p>
-            <p>1</p>
-            <button onclick='remove()'>
-              <img src="../../assets/icons/trash.png">
-            </button>
-          </div>
-      </div>`
+//   arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
 
-    classProdutoItem.innerHTML += produtoHTML;
-  });
-}
+//   arrayProdutoCarrinho.forEach(element => {
+//     const produtoHTML = `
+//     <div class="produtoPopup">
+//             <img id="produto" src="${element.img}">
+//             <strong>${element.nome}</strong>
+//             <p>R$${element.preco}</p>
+//             <p>1</p>
+//             <button>
+//               <img src="../../assets/icons/trash.png">
+//             </button>
+//           </div>
+//       </div>`
 
-function remove() {
+//     classContainerProdutos.innerHTML += produtoHTML;
 
-}
+//   });
+
+// }
 
 
 
