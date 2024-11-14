@@ -19,7 +19,7 @@
             flex-direction: column;
             justify-content: space-between;
             background-color: red;
-            width: 100%;    
+            width: 100%;
             min-width: 200px;
             max-width: 400px;
             padding: 10px;
@@ -40,8 +40,7 @@
 
         main.menu section button {
             width: 100%;
-            padding: 20px;
-
+            padding: 20px 80px;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.712);
             font-size: 23px;
@@ -52,7 +51,7 @@
             border-radius: 20px;
         }
 
-        main.menu a {
+        main.menu .exit {
             display: flex;
             align-items: center;
             font-size: 30px;
@@ -65,18 +64,17 @@
             transition: 0.3s;
         }
 
-        main.menu a:hover {
+        main.menu .exit:hover {
             color: white;
             transform: scale(1.02);
         }
 
-        main.menu a img {
+        main.menu .exit img {
             width: 15%;
             min-width: 50px;
         }
 
         main.menu section button:hover {
-            width: 95%;
             opacity: 80%;
         }
 
@@ -90,14 +88,19 @@
     <main class="menu">
         <section>
             <img src="../../../assets/images/logo.png" alt="">
-            <button>Adicionar</button>
-            <button>Produtos</button>
+            <a href="../../pages/admin/addProdutos/addProdutos.html">
+                <button>Adicionar</button>
+            </a>
+            <a href="../../pages/admin/produtos/Produtos.html">
+                <button>Produtos</button>
+            </a>
         </section>
-        <a href="../../Home/Home.html">
+        <a class="exit" href="../../Home/Home.html">
             <img src="../../../assets/images/adm/exit-svgrepo-com.svg" alt="">
             <p>Sair</p>
         </a>
     </main>
 </body>
 <script src="menu.js"></script>
+
 </html>
