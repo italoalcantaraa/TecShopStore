@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,7 +9,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href='addProdutos.css'>
     <link rel="icon" href="../../../assets/images/LogoIcon.png" type="image/x-icon">
     <script src="../../../plugin/components.js"></script>
-    <script src="ProdutoAdd.js"></script>
 </head>
 
 <body>
@@ -17,41 +17,41 @@
 
     <div class="container">
         <div class="linha1">
-            <input id="categoria" class="categoria" type="text" placeholder="Categoria">
+            <input id="category" type="text" placeholder="Categoria">
 
-            <input id="name" class="name" type="text" placeholder="Nome">
+            <input id="name" type="text" placeholder="Nome">
 
-            <input id="fabricante" class="fabricante" type="text" placeholder="Fabricante">
+            <input id="manufacturer" type="text" placeholder="Fabricante">
         </div>
 
         <div class="linha2">
 
-            <select class="condicao" name="Condição" id="condicao">
-                <option id="titulo" selected disabled>Condição</option>
-                <option value="Novo">Novo</option>
-                <option value="Usado">Usado</option>
+            <select id="condition" name="Condição">
+                <option id="title" selected disabled>Condição</option>
+                <option value="New">Novo</option>
+                <option value="Used">Usado</option>
             </select>
 
             <div>
-                <input id="valor" class="valor" type="number" placeholder="Valor">
+                <input id="price" type="number" placeholder="Valor">
 
-                <input id="estoque" class="estoque" type="number" placeholder="Estoque">
+                <input id="stock" type="number" placeholder="Estoque">
             </div>
             <input type="text" id="img" placeholder="URL da imagem">
 
         </div>
 
         <div class="linha3">
-            <textarea name="" id="descricao" placeholder="Informe a descrição do produto"></textarea>
+            <textarea name="" id="description" placeholder="Informe a descrição do produto"></textarea>
 
-            <textarea name="" id="infoTec" placeholder="Informe a descrição tecnica do produto"></textarea>
+            <textarea name="" id="infoTech" placeholder="Informe a descrição tecnica do produto"></textarea>
 
         </div>
 
-        <button onclick="addProduto()" class="confirmar">Adicionar</button>
+        <button onclick="addProduct()">Adicionar</button>
     </div>
 </body>
-
+<script src="ProdutoAdd.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         CarregarComponente('../../../components/menu/menu.html', 'menu');
