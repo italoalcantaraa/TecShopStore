@@ -1,15 +1,15 @@
-function Produto(id, img, nome, preco, precoOriginal){
+export default function Produto(id, img, logo, nome, preco, descricao, info, estoque){
     let Produto = {
         id: id,
-        Image: img.src,
+        Image: img,
         Logo: "swww",
         NomeProduto: nome.innerText,
-        preco: preco.innerText,
-        precoOriginal: precoOriginal ? precoOriginal.innerText : "",
-        descricaoProduto: "",
-        InformacoesTecnica: "",
+        preco: preco,
+        descricaoProduto: descricao,
+        InformacoesTecnica: info,
+        estoque: estoque,
     }
 
-    return Produto
+    return Produto;
 }
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -9,7 +8,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='addProdutos.css'>
     <link rel="icon" href="../../../assets/images/LogoIcon.png" type="image/x-icon">
     <script src="../../../plugin/components.js"></script>
-    <script src='addProdutos.js'></script>
+    <script src="ProdutoAdd.js"></script>
 </head>
 
 <body>
@@ -38,25 +37,25 @@
 
                 <input id="estoque" class="estoque" type="number" placeholder="Estoque">
             </div>
-            <input type="text" placeholder="URL da imagem">
+            <input type="text" id="img" placeholder="URL da imagem">
 
         </div>
 
         <div class="linha3">
-            <textarea name="" id="descrcao" placeholder="Informe a descrição do produto"></textarea>
+            <textarea name="" id="descricao" placeholder="Informe a descrição do produto"></textarea>
 
             <textarea name="" id="infoTec" placeholder="Informe a descrição tecnica do produto"></textarea>
 
         </div>
 
-        <button class="confirmar">Adicionar</button>
+        <button onclick="addProduto()" class="confirmar">Adicionar</button>
     </div>
 </body>
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         CarregarComponente('../../../components/menu/menu.html', 'menu');
     });
 </script>
-<script src="addProdutos.js"></script>
 
 </html>
