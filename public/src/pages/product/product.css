@@ -308,6 +308,7 @@ section{
     font-size: 30px;
     padding: 10px;
     color: #125671;
+    gap: 40px;
 }
 
 .botaoComprar {
@@ -349,7 +350,7 @@ section{
     opacity: 85%;
 }
 
-button{
+/* button{
     appearance: none;
     background-color: #FFFFFF;
     border-radius: 40em;
@@ -375,7 +376,7 @@ button:hover {
     background: linear-gradient(67deg, #50ffe8, #2e75b4);
     box-shadow: rgba(91, 85, 255, 0.7) 0 -6px 8px inset;
     transform: scale(1.125);
-} */
+}  */
 
 .opcoes{
     display: flex;
@@ -398,8 +399,8 @@ article{
     -10px -10px 30px rgba(255, 255, 255, 0.8), 
     inset 5px 5px 15px rgba(0, 0, 0, 0.1), 
     inset -5px -5px 15px rgba(255, 255, 255, 0.5);
-border-radius: 15px;
-border: 2px solid #ddeff2;
+    border-radius: 15px;
+    border: 2px solid #ddeff2;
 }
 
 header{
@@ -428,6 +429,22 @@ footer{
     font-size: 25px;
     color: wheat;
 }
+
+.description{
+    display: flex;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
 
 @keyframes flipInY {
     0% {

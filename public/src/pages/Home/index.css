@@ -391,4 +391,10 @@ a {
     opacity: 85%;
 }
 
+.comprar, button{
+    border: none;
+    background: none;
+    padding: 0; 
+}
+
 @media (max-width: 500px) {}

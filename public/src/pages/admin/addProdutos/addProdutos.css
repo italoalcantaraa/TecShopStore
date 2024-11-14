@@ -70,5 +70,18 @@ select option:nth-child(1){
 }
 
 .confirmar{
-    
+    background-color: #125671;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px 0px #838383;
+    transition: 0.3s;
+    padding: 16px 90px;
+    display: flex;
+    margin: 34px auto 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.confirmar:hover{
+    opacity: 80%;
 }
