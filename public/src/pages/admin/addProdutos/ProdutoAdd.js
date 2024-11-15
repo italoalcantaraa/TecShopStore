@@ -58,6 +58,8 @@ function addProduct() {
 
 // Fazer melhorias nas
 function validation(category, name, manufacturer, condition, price, stock, img, description, infoTech) {
+    let message = document.getElementById('erro');
+    
     let error;
 
     if (category == '')
@@ -85,15 +87,15 @@ function validation(category, name, manufacturer, condition, price, stock, img, 
     if (error != undefined) {
         message.innerHTML = error;
         message.style = "visibility: visible; top: 0px; background: red";
-
-        setTimeout(() => {
-            message.style = window.getComputedStyle(message);
-
-            if (!error)
-                window.location.href = "../Home/Home.html";
-
-        }, 1000);
+    }else {
+        message.innerHTML = "Cadastro realizado com sucesso!";
+        message.style = "visibility: visible; top: 0px; background: rgb(0, 255, 0)"
     }
+
+    setTimeout(() => {
+        message.style = window.getComputedStyle(message);
+
+    }, 1000);
 
     return true
 }
