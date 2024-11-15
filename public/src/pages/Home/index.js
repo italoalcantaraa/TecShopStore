@@ -32,14 +32,6 @@ window.onload = function () {
 
 }
 
-class ProdutoCarrinho {
-  constructor(img, nome, preco) {
-    this.img = img;
-    this.nome = nome;
-    this.preco = preco;
-  }
-}
-
 // função para abrir o popup
 function abrirPopup() {
   document.getElementById("meuPopup").style.display = "flex";
@@ -62,7 +54,7 @@ var productCart = [];
 
 function addCarrinho(event, element) {
   let objProduct;
-  
+
   let products = [];
 
   // Impede que outros elementos executem (função da div pai)
@@ -80,6 +72,7 @@ function addCarrinho(event, element) {
 
   products.forEach(element => {
     if (element.id == id) {
+      element.quantityCart++;
       objProduct = element;
       return;
     }
@@ -87,7 +80,6 @@ function addCarrinho(event, element) {
 
   // Adiciona o produto no array
   productCart.push(objProduct);
-  console.log(productCart )
 
   // adiciona todos os produtos do array na localStorade de produtos
   localStorage.produtoCarrinho = JSON.stringify(productCart);
@@ -99,37 +91,59 @@ function verificaProdutosCarrinho() {
   let checkoutButton = document.querySelector('.botaoCarrinho');
   let productElementCard = [];
   const classContainerProdutos = document.getElementById('container_produtos');
-  
+
   if (localStorage.produtoCarrinho) {
     emptyCart.style = "display:none;";
     checkoutButton = "display: flex;"
 
     productElementCard = JSON.parse(localStorage.getItem('produtoCarrinho'));
-    
+
     classContainerProdutos.innerHTML = "";
 
     productElementCard.forEach(element => {
       const produtoHTML = `
           <div class="produtoPopup" id=${element.id}>
+                <div id="img">
                   <img id="produto" src="${element.img}">
+                </div>
                   <strong>${element.name}</strong>
                   <p>R$${element.price}</p>
                   <div>
-                  <button>-</button>
-                    <p>1</p>
-                    <button>+</button>
+                  <button onclick='alterQuantity("decrement", ${element.id})' >-</button>
+                    <p>${element.quantityCart}</p>
+                    <button onclick='alterQuantity("increment", ${element.id})'>+</button>
                   </div>
                 </div>
             </div>`
 
       classContainerProdutos.innerHTML += produtoHTML;
     });
-  } else{
+  } else {
     emptyCart.style = "display:flex;";
     checkoutButton.style = "display:none;";
   }
 }
 
+function alterQuantity(operation, id) {
+  let products = [];
+
+  products = JSON.parse(localStorage.getItem('produtoCarrinho'));
+
+  products.forEach(element => {
+    if (id == element.id) {
+
+      if (operation == "increment")
+        element.quantityCart++;
+      else
+        element.quantityCart--;
+
+      return;
+    }
+  });
+
+  localStorage.produtoCarrinho = JSON.stringify(products);
+  abrirPopup();
+}
 
 
 // function de add no popup

@@ -1,6 +1,7 @@
 class Product {
     constructor(id, category, name, manufacturer, condition, price, stock, img, description, infoTech) {
         this.id = id;
+        this.quantityCart = 0; 
         this.category = category;
         this.name = name;
         this.manufacturer = manufacturer;

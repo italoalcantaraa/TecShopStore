@@ -161,6 +161,11 @@ a {
     font-size: 20px;
 }
 
+
+.produtoPopup #img{
+    height: 80px;
+}
+
 .produtoPopup button{
     background-color: #EFEFEF;
     border-radius: 10px;
