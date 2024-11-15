@@ -113,8 +113,8 @@ a {
     position: static;
     top: 8%;
     right: 15%;
-    font-size: 20px;
-    gap: 10px;
+    font-size: 25px;
+    gap: 20px;
     display: flex;
     font-weight: bold;
     cursor: pointer;
@@ -134,7 +134,6 @@ a {
 
 .infoPopup div{
     display: flex;
-    gap: 25px;
 }
 
 #produto{
@@ -145,7 +144,45 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #105773;
+}
+
+.produtoPopup p, strong {
+    color: white;
+}
+
+.produtoPopup div{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 20px;
+}
+
+.produtoPopup button{
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    border: none;
+    padding: 0px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 25px;
+    color: #105773;
+}
+
+.produtoPopup button:hover{
+    box-shadow:-1px -1px 15px rgb(255, 255, 255);
+}
+
+.produtoPopup button:active{
+    box-shadow: inset 0px 4px 5px 0px #838383a8;
+}
+
+.produtoPopup button img{
+    width: 25px;
+    
 }
 
 .produtoPopup strong{
@@ -171,14 +208,14 @@ a {
 }
 
 .carrinhoVazio {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-end;
-    height: 50%;
 }
 
 .fechar p {
     color: #125671;
+    margin-bottom: 25px;
 }
 
 .popup h2 {

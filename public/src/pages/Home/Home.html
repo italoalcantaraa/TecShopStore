@@ -53,25 +53,19 @@
         </span>
 
         <div class="container_produtos" id="container_produtos">
-
-          <!-- Carrinho com protudos -->
-          <!-- <div class="container_produtos">
-
-            <button class="botaoCarrinho" type="button">Finalizar Compra</button>
-          </div> -->
-
-
-          <!-- <div class="carrinhoVazio">
-            
-            <!-- Opção quando o carrinho estiver vazio -->
-          <!-- <div class="carrinhoVazio">
+        
+        </div>
+        
+        <button class="botaoCarrinho" type="button">Finalizar Compra</button>
+        
+        
+        <div class="carrinhoVazio">
           <h2>Seu carrinho está vazio</h2>
           <a href="../Home/Home.html">
             <button class="car">COMPRAR</button>
           </a>
-        </div> -->
         </div>
-      </div>
+      
     </div>
 
   </header>
@@ -126,12 +120,8 @@
     const preco1 = element.querySelector('.preco1')
     const preco2 = element.querySelector('.preco2') || null
 
-    // Criando o objeto produto e salvando no localStorage
-    const product = Produto(id, image, nomeP, preco1, preco2)
-    localStorage.setItem('produto', JSON.stringify(product))
-
     // Redireciona para a próxima página
-    window.location.href = "../product/product.html";
+    //window.location.href = "../product/product.html";
   }
 </script>
 

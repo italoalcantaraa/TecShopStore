@@ -94,15 +94,18 @@ function addCarrinho(event, element) {
   abrirPopup();
 }
 
-
 function verificaProdutosCarrinho() {
+  let emptyCart = document.querySelector('.carrinhoVazio');
+  let checkoutButton = document.querySelector('.botaoCarrinho');
   let productElementCard = [];
   const classContainerProdutos = document.getElementById('container_produtos');
   
   if (localStorage.produtoCarrinho) {
-    
+    emptyCart.style = "display:none;";
+    checkoutButton = "display: flex;"
+
     productElementCard = JSON.parse(localStorage.getItem('produtoCarrinho'));
-    console.log(productElementCard);
+    
     classContainerProdutos.innerHTML = "";
 
     productElementCard.forEach(element => {
@@ -111,31 +114,21 @@ function verificaProdutosCarrinho() {
                   <img id="produto" src="${element.img}">
                   <strong>${element.name}</strong>
                   <p>R$${element.price}</p>
-                  <p>1</p>
-                  <button>
-                    <img src="../../assets/icons/trash.png">
-                  </button>
+                  <div>
+                  <button>-</button>
+                    <p>1</p>
+                    <button>+</button>
+                  </div>
                 </div>
             </div>`
 
       classContainerProdutos.innerHTML += produtoHTML;
     });
+  } else{
+    emptyCart.style = "display:flex;";
+    checkoutButton.style = "display:none;";
   }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
