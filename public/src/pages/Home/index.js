@@ -99,7 +99,9 @@ function verificaProdutosCarrinho() {
   arrayProdutoCarrinho.forEach(element => {
     const produtoHTML = `
     <div class="produtoPopup" id=${element.id}>
+          <div class="imgProduto">
             <img id="produto" src="${element.img}">
+          <div/>
             <strong>${element.name}</strong>
             <p>R$${element.price}</p>
             <p>1</p>
