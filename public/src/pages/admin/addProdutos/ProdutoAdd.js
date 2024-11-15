@@ -1,5 +1,6 @@
 class Product {
-    constructor(category, name, manufacturer, condition, price, stock, img, description, infoTech) {
+    constructor(id, category, name, manufacturer, condition, price, stock, img, description, infoTech) {
+        this.id = id;
         this.category = category;
         this.name = name;
         this.manufacturer = manufacturer;
@@ -13,6 +14,7 @@ class Product {
 }
 
 function addProduct() {
+    let id = Math.trunc((Math.random() * (2000 - 0) + 0));
     let category = document.getElementById('category').value;
     let name = document.getElementById('name').value;
     let manufacturer = document.getElementById('manufacturer').value;
@@ -35,7 +37,7 @@ function addProduct() {
             products = JSON.parse(localStorage.getItem('products'));
 
         // Cria um objeto produto     
-        let product = new Product(category, name, manufacturer, condition, price, stock, imgProduto, description, infoTech);
+        let product = new Product(id, category, name, manufacturer, condition, price, stock, imgProduto, description, infoTech);
 
         // Armazena o produto dentro do array
         products.push(product);
@@ -87,6 +89,7 @@ function validation(category, name, manufacturer, condition, price, stock, img, 
     if (error != undefined) {
         message.innerHTML = error;
         message.style = "visibility: visible; top: 0px; background: red";
+        return false;
     }else {
         message.innerHTML = "Cadastro realizado com sucesso!";
         message.style = "visibility: visible; top: 0px; background: rgb(0, 255, 0)"
@@ -94,8 +97,7 @@ function validation(category, name, manufacturer, condition, price, stock, img, 
 
     setTimeout(() => {
         message.style = window.getComputedStyle(message);
-
     }, 1000);
 
-    return true
+    return true;
 }
