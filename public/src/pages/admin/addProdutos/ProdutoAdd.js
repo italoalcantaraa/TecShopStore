@@ -27,7 +27,7 @@ function addProduct() {
 
     let products = [];
 
-    if (validation()) {
+    if (validation(category, name, manufacturer, condition, price, stock, img, description, infoTech)) {
 
         // Verifica se existe a localStorage de produtos
         if (localStorage.products)
@@ -52,10 +52,52 @@ function addProduct() {
         document.getElementById('img').value = '';
         document.getElementById('description').value = '';
         document.getElementById('infoTech').value = '';
-    
+
     }
 }
 
-function validation() {
+// Fazer melhorias nas
+function validation(category, name, manufacturer, condition, price, stock, img, description, infoTech) {
+    let error;
+
+    if (category == '')
+        error = "Informe a categoria.";
+    else if (name == '')
+        error = "Informe o nome.";
+    else if (manufacturer == '')
+        error = "Informe o fornecedor.";
+    else if (condition == '')
+        error = "Informe a condição.";
+    else if (price == '' || price < 0)
+        error = "Informe um preço válido.";
+    else if (stock == '' || stock < 1)
+        error = "Informe o estoque.";
+    else if (img == '')
+        error = "Informe a imagem.";
+    else if (description == '')
+        error = "Informe a descrição.";
+    else if (infoTech == '')
+        error = "Informe a descrição técnica.";
+
+    /* Caso identifique algum erro, lança uma resposta
+         indicando o erro ocorrido */
+
+
+    if (error != undefined) {
+        message.innerHTML = error;
+        message.style = "visibility: visible; top: 0px; background: red";
+
+        setTimeout(() => {
+            message.style = window.getComputedStyle(message);
+
+            if (!error)
+                window.location.href = "../Home/Home.html";
+
+        }, 1000);
+    }
+
+
+
+
     return true
 }
