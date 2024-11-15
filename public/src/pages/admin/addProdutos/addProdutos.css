@@ -2,7 +2,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'font';
-    font-size: 18px;
 }
 
 body {
@@ -62,6 +61,7 @@ body {
     width: 100%;
     padding: 10px;
     outline: none;
+    font-size: 18px;
 }
 
 select option:nth-child(1){
@@ -81,6 +81,7 @@ select option:nth-child(1){
     padding: 10px;
     height: 100px;
     outline: none;
+    font-size: 18px;
 }
 
 .confirmar{
@@ -94,6 +95,7 @@ select option:nth-child(1){
     margin: 34px auto 0;
     color: white;
     text-transform: uppercase;
+    font-size: 18px;
 }
 
 .confirmar:hover{

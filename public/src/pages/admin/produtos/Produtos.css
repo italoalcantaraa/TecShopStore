@@ -15,19 +15,6 @@ body{
     gap: 30px;
 }
 
-.popup{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    z-index: 999;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    
-}
-
-
 .popup div{
     display: flex;
     background-color: white;
