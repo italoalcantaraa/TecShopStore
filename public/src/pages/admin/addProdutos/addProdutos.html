@@ -13,29 +13,28 @@
 </head>
 
 <body>
-
+    <div id="erro">Erro</div>
     <div id="menu"></div>
-
     <div class="container">
         <div class="linha1">
-            <select class="categoria" name="Categoria" id="categoria">
-                <option id="category" selected disabled>Categoria</option>
-                <option value="manufacturer">Gabinete</option>
-                <option value="Usado">Placa de video</option>
-                <option value="Novo">Memoria RAM</option>
-                <option value="Usado">SSD</option>
-                <option value="Novo">Teclado</option>
-                <option value="Usado">Processador</option>
+            <select class="categoria" name="Categoria" id="category">
+                <option selected disabled value="">Categoria</option>
+                <option value="Gabinete">Gabinete</option>
+                <option value="Placa de vídeo">Placa de vídeo</option>
+                <option value="Memoria RAM">Memoria RAM</option>
+                <option value="SSD">SSD</option>
+                <option value="Teclado">Teclado</option>
+                <option value="Processador">Processador</option>
             </select>
 
             <input id="name" class="name" type="text" placeholder="Nome">
 
-            <input id="fabricante" class="fabricante" type="text" placeholder="Fabricante">
+            <input id="manufacturer" class="fabricante" type="text" placeholder="Fabricante">
         </div>
 
         <div class="linha2">
 
-            <select class="condition" name="Condição" id="condicao">
+            <select class="condition" name="Condição" id="condition">
                 <option id="titulo" selected disabled>Condição</option>
                 <option value="Novo">Novo</option>
                 <option value="Usado">Usado</option>
