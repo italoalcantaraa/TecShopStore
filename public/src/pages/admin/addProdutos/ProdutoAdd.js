@@ -82,7 +82,6 @@ function validation(category, name, manufacturer, condition, price, stock, img, 
     /* Caso identifique algum erro, lança uma resposta
          indicando o erro ocorrido */
 
-
     if (error != undefined) {
         message.innerHTML = error;
         message.style = "visibility: visible; top: 0px; background: red";
@@ -95,9 +94,6 @@ function validation(category, name, manufacturer, condition, price, stock, img, 
 
         }, 1000);
     }
-
-
-
 
     return true
 }
