@@ -1,3 +1,4 @@
+// Função que é executada assim que a página é carregada
 window.onload = function () {
   let containerProdutct = document.querySelector('.produtos-grid');
 
@@ -7,9 +8,8 @@ window.onload = function () {
     arrayProducts = JSON.parse(localStorage.getItem('products'));
 
   arrayProducts.forEach(element => {
-   
     const product = `
-            <span class="luz">
+              <span class="luz">
                 <div class="produto" id="${element.id}" onclick="EnvioProduto(this)">
                     <div class="imgProduto">
                         <img id="img" src="${element.img}" alt="Produto 1">
@@ -25,7 +25,7 @@ window.onload = function () {
                         </div>
                     </div>
                 </div>
-            </span>`;
+              </span>`;
 
     containerProdutct.innerHTML += product;
   });
@@ -62,52 +62,58 @@ function toggleDropdown() {
 
 
 function addCarrinho(event, element) {
+  let objProduct;
+  let arrayProducts = [];
 
   // Impede que outros elementos executem (função da div pai)
   event.stopPropagation();
 
-  // Pega o elemento pai .produto e captura o id
-  const id = element.closest('.produto').id;
+  // Pega o id do card de produto
+  let id = parseInt(element.closest('.produto').id);
 
-  let arrayProduto = JSON.parse(localStorage.getItem('produto'));
+  // Adiciona os produtos da localStorage no array
+  if (localStorage.products)
+    arrayProducts = JSON.parse(localStorage.getItem('products'));
 
-  console.log(arrayProduto);
+  arrayProducts.forEach(element => {
+    if (element.id == id) {
+      objProduct = element;
+      return;
+    }
+  });
 
+  if (localStorage.produtoCarrinho)
+    arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
 
-  // let produto = new Produto(urlImg, title, price);
+  arrayProdutoCarrinho.push(objProduct);
 
-  // if (localStorage.produtoCarrinho)
-  //   arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
-
-  // arrayProdutoCarrinho.push(produto);
-
-  // localStorage.produtoCarrinho = JSON.stringify(arrayProdutoCarrinho);
+  localStorage.produtoCarrinho = JSON.stringify(arrayProdutoCarrinho);
 }
 
 
-// function verificaProdutosCarrinho() {
-//   const classContainerProdutos = document.getElementById('container_produtos');
+function verificaProdutosCarrinho() {
+  const classContainerProdutos = document.getElementById('container_produtos');
 
-//   arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
+  arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
 
-//   arrayProdutoCarrinho.forEach(element => {
-//     const produtoHTML = `
-//     <div class="produtoPopup">
-//             <img id="produto" src="${element.img}">
-//             <strong>${element.nome}</strong>
-//             <p>R$${element.preco}</p>
-//             <p>1</p>
-//             <button>
-//               <img src="../../assets/icons/trash.png">
-//             </button>
-//           </div>
-//       </div>`
+  arrayProdutoCarrinho.forEach(element => {
+    const produtoHTML = `
+    <div class="produtoPopup" id=${element.id}>
+            <img id="produto" src="${element.img}">
+            <strong>${element.name}</strong>
+            <p>R$${element.price}</p>
+            <p>1</p>
+            <button>
+              <img src="../../assets/icons/trash.png">
+            </button>
+          </div>
+      </div>`
 
-//     classContainerProdutos.innerHTML += produtoHTML;
+    classContainerProdutos.innerHTML += produtoHTML;
 
-//   });
+  });
 
-// }
+}
 
 
 
