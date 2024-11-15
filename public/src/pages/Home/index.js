@@ -40,8 +40,6 @@ class ProdutoCarrinho {
   }
 }
 
-var arrayProdutoCarrinho = [];
-
 // função para abrir o popup
 function abrirPopup() {
   document.getElementById("meuPopup").style.display = "flex";
@@ -60,10 +58,12 @@ function toggleDropdown() {
   dropdown.classList.toggle("show");
 }
 
+var productCart = [];
 
 function addCarrinho(event, element) {
   let objProduct;
-  let arrayProducts = [];
+  
+  let products = [];
 
   // Impede que outros elementos executem (função da div pai)
   event.stopPropagation();
@@ -71,49 +71,58 @@ function addCarrinho(event, element) {
   // Pega o id do card de produto
   let id = parseInt(element.closest('.produto').id);
 
-  // Adiciona os produtos da localStorage no array
-  if (localStorage.products)
-    arrayProducts = JSON.parse(localStorage.getItem('products'));
+  // Verifica se existe a lovalStora de produtoCarrinho
+  if (localStorage.produtoCarrinho)
+    productCart = JSON.parse(localStorage.getItem('produtoCarrinho'))
 
-  arrayProducts.forEach(element => {
+  // Adiciona todos os produtos na localStorage no array
+  products = JSON.parse(localStorage.getItem('products'));
+
+  products.forEach(element => {
     if (element.id == id) {
       objProduct = element;
       return;
     }
   });
 
-  if (localStorage.produtoCarrinho)
-    arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
+  // Adiciona o produto no array
+  productCart.push(objProduct);
+  console.log(productCart )
 
-  arrayProdutoCarrinho.push(objProduct);
-
-  localStorage.produtoCarrinho = JSON.stringify(arrayProdutoCarrinho);
+  // adiciona todos os produtos do array na localStorade de produtos
+  localStorage.produtoCarrinho = JSON.stringify(productCart);
+  abrirPopup();
 }
 
 
 function verificaProdutosCarrinho() {
+  let productElementCard = [];
   const classContainerProdutos = document.getElementById('container_produtos');
+  
+  if (localStorage.produtoCarrinho) {
+    
+    productElementCard = JSON.parse(localStorage.getItem('produtoCarrinho'));
+    console.log(productElementCard);
+    classContainerProdutos.innerHTML = "";
 
-  arrayProdutoCarrinho = JSON.parse(localStorage.getItem('produtoCarrinho'));
+    productElementCard.forEach(element => {
+      const produtoHTML = `
+          <div class="produtoPopup" id=${element.id}>
+                  <img id="produto" src="${element.img}">
+                  <strong>${element.name}</strong>
+                  <p>R$${element.price}</p>
+                  <p>1</p>
+                  <button>
+                    <img src="../../assets/icons/trash.png">
+                  </button>
+                </div>
+            </div>`
 
-  arrayProdutoCarrinho.forEach(element => {
-    const produtoHTML = `
-    <div class="produtoPopup" id=${element.id}>
-          <div class="imgProduto">
-            <img id="produto" src="${element.img}">
-          <div/>
-            <strong>${element.name}</strong>
-            <p>R$${element.price}</p>
-            <p>1</p>
-            <button>
-              <img src="../../assets/icons/trash.png">
-            </button>
-          </div>
-      </div>`
+      classContainerProdutos.innerHTML += produtoHTML;
+    });
+  }
 
-    classContainerProdutos.innerHTML += produtoHTML;
 
-  });
 
 }
 
