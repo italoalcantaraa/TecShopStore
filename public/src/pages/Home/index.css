@@ -308,20 +308,19 @@ a {
 }
 
 .produto {
-    display: flex;
+display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px;
-    padding: 20px;
     align-items: center;
     text-align: center;
+    padding: 20px;
     background-color: #EFEFEF;
     transition: 0.3s;
     border-radius: 8px;
-    box-shadow:
-        8px 8px 15px rgba(0, 0, 0, 0.1),
-        -8px -8px 15px rgba(255, 255, 255, 0.913);
+    transition: transform 0.3s;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.913);
 
+    z-index: 2;
 }
 
 .imgProdto {
@@ -356,6 +355,37 @@ a {
     font-size: 12px;
     text-decoration: line-through;
 }
+
+.luz {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 12px;
+    display: inline-block; 
+}
+
+.luz::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    right: -100px;
+    bottom: 100px;
+    border-radius: 12px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    animation: rotBGimg 3s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 .botao {
     color: white;
