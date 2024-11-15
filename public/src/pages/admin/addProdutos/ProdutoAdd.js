@@ -1,59 +1,33 @@
-class Product {
-    constructor(category, name, manufacturer, condition, price, stock, img, description, infoTech) {
-        this.category = category;
-        this.name = name;
-        this.manufacturer = manufacturer;
-        this.condition = condition;
-        this.price = price;
-        this.stock = stock;
-        this.img = img;
-        this.description = description;
-        this.infoTech = infoTech;
-    }
-}
+import Produto from '../../../script/ProductObj.js';
 
-function addProduct() {
-    let category = document.getElementById('category').value;
-    let name = document.getElementById('name').value;
-    let manufacturer = document.getElementById('manufacturer').value;
-    let condition = document.getElementById('condition').value;
-    let price = document.getElementById('price').value;
-    let stock = document.getElementById('stock').value;
-    let img = document.getElementById('img').value;
-    let description = document.getElementById('description').value;
-    let infoTech = document.getElementById('infoTech').value;
+function addProduto() {
 
-    let products = [];
-
-    if (validation()) {
-
-        // Verifica se existe a localStorage de produtos
-        if (localStorage.products)
-            // Transfere totos os elementos da localStora de produto para o array
-            products = JSON.parse(localStorage.getItem('products'));
-
-        // Cria um objeto produto     
-        let product = new Product(category, name, manufacturer, condition, price, stock, img, description, infoTech);
-
-        // Armazena o produto dentro do array
-        products.push(product);
-
-        // Armazena todos os elementos do array na localStorage
-        localStorage.products = JSON.stringify(products);
-
-        // Apaga os valores dos campos preenchidos
-        document.getElementById('category').value = '';
-        document.getElementById('name').value = '';
-        document.getElementById('manufacturer').value = '';
-        document.getElementById('price').value = '';
-        document.getElementById('stock').value = '';
-        document.getElementById('img').value = '';
-        document.getElementById('description').value = '';
-        document.getElementById('infoTech').value = '';
+    let categoria = document.getElementById('categoria').value
+    let name = document.getElementById('name').value
+    let logo = document.getElementById('fabricante').value
+    let condicao = document.getElementById('condicao').value
+    let valor = document.getElementById('valor').value
+    let estoque = document.getElementById('estoque').value
+    let nomeImg = document.getElementById('img').value;
+    let descricao = document.getElementById('descricao').value
+    let infotec = document.getElementById('infoTec').value
     
-    }
+    let arrayProdutos = [];
+    let enderecoImg = `../../assets/images/produtos/${nomeImg}`;
+
+    // Gerar id do produto
+    let id = Math.random();
+
+    let produto = Produto(id, enderecoImg, logo, name, valor, descricao, info, estoque,);
+
 }
 
-function validation() {
-    return true
-}
+
+
+
+
+
+function valida() {
+
+} 
+
