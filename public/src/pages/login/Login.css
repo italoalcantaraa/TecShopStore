@@ -8,7 +8,6 @@ html{
     height: 100%;
 }
 
-
 #erro{
     color: white;
     text-align: center;
@@ -22,7 +21,6 @@ html{
     position: absolute;
     transition: all 0.4s;
 }
-
 
 #sucess{
     display: none;
