@@ -92,7 +92,7 @@ function verificaProdutosCarrinho() {
   let productElementCard = [];
   const classContainerProdutos = document.getElementById('container_produtos');
 
-  if (localStorage.produtoCarrinho) {
+  if (localStorage.produtoCarrinho && productCart.length >= 1) {
     emptyCart.style = "display:none;";
     checkoutButton = "display: flex;"
 
@@ -134,15 +134,19 @@ function alterQuantity(operation, id) {
 
       if (operation == "increment")
         element.quantityCart++;
-      else
+      else{
         element.quantityCart--;
+        
+        if(element.quantityCart <= 0)
+          products.splice(products.indexOf(element), 1);
 
+        }
       return;
     }
   });
 
   localStorage.produtoCarrinho = JSON.stringify(products);
-  abrirPopup();
+  verificaProdutosCarrinho();
 }
 
 
