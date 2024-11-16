@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "animate.css": "^4.1.1",
+    "particles.js": "^2.0.0",
     "public": "file:"
   },
   "name": "public",
