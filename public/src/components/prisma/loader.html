@@ -10,6 +10,14 @@
           <span class="side side4"></span>
           <span class="shadow"></span>
         </div>
-      </div>
+      </div><img src="../../../../" alt="">
       
+      <script>
+        const duracao = 3000; // Tempo do loader (3 segundos)
+        const url = localStorage.getItem('urlDestino')
+
+        setTimeout(() => {
+            window.location.href = url;
+        }, duracao);
+    </script>
 </body>

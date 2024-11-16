@@ -105,7 +105,7 @@
     <main>
 
         <figure class="imgProduto">
-            <img src="" alt="product">
+            <img id="img" src="" alt="product">
         </figure>
 
         <section class="body">
@@ -180,19 +180,38 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            
+            let arrayProduto = [];
+            let produto;
+
+            arrayProduto = JSON.parse(localStorage.getItem('products')); 
+            
+            arrayProduto.forEach(element => {
+                if(id == element.id) {
+                    produto = element;
+                    return;
+                }
+            });
+            
             // Recupere o produto do localStorage
-            const produto = JSON.parse(localStorage.getItem('produto'));
+            
 
             if (produto) {
+                document.getElementById('img').src = produto.img;
 
-                produto.descricaoProduto = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
-                produto.InformacoesTecnica = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
+                // produto.descricaoProduto = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
+                // produto.InformacoesTecnica = "A amizade consegue ser tão complexa.Deixa uns desanimados, outros bem felizes.É a alimentação dos fracos É o reino dos fortes. Faz-nos cometer erros Os fracos deixam se ir abaixo Os fortes erguem sempre a cabeça Os assim assumem-nos. Sem pensar conquistamos o mundo geral e construímo o nosso pequeno lugar, deixando brilhar cada estrelinha. Estrelinhas. Doces, sensíveis, frias, ternurentas. Mas sempre presentes em qualquer parte. Os donos da amizade.";
 
-                document.querySelector('.imgProduto img').src = produto.Image;
-                document.querySelector('.nome h2').innerText = produto.NomeProduto;
-                document.querySelector('#preco1').innerText = produto.preco;
-                document.querySelector('.descricao p').innerText = produto.descricaoProduto;
-                document.querySelector('.tecnico p').innerText = produto.InformacoesTecnica;
+                // document.getElementById('imgProduto').src = produto.img;
+                // document.querySelector('.nome h2').innerText = produto.name;
+                // document.querySelector('#preco1').innerText = produto.price;
+                // document.querySelector('.descricao p').innerText = produto.description;
+                // document.querySelector('.tecnico p').innerText = produto.infoTec;
+
+
 
                 // Cálculo do valor parcelado
                 const precoFloat = parseFloat(produto.preco.replace('R$', '').replace('.', '').replace(',', '.'));
