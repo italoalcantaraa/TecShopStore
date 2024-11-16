@@ -418,7 +418,7 @@ header input[type="button"]{
 
 footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px;
     justify-content: space-between;
     gap: 30px;
@@ -427,7 +427,7 @@ footer{
 .descricao,.tecnico{
     text-align: center;
     font-size: 25px;
-    color: wheat;
+    color: white;
 }
 
 .description{
