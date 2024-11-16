@@ -27,11 +27,12 @@
 
             <div id="ocult1">
                
-                    <input type="text" id="pix" value="função gerar pix" readonly> 
-                    <button onclick="">Copiar</button>
+                    <input type="text" id="pix" value="00020126360014BR.GOV.BCB.PIX0114TecShop@email.com52040000530398654041.90000000000000001400000000000000000000000000000000000000000000000000000000000000000000000000000" 
+                    readonly> 
+                    <button id="share" onclick="compartinhar()">Copiar</button>
 
                 <div class="qrcode">
-
+                    <img src="../../assets/images/QRCode_Fácil.svg" alt="">
                 </div>
             </div>
         </section>
@@ -40,8 +41,8 @@
             <input type="radio" onclick="radioOn(this, 2)">
             <label for="option2">BOLETO:</label>
 
-            <div class="ocult2">
-
+            <div id="ocult2">
+                <img src="../../assets/images/Captura de tela 2024-11-16 145241.png" alt="">
             </div>
         </section>
 
@@ -78,7 +79,25 @@
         </article>
     </main>
 
-    <div id="footer"></div>
+    <div id="footer" style="width: 100%;"></div>
+    <script>
+    function compartinhar() {
+            const button = document.querySelector('#share')
+
+            button.addEventListener("click", () => {
+                const InputPix = document.querySelector('#pix')
+                const Pix = InputPix.getAttribute('value');
+
+                navigator.clipboard.writeText(Pix)
+                    .then(() => {
+                        NotifySuccess("Link copiada com Sucesso 👍") //NÃO FUNCIONA :(
+                    })
+                    .catch(err => {
+                        console.error('Erro ao copiar o link: ', err);
+                    });
+            })
+        }
+</script>
 </body>
 
 
