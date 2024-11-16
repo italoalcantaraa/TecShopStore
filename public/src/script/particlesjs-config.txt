@@ -1,0 +1,110 @@
+{
+  "particles": {
+    "number": {
+      "value": 100, // Quantidade de partículas na tela
+      "density": {
+        "enable": true, // Ajusta à densidade da tela
+        "value_area": 1000 // Área para distribuir partículas
+      }
+    },
+    "color": {
+      "value": ["#ff0000", "#00ff00", "#0000ff"] // Partículas multicoloridas
+    },
+    "shape": {
+      "type": "polygon", // Formato: "circle", "edge", "triangle", "polygon", "star", "image"
+      "stroke": {
+        "width": 2, // Borda ao redor das partículas 0
+        "color": "#ffffff" // Cor da borda
+      },
+      "polygon": {
+        "nb_sides": 6 // Número de lados (apenas para "polygon")
+      },
+      "image": {
+        "src": "https://example.com/my-image.png", // Caminho para imagem personalizada
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.8, // Opacidade padrão
+      "random": true, // Opacidade aleatória
+      "anim": {
+        "enable": true, // Ativa animação de opacidade
+        "speed": 2, // Velocidade da animação
+        "opacity_min": 0.3, // Opacidade mínima
+        "sync": false // Sincroniza a animação
+      }
+    },
+    "size": {
+      "value": 5, // Tamanho padrão
+      "random": true, // Tamanhos aleatórios
+      "anim": {
+        "enable": true, // Ativa animação de tamanho
+        "speed": 20, // Velocidade de variação
+        "size_min": 1, // Tamanho mínimo
+        "sync": false // Sincroniza a animação
+      }
+    },
+    "line_linked": {
+      "enable": true, // Linhas entre partículas
+      "distance": 200, // Distância para conexões
+      "color": "#ffffff", // Cor das linhas
+      "opacity": 0.6, // Opacidade das linhas
+      "width": 2 // Largura das linhas
+    },
+    "move": {
+      "enable": true, // Movimento ativado
+      "speed": 4, // Velocidade do movimento
+      "direction": "none", // Direção: "none", "top", "top-right", "right", etc.
+      "random": false, // Movimento aleatório
+      "straight": false, // Movimento em linha reta
+      "out_mode": "out", // O que acontece quando a partícula sai da tela: "bounce" ou "out"
+      "bounce": true, // Ativa o rebote nas bordas
+      "attract": {
+        "enable": true, // Partículas se atraem
+        "rotateX": 800, // Intensidade no eixo X
+        "rotateY": 1200 // Intensidade no eixo Y
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas", // Onde detectar interação: "canvas" ou "window"
+    "events": {
+      "onhover": {
+        "enable": true, // Efeito ao passar o mouse
+        "mode": "grab" // Modos: "grab", "repulse", "bubble"
+      },
+      "onclick": {
+        "enable": true, // Efeito ao clicar
+        "mode": "push" // Modos: "push", "remove", "bubble", "repulse"
+      },
+      "resize": true // Redimensiona ao alterar o tamanho da tela
+    },
+    "modes": {
+      "grab": {
+        "distance": 300, // Distância para efeito de "grab"
+        "line_linked": {
+          "opacity": 1 // Opacidade da linha no modo "grab"
+        }
+      },
+      "bubble": {
+        "distance": 300, // Distância para bolhas
+        "size": 10, // Tamanho das bolhas
+        "duration": 2, // Duração do efeito
+        "opacity": 0.8, // Opacidade das bolhas
+        "speed": 3 // Velocidade do efeito
+      },
+      "repulse": {
+        "distance": 200, // Distância de repulsão
+        "duration": 0.4 // Duração do efeito
+      },
+      "push": {
+        "particles_nb": 5 // Número de partículas adicionadas ao clicar
+      },
+      "remove": {
+        "particles_nb": 2 // Número de partículas removidas ao clicar
+      }
+    }
+  },
+  "retina_detect": true // Ajusta qualidade para telas de alta densidade
+}
