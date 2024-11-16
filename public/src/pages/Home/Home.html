@@ -113,15 +113,15 @@
 </body>
 
 <script>
-  function EnvioProduto(element) {
-    const id = element.getAttribute('id');
-    const image = element.querySelector('.imgProduto img')
-    const nomeP = element.querySelector('h2')
-    const preco1 = element.querySelector('.preco1')
-    const preco2 = element.querySelector('.preco2') || null
-
+  function EnvioProduto(id) {
+    // const id = element.getAttribute('id');
+    // const image = element.querySelector('.imgProduto img')
+    // const nomeP = element.querySelector('h2')
+    // const preco1 = element.querySelector('.preco1')
+    // const preco2 = element.querySelector('.preco2') || null
     // Redireciona para a próxima página
-    //window.location.href = "../product/product.html";
+
+      window.location.href = `../product/product.html?id=${id}`;
   }
 </script>
 

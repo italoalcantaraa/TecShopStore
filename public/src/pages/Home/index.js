@@ -10,7 +10,7 @@ window.onload = function () {
   arrayProducts.forEach(element => {
     const product = `
               <span class="luz">
-                <div class="produto" id="${element.id}" onclick="EnvioProduto(this)">
+                <div class="produto" id="${element.id}" onclick="EnvioProduto(${element.id})">
                     <div class="imgProduto">
                         <img id="img" src="${element.img}" alt="Produto 1">
                     </div>
@@ -102,14 +102,14 @@ function verificaProdutosCarrinho() {
 
     productElementCard.forEach(element => {
       const produtoHTML = `
-          <div class="produtoPopup" id=${element.id}>
+          <div class="produtoPopup" id=${element.id}">
                 <div id="img">
                   <img id="produto" src="${element.img}">
                 </div>
                   <strong>${element.name}</strong>
                   <p>R$${element.price}</p>
                   <div>
-                  <button onclick='alterQuantity("decrement", ${element.id})' >-</button>
+                  <button onclick='alterQuantity("decrement", ${element.id})'>-</button>
                     <p>${element.quantityCart}</p>
                     <button onclick='alterQuantity("increment", ${element.id})'>+</button>
                   </div>
