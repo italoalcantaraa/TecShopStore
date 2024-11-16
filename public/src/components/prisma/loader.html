@@ -1,23 +1,27 @@
 <head>
-    <link rel="stylesheet" href="loader.css">
+  <link rel="stylesheet" href="loader.css">
 </head>
 <body>
-    <div class="pyramid-loader">
-        <div class="wrapper">
-          <span class="side side1"></span>
-          <span class="side side2"></span>
-          <span class="side side3"></span>
-          <span class="side side4"></span>
-          <span class="shadow"></span>
-        </div>
-      </div><img src="../../../../" alt="">
-      
-      <script>
-        const duracao = 2000; // Tempo do loader (3 segundos)
-        const url = localStorage.getItem('urlDestino')
+<main id="particles-js">
+  
+  <div class="pyramid-loader">
+      <div class="wrapper">
+        <span class="side side1"></span>
+        <span class="side side2"></span>
+        <span class="side side3"></span>
+        <span class="side side4"></span>
+        <span class="shadow"></span>
+      </div>
 
-        setTimeout(() => {
-            window.location.href = url;
-        }, duracao);
-    </script>
+    <script src="../../script/particles.min.js"></script>
+    <script src="../../script/particles-init.js"></script>
+    <script>
+      const duracao = 2000; // Tempo do loader (3 segundos)
+      const url = localStorage.getItem('urlDestino')
+
+      setTimeout(() => {
+          window.location.href = url;
+      }, duracao);
+  </script>
+  </main>
 </body>
