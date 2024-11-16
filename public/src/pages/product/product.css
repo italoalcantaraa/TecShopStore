@@ -315,7 +315,7 @@ section{
     width: 100%;
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 60%;
     box-shadow: -2px 3px 5px 0px #838383;
     border-radius: 8px;
     border: none;
@@ -327,7 +327,7 @@ section{
     border-radius: 8px 0 0 8px;
     border: none;
     width: 100%;
-    padding: 8px;
+    padding: 15px;
     transition: 0.3s;
 }
 
@@ -337,7 +337,7 @@ section{
 
 .addCarrinho {
     background: linear-gradient(145deg, #EFEFEF, #afcfeb);
-    padding: 0 10px;
+    padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -418,7 +418,7 @@ header input[type="button"]{
 
 footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px;
     justify-content: space-between;
     gap: 30px;
@@ -427,7 +427,7 @@ footer{
 .descricao,.tecnico{
     text-align: center;
     font-size: 25px;
-    color: wheat;
+    color: white;
 }
 
 .description{

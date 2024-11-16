@@ -80,7 +80,7 @@ function addCarrinho(event, element) {
 
   // Adiciona o produto no array
   productCart.push(objProduct);
-
+console.log(objProduct)
   // adiciona todos os produtos do array na localStorade de produtos
   localStorage.produtoCarrinho = JSON.stringify(productCart);
   abrirPopup();
