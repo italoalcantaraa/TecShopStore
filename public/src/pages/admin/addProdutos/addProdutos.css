@@ -84,7 +84,7 @@ select option:nth-child(1){
     font-size: 18px;
 }
 
-.confirmar{
+.confirmOrChange{
     background-color: #125671;
     border: none;
     border-radius: 5px;
@@ -98,7 +98,7 @@ select option:nth-child(1){
     font-size: 18px;
 }
 
-.confirmar:hover{
+.confirmOrChange:hover{
     opacity: 80%;
 }
 

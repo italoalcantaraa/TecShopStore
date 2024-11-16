@@ -15,7 +15,7 @@ window.onload = () => {
                 <p id="description">${element.description}</p>
                 <p id="price">R$ ${element.price}</p>
                 <div>
-                <button onclick="deleteProduto('${element.id}')">
+                <button onclick="editProduct('${element.id}')">
                     <img src="../../../assets/images/adm/pencil.svg" alt="">
                 </button>
                 <button onclick="deleteProduto('${element.id}')">
@@ -70,7 +70,7 @@ function atualizarListaDeProdutos() {
                 <p id="description">${element.description}</p>
                 <p id="price">R$ ${element.price}</p>
                 <div>
-                    <button onclick="deleteProduto('${element.id}')">
+                    <button onclick="editProduct(${element.id})">
                         <img src="../../../assets/images/adm/pencil.svg" alt="">
                     </button>
                     <button onclick="deleteProduto('${element.id}')">
@@ -81,4 +81,9 @@ function atualizarListaDeProdutos() {
 
         classProducts.innerHTML += product;
     });
+}
+
+
+function editProduct(id) {
+    window.location.href = `../addProdutos/addProdutos.html?id=${id}`;
 }

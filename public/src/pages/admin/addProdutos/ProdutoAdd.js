@@ -1,17 +1,80 @@
-class Product {
-    constructor(id, category, name, manufacturer, condition, price, stock, img, description, infoTech) {
-        this.id = id;
-        this.quantityCart = 0; 
-        this.category = category;
-        this.name = name;
-        this.manufacturer = manufacturer;
-        this.condition = condition;
-        this.price = price;
-        this.stock = stock;
-        this.img = img;
-        this.description = description;
-        this.infoTech = infoTech;
+let confirmOrChange = document.querySelector('.confirmOrChange'); // Seletor do botão;
+let idProduct;
+let arrayProducts = [];
+let product;
+
+// Após carregar a página, verifica se existe algum id na URL
+window.onload = () => {
+    const params = new URLSearchParams(window.location.search);
+    idProduct = params.get('id');
+
+    // Caso o id exista, altera o conteúdo do botão para "Alterar"
+    if (idProduct) {
+        confirmOrChange.innerHTML = "Alterar";
+
+        // Função para preencher os campos de acordo com o id da URL
+        fillInFields(idProduct);
     }
+    // Caso não exista, altera o conteúdo do botão para "Cadastrar"
+    else
+        confirmOrChange.innerHTML = "Cadastrar";
+}
+
+// Preencher os campos
+function fillInFields(idProduct) {
+
+    arrayProducts = JSON.parse(localStorage.getItem('products'));
+
+    arrayProducts.forEach(element => {
+        if (idProduct == element.id) {
+            product = element;
+            return;
+        }
+    });
+
+    document.getElementById('category').value = product.category;
+    document.getElementById('name').value = product.name;
+    document.getElementById('manufacturer').value = product.manufacturer;
+    document.getElementById('condition').value = product.condition;
+    document.getElementById('price').value = product.price;
+    document.getElementById('stock').value = product.stock;
+    document.getElementById('img').value = product.img.slice(35, -4);
+    document.getElementById('description').value = product.description;
+    document.getElementById('infoTech').value = product.infoTech;
+}
+
+function modifyProduct() {
+    let newCategory = document.getElementById('category').value;
+    let newName = document.getElementById('name').value;
+    let newManofacture = document.getElementById('manufacturer').value;
+    let newCondition = document.getElementById('condition').value;
+    let newPrice = document.getElementById('price').value;
+    let newStock = document.getElementById('stock').value;
+    let newImg = document.getElementById('img').value;
+    let newDescription = document.getElementById('description').value;
+    let newInfoTehc = document.getElementById('infoTech').value;
+
+    // faz a validação dos campos;
+    if(validation(newCategory, newName, newManofacture, newCondition, newPrice, newStock, newDescription, newInfoTehc)) {
+        
+        let index;
+        
+        for(let i = 0; i < arrayProducts.length; i++) {
+            
+            if(idProduct == arrayProducts[i].id)
+                index = i;
+        }
+
+        arrayProducts[index] = new Product(idProduct, newCategory, newName, newManofacture, newCondition, newPrice, newStock, newImg, newDescription, newInfoTehc);
+        localStorage.products = JSON.stringify(arrayProducts);
+    }
+}
+
+function productActions() {
+    if (idProduct)
+        modifyProduct()
+    else
+        addProduct()
 }
 
 function addProduct() {
@@ -26,8 +89,6 @@ function addProduct() {
     let description = document.getElementById('description').value;
     let infoTech = document.getElementById('infoTech').value;
 
-    let imgProduto = `/public/src/assets/images/produtos/${img}.png`;
-
     let products = [];
 
     if (validation(category, name, manufacturer, condition, price, stock, img, description, infoTech)) {
@@ -38,7 +99,7 @@ function addProduct() {
             products = JSON.parse(localStorage.getItem('products'));
 
         // Cria um objeto produto     
-        let product = new Product(id, category, name, manufacturer, condition, price, stock, imgProduto, description, infoTech);
+        let product = new Product(id, category, name, manufacturer, condition, price, stock, img, description, infoTech);
 
         // Armazena o produto dentro do array
         products.push(product);
@@ -47,14 +108,7 @@ function addProduct() {
         localStorage.products = JSON.stringify(products);
 
         // Apaga os valores dos campos preenchidos
-        document.getElementById('category').value = '';
-        document.getElementById('name').value = '';
-        document.getElementById('manufacturer').value = '';
-        document.getElementById('price').value = '';
-        document.getElementById('stock').value = '';
-        document.getElementById('img').value = '';
-        document.getElementById('description').value = '';
-        document.getElementById('infoTech').value = '';
+        clearFields();
 
     }
 }
@@ -62,7 +116,7 @@ function addProduct() {
 // Fazer melhorias nas
 function validation(category, name, manufacturer, condition, price, stock, img, description, infoTech) {
     let message = document.getElementById('erro');
-    
+
     let error;
 
     if (category == '')
@@ -91,7 +145,7 @@ function validation(category, name, manufacturer, condition, price, stock, img, 
         message.innerHTML = error;
         message.style = "visibility: visible; top: 0px; background: red";
         return false;
-    }else {
+    } else {
         message.innerHTML = "Cadastro realizado com sucesso!";
         message.style = "visibility: visible; top: 0px; background: rgb(0, 255, 0)"
     }
@@ -101,4 +155,34 @@ function validation(category, name, manufacturer, condition, price, stock, img, 
     }, 1000);
 
     return true;
+}
+
+
+// Função para limpar os campos
+function clearFields() {
+    document.getElementById('category').value = '';
+    document.getElementById('name').value = '';
+    document.getElementById('manufacturer').value = '';
+    document.getElementById('price').value = '';
+    document.getElementById('stock').value = '';
+    document.getElementById('img').value = '';
+    document.getElementById('description').value = '';
+    document.getElementById('infoTech').value = '';
+}
+
+// Classe do produto
+class Product {
+    constructor(id, category, name, manufacturer, condition, price, stock, img, description, infoTech) {
+        this.id = id;
+        this.quantityCart = 0;
+        this.category = category;
+        this.name = name;
+        this.manufacturer = manufacturer;
+        this.condition = condition;
+        this.price = price;
+        this.stock = stock;
+        this.img = `/public/src/assets/images/produtos/${img}.png`;
+        this.description = description;
+        this.infoTech = infoTech;
+    }
 }
