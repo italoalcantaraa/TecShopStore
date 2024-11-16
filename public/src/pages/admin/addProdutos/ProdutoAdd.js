@@ -1,7 +1,6 @@
 let confirmOrChange = document.querySelector('.confirmOrChange'); // Seletor do botão;
 let idProduct;
 let arrayProducts = [];
-let product;
 
 // Após carregar a página, verifica se existe algum id na URL
 window.onload = () => {
@@ -20,10 +19,11 @@ window.onload = () => {
         confirmOrChange.innerHTML = "Cadastrar";
 }
 
-// Preencher os campos
+// função para preencher os campos
 function fillInFields(idProduct) {
 
     arrayProducts = JSON.parse(localStorage.getItem('products'));
+    let product;
 
     arrayProducts.forEach(element => {
         if (idProduct == element.id) {
@@ -32,6 +32,7 @@ function fillInFields(idProduct) {
         }
     });
 
+    // preenche os campos de acordo o produto capturado pelo id
     document.getElementById('category').value = product.category;
     document.getElementById('name').value = product.name;
     document.getElementById('manufacturer').value = product.manufacturer;
