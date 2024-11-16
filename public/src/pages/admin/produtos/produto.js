@@ -25,8 +25,6 @@ window.onload = () => {
 
             classProducts.innerHTML += product;
     });
-
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {
