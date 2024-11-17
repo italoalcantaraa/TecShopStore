@@ -404,8 +404,11 @@ button:hover {
 }
 
 article{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     background-color: #125671;
-    padding: 30px;
+    padding: 70px 50px;
     box-shadow: 
     10px 10px 30px rgba(0, 0, 0, 0.2), 
     -10px -10px 30px rgba(255, 255, 255, 0.8), 
@@ -425,16 +428,19 @@ article input[type="button"]{
 
 .description{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start
+
 }
 
-
-.descricao{
+.titulo{
     display: flex;
-    flex-direction: inherit;
-    padding: 20px;
-    justify-content: space-between;
-    gap: 30px;
+    align-items: center;
+}
+
+#descricao{
+    text-align: start;
+    padding-top: 30px;
 }
 
 .descricao,.tecnico{
@@ -443,14 +449,15 @@ article input[type="button"]{
     color: white;
 }
 
-.description{
+
+.tituloInfo{
     display: flex;
-    align-items: center;
 }
 
 .info{
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 @keyframes flipInY {
