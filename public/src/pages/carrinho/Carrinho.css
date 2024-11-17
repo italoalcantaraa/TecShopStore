@@ -61,6 +61,7 @@ nav #linha{
     font-weight: bold;
 }
 
+
 .detalhes_produto nav button {
     background-color: black;
     color: white;
@@ -103,6 +104,12 @@ nav #linha{
     font-size: 30px;
     text-align: center;
     cursor: pointer;
+}
+
+.produtos-carrinho{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .carrinho_produto img{
