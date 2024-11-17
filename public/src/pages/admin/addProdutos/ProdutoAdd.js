@@ -181,7 +181,7 @@ class Product {
         this.manufacturer = manufacturer;
         this.condition = condition;
         this.price = price;
-        this.stock = stock;
+        this.stock = stock; 
         this.img = `/public/src/assets/images/produtos/${img}.png`;
         this.description = description;
         this.infoTech = infoTech;
