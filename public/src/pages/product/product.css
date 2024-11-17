@@ -9,6 +9,7 @@
     src: url('../../assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf');
 }
 
+
 .header-container {
     padding: 20px;
     display: flex;
@@ -21,8 +22,8 @@
 }
 
 .logo img {
-    margin-left: 50px;
-    width: 130px;
+    width: 100%;
+    max-width: 130px;
 }
 
 .search img {
@@ -210,6 +211,7 @@ a {
 
 main{
     width: 100%;
+    min-width: 600px;
 }
 
 nav{
@@ -220,9 +222,10 @@ nav{
     justify-content: space-evenly;
     width: 99%;
     height: 30%;
+    min-width: 400px;
     padding: 20px;
-    gap: 80px;
-    animation: fadeIn 7.0s ease forwards;
+    
+    animation: fadeIn 3.0s ease forwards;
 }
 
 nav img{
@@ -230,8 +233,9 @@ nav img{
     height: 4%;
 }
 
-nav p{
-    width: 11%;
+nav .estrela{
+    min-width: 400px;
+    width: 15%;
     font-size: 30px; 
     color: gold;
 }
@@ -255,7 +259,7 @@ nav p{
 }
 
 main{
-    display: flex;
+    height: 30%;
     padding: 30px;
     display: flex;
     justify-content: space-around;
@@ -271,6 +275,7 @@ main{
 figure{
     display: flex;
     width: 50%;
+    height: 30%;
     justify-content: center;
     align-items: center;
     box-shadow: 
@@ -282,8 +287,8 @@ figure{
 }
 
 figure img{
-    height: 80%;
-    width: 60%;
+    height: 50%;
+    width: 50%;
 }
 
 section{
@@ -300,6 +305,11 @@ section{
     border-radius: 8px;
     border: 1px;
     background-color: #EFEFEF;
+}
+
+.tecshop{
+    color: #959595;
+    font-size: 14px;
 }
 
 .preco1{
@@ -384,6 +394,8 @@ button:hover {
     justify-content: space-between;
     width: 100%;
     padding: 10px;
+    color: #959595;
+    font-size: 14px;
 }
 
 .opcoes div{
@@ -403,12 +415,7 @@ article{
     border: 2px solid #ddeff2;
 }
 
-header{
-    display: flex;
-    justify-content: space-around;
-}
-
-header input[type="button"]{
+article input[type="button"]{
     border: none;
     background: none;
     cursor: pointer;
@@ -416,9 +423,15 @@ header input[type="button"]{
     color: #FFFFFF;
 }
 
-footer{
+.description{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.descricao{
+    display: flex;
+    flex-direction: inherit;
     padding: 20px;
     justify-content: space-between;
     gap: 30px;
@@ -439,12 +452,6 @@ footer{
     display: flex;
     align-items: center;
 }
-
-
-
-
-
-
 
 @keyframes flipInY {
     0% {
