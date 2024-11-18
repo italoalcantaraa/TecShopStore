@@ -131,7 +131,7 @@
                 </div>
             </div>
             <div class="botaoComprar">
-                <button class="botao">COMPRAR</button>
+                    <button class="botao" onclick="comprar()">COMPRAR</button>
                 <div class="addCarrinho">
                     <a href="">
                         <img src="../../assets/icons/shopping-cart-add.png">
@@ -259,6 +259,25 @@
                         console.error('Erro ao copiar o link: ', err);
                     });
             })
+        }
+
+        function comprar(){
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+
+
+            let arrayProduto = [];
+
+            arrayProduto = localStorage.getItem('produtoCarrinho');
+
+            arrayProduto.forEach(element => {
+                
+            });
+
+            window.location.href = "../carrinho/Carrinho.html";
+
+
+
         }
     </script>
 

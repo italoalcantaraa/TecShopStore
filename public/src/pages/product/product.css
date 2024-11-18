@@ -54,7 +54,7 @@
     min-width: 139px;
 }
 
-.icon img{
+.icon img {
     width: 35px;
 }
 
@@ -118,24 +118,24 @@ a {
     cursor: pointer;
 }
 
-.container_produtos{
+.container_produtos {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding-top: 25px;
 }
 
-.infoPopup{
+.infoPopup {
     display: flex;
     justify-content: space-between;
 }
 
-.infoPopup div{
+.infoPopup div {
     display: flex;
     gap: 25px;
 }
 
-#produto{
+#produto {
     width: 70px;
 }
 
@@ -146,12 +146,12 @@ a {
     padding-right: 40px;
 }
 
-.produtoPopup strong{
+.produtoPopup strong {
     font-size: 15px;
     max-width: 120px;
 }
 
-.botaoCarrinho{
+.botaoCarrinho {
     background-color: #125671;
     border: none;
     border-radius: 5px;
@@ -164,7 +164,7 @@ a {
     text-transform: uppercase;
 }
 
-.botaoCarrinho:hover{
+.botaoCarrinho:hover {
     opacity: 80%;
 }
 
@@ -209,12 +209,12 @@ a {
 }
 
 
-main{
+main {
     width: 100%;
     min-width: 600px;
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -224,74 +224,74 @@ nav{
     height: 30%;
     min-width: 400px;
     padding: 20px;
-    
+
     animation: fadeIn 3.0s ease forwards;
 }
 
-nav img{
+nav img {
     width: 60px;
     height: 4%;
 }
 
-nav .estrela{
+nav .estrela {
     min-width: 400px;
     width: 15%;
-    font-size: 30px; 
+    font-size: 30px;
     color: gold;
 }
 
-.share{
+.share {
     display: flex;
     flex-direction: row;
     width: 10%;
     justify-content: space-between;
 }
 
-.share img{
-    width:  40px;
+.share img {
+    width: 40px;
     cursor: pointer;
 }
 
-.share p{
+.share p {
     color: rgb(255, 0, 0);
     cursor: pointer;
     font-size: 32px;
 }
 
-main{
+main {
     height: 30%;
     padding: 30px;
     display: flex;
     justify-content: space-around;
     background: linear-gradient(67deg, #EFEFEF, #afcfeb);
-    box-shadow: 
-    8px 8px 15px rgba(0, 0, 0, 0.1),
-    -8px -8px 15px rgba(255, 255, 255, 0.913); 
+    box-shadow:
+        8px 8px 15px rgba(0, 0, 0, 0.1),
+        -8px -8px 15px rgba(255, 255, 255, 0.913);
     border-radius: 8px;
     border: 1px;
-    color:#f8f8f8;
+    color: #f8f8f8;
 }
 
-figure{
+figure {
     display: flex;
     width: 50%;
     height: 30%;
     justify-content: center;
     align-items: center;
-    box-shadow: 
-    8px 8px 15px rgba(0, 0, 0, 0.1),
-    -8px -8px 15px rgba(255, 255, 255, 0.913); 
+    box-shadow:
+        8px 8px 15px rgba(0, 0, 0, 0.1),
+        -8px -8px 15px rgba(255, 255, 255, 0.913);
     border-radius: 8px;
     border: 1px;
     background-color: #EFEFEF;
 }
 
-figure img{
+figure img {
     height: 50%;
     width: 50%;
 }
 
-section{
+section {
     color: black;
     display: flex;
     flex-direction: column;
@@ -299,20 +299,20 @@ section{
     width: 35%;
     padding: 30px;
     justify-content: space-between;
-    box-shadow: 
-    8px 8px 15px rgba(0, 0, 0, 0.1),
-    -8px -8px 15px rgba(255, 255, 255, 0.913); 
+    box-shadow:
+        8px 8px 15px rgba(0, 0, 0, 0.1),
+        -8px -8px 15px rgba(255, 255, 255, 0.913);
     border-radius: 8px;
     border: 1px;
     background-color: #EFEFEF;
 }
 
-.tecshop{
+.tecshop {
     color: #959595;
     font-size: 14px;
 }
 
-.preco1{
+.preco1 {
     display: flex;
     width: 100%;
     font-size: 30px;
@@ -388,7 +388,7 @@ button:hover {
     transform: scale(1.125);
 }  */
 
-.opcoes{
+.opcoes {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -398,27 +398,27 @@ button:hover {
     font-size: 14px;
 }
 
-.opcoes div{
+.opcoes div {
     display: flex;
     flex-direction: column;
 }
 
-article{
+article {
     display: flex;
     flex-direction: column;
     gap: 40px;
     background-color: #125671;
     padding: 70px 50px;
-    box-shadow: 
-    10px 10px 30px rgba(0, 0, 0, 0.2), 
-    -10px -10px 30px rgba(255, 255, 255, 0.8), 
-    inset 5px 5px 15px rgba(0, 0, 0, 0.1), 
-    inset -5px -5px 15px rgba(255, 255, 255, 0.5);
+    box-shadow:
+        10px 10px 30px rgba(0, 0, 0, 0.2),
+        -10px -10px 30px rgba(255, 255, 255, 0.8),
+        inset 5px 5px 15px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     border: 2px solid #ddeff2;
 }
 
-article input[type="button"]{
+article input[type="button"] {
     border: none;
     background: none;
     cursor: pointer;
@@ -426,38 +426,44 @@ article input[type="button"]{
     color: #FFFFFF;
 }
 
-.description{
+.description {
     display: flex;
     flex-direction: column;
     justify-content: flex-start
-
 }
 
-.titulo{
+.titulo {
     display: flex;
     align-items: center;
 }
 
-#descricao{
+#descricao {
     text-align: start;
     padding-top: 30px;
 }
 
-.descricao,.tecnico{
+.descricao,
+.tecnico {
     text-align: center;
-    font-size: 25px;
+    font-size: 16px;
     color: white;
 }
 
-
-.tituloInfo{
+.info {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start
 }
 
-.info{
+.tituloInfo {
     display: flex;
     align-items: center;
-    flex-direction: column;
+}
+
+
+#tec {
+    text-align: start;
+    padding-top: 30px;
 }
 
 @keyframes flipInY {
@@ -465,15 +471,18 @@ article input[type="button"]{
         transform: perspective(400px) rotateY(90deg);
         opacity: 0;
     }
+
     100% {
         transform: perspective(400px) rotateY(0);
         opacity: 1;
     }
 }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
