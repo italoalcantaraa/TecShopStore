@@ -131,7 +131,7 @@
                 </div>
             </div>
             <div class="botaoComprar">
-                    <button class="botao" onclick="comprar()">COMPRAR</button>
+                <button class="botao" onclick="comprar()">COMPRAR</button>
                 <div class="addCarrinho">
                     <a href="">
                         <img src="../../assets/icons/shopping-cart-add.png">
@@ -261,21 +261,30 @@
             })
         }
 
-        function comprar(){
+        function comprar() {
             const params = new URLSearchParams(window.location.search);
             const id = params.get('id');
 
+            let produto;
+            let produtosCarrinho = [];;
+            let produtos = [];
 
-            let arrayProduto = [];
+            produtos = JSON.parse(localStorage.getItem('products'));
 
-            arrayProduto = localStorage.getItem('produtoCarrinho');
+            console.log(produtosCarrinho)
 
-            arrayProduto.forEach(element => {
-                
+            produtos.forEach(element => {
+                if (id == element.id) {
+                    produto = element;
+                    return;
+                }
             });
 
-            window.location.href = "../carrinho/Carrinho.html";
+            produtosCarrinho = JSON.parse(localStorage.getItem("produtoCarrinho"));
+            produtosCarrinho.push(produto);
+            localStorage.produtoCarrinho = JSON.stringify(produtosCarrinho);
 
+            window.location.href = "../carrinho/Carrinho.html";
 
 
         }
