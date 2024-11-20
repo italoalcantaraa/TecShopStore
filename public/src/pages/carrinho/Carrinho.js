@@ -8,8 +8,8 @@ function checkProductsCart() {
 
     arrayProductsCart = JSON.parse(localStorage.getItem('produtoCarrinho'));
 
+    classProductsCart.innerHTML = "";
     arrayProductsCart.forEach(element => {
-        
         let product = `
             <div class="carrinho_produto">
                     <div class="informacoes_produto">
@@ -18,9 +18,9 @@ function checkProductsCart() {
                         <div>
                             <p>QTD</p>
                             <div class="botao_quantidade">
-                                <button>-</button>
+                                <button onclick='alterQuantity("decrement", ${element.id})'>-</button>
                                 <p>${element.quantityCart}</p>
-                                <button>+</button>
+                                <button onclick='alterQuantity("increment", ${element.id})'>+</button>
                             </div>
                         </div>
                         <div>
@@ -34,15 +34,15 @@ function checkProductsCart() {
     
                         <div class="opcoes">
                             <div>
-                                <input type="radio">
+                                <input type="radio" name="assurance">
                                 <p>Sem garantia</p>
                             </div>
                             <div>
-                                <input type="radio">
+                                <input type="radio" name="assurance">
                                 <p>12 meses de garantia estendida</p>
                             </div>
                             <div>
-                                <input type="radio">
+                                <input type="radio" name="assurance">
                                 <p>24 meses de garantia estendida</p>
                             </div>
                         </div>
@@ -53,4 +53,29 @@ function checkProductsCart() {
 
         classProductsCart.innerHTML += product;
     });
+}
+
+function alterQuantity(operation, id) {
+    let products = [];
+
+    products = JSON.parse(localStorage.getItem('produtoCarrinho'));
+
+    products.forEach(element => {
+        if (id == element.id) {
+
+            if (operation == "increment")
+                element.quantityCart++;
+            else {
+                element.quantityCart--;
+
+                if (element.quantityCart <= 0)
+                    products.splice(products.indexOf(element), 1);
+
+            }
+            return;
+        }
+    });
+
+    localStorage.produtoCarrinho = JSON.stringify(products);
+    checkProductsCart();
 }

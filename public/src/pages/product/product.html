@@ -281,6 +281,10 @@
             });
 
             produtosCarrinho = JSON.parse(localStorage.getItem("produtoCarrinho"));
+
+            // Adiciona um produto ao carrinho
+            produto.quantityCart++;
+
             produtosCarrinho.push(produto);
             localStorage.produtoCarrinho = JSON.stringify(produtosCarrinho);
 
