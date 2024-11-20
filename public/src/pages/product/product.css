@@ -214,27 +214,27 @@ main {
     min-width: 600px;
 }
 
-nav {
+.nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     justify-content: space-evenly;
-    width: 99%;
+    width: 100%;
     height: 30%;
-    min-width: 400px;
+    min-width: 100%;
     padding: 20px;
-
+    
     animation: fadeIn 3.0s ease forwards;
 }
 
-nav img {
+.nav img {
     width: 60px;
     height: 4%;
 }
 
-nav .estrela {
-    min-width: 400px;
+.nav .estrela {
+    min-width: 150px;
     width: 15%;
     font-size: 30px;
     color: gold;
@@ -271,11 +271,23 @@ main {
     border: 1px;
     color: #f8f8f8;
 }
+@media (max-width: 730px){
+    main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        
+    }
+
+    figure, section{
+        min-width: 80%;
+    }
+}
 
 figure {
     display: flex;
     width: 50%;
-    height: 30%;
     justify-content: center;
     align-items: center;
     box-shadow:
@@ -287,7 +299,6 @@ figure {
 }
 
 figure img {
-    height: 50%;
     width: 50%;
 }
 
@@ -406,6 +417,7 @@ button:hover {
 article {
     display: flex;
     flex-direction: column;
+    min-width: 600px;
     gap: 40px;
     background-color: #125671;
     padding: 70px 50px;

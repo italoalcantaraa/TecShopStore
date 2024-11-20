@@ -19,78 +19,9 @@
 <body>
 
     <!-- Logo do inicio da página -->
-    <header class="header-container">
-        <a href="../Home/Home.html">
-            <div class="logo">
-                <img src="../../assets/images/logoP1.png" alt="">
-            </div>
-        </a>
+    
 
-        <!-- Barra de pesquisa -->
-        <div class="search">
-            <input placeholder="Nome do produto" type="text">
-            <img src="../../assets/images/adm/search.svg" alt="">
-        </div>
-
-        <!-- Icone e botão de login -->
-        <div class="icon">
-            <img src="../../assets/images/user-svgrepo-com.svg">
-            <p>
-                <a class="login" href="">Entrar</a>
-                ou
-                <a class="login" href="">Cadastre-se</a>
-            </p>
-        </div>
-
-        <!-- Popup com carrinho de produtos e botão de abrir -->
-        <button class="carrinho" onclick="abrirPopup()">
-            <img src="../../assets/icons/shopping-cart.png">
-        </button>
-
-        <!-- Opção para fechar o popup -->
-        <div id="meuPopup" class="popup">
-            <div class="popup-conteudo">
-                <span class="fechar" onclick="fecharPopup()">
-                    &times;
-                    <p>MEU CARRINHO</p>
-                </span>
-
-                <!-- Carrinho com protudos -->
-                <div class="container_produtos">
-
-                    <div class="infoPopup">
-                        <p>Item</p>
-                        <div>
-                            <p>Preço</p>
-                            <p>Quantidade</p>
-                        </div>
-                    </div>
-
-                    <div class="produtoPopup">
-                        <img id="produto" src="../../assets/images/produtos/INTEL _CORE I9.png">
-                        <strong>PROCESSADOR INTEL CORE I9</strong>
-                        <p>R$2.974,00</p>
-                        <p>1</p>
-                        <button>
-                            <img src="../../assets/icons/trash.png">
-                        </button>
-                    </div>
-                </div>
-
-                <button class="botaoCarrinho" type="button">Finalizar Compra</button>
-
-                <!-- Opção quando o carrinho estiver vazio -->
-                <!-- <div class="carrinhoVazio">
-          <h2>Seu carrinho está vazio</h2>
-          <a href="../Home/Home.html">
-            <button class="car">COMPRAR</button>
-          </a>
-        </div> -->
-            </div>
-        </div>
-    </header>
-
-    <nav>
+    <div class="nav">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F318%2F793%2Fpng-transparent-amd-logo-logos-logos-and-brands-icon.png&f=1&nofb=1&ipt=16bc6ee85242e22d5bc168df2f06ddcccf706db787b32ef0759ab319892eb0ad&ipo=images"
             alt="logo">
 
@@ -100,7 +31,7 @@
             <p onclick="favoritar()">&#9825;</p> <!-- &#10084; -->
             <img onclick="compartinhar()" src="../../assets/icons/share-svgrepo-com.svg" alt="">
         </div>
-    </nav>
+    </div>
 
     <main>
 
