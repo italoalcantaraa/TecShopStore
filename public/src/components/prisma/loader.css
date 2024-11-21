@@ -22,7 +22,7 @@ main#particles-js {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: 0;
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../assets/images/giphy.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +38,7 @@ main#particles-js {
     transform: rotateX(-20deg);
     left: 40%;
     top: 30%;
-    z-index: 0;
+    z-index: 1;
   }
   
   .wrapper {

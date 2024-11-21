@@ -11,15 +11,21 @@
   <script async src='index.js'></script>
   <script src='../../plugin/components.js'></script>
   <script src="../../script/ProductObj.js"></script>
+  <script src="../../components/prisma/loader.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
+
+  <script>
+    loader()
+  </script>
 
   <!-- Logo do inicio da página -->
   <header class="header-container">
     <a href="../Home/Home.html">
       <div class="logo">
-        <img src="../../assets/images/logoP1.png" alt="">
+        <img src="../../assets/images/logoP1.png" alt="" class="animate__animated animate__bounceInLeft">
       </div>
     </a>
 
@@ -32,7 +38,7 @@
     <!-- Icone e botão de login -->
     <div class="icon">
       <img src="../../assets/images/user-svgrepo-com.svg">
-      <p>
+      <p class="animate__animated animate__flash">
         <a class="login" href="../login/Login.html">Entrar</a>
         ou
         <a class="login" href="../cadastro/Cadastro.html">Cadastre-se</a>
@@ -41,7 +47,7 @@
 
     <!-- Popup com carrinho de produtos e botão de abrir -->
     <button class="carrinho" onclick="abrirPopup()">
-      <img src="../../assets/icons/shopping-cart.png">
+      <img src="../../assets/icons/shopping-cart.png" class="animate__animated animate__backInRight">
     </button>
 
     <!-- Opção para fechar o popup -->

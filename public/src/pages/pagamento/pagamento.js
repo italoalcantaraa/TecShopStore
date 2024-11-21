@@ -6,7 +6,11 @@ function radioOn(radio, n){
         lastCheck = null
     }
     else{
-        lastCheck = radio //Tá ligado radio
+        if (lastCheck !== null) {
+            lastCheck.checked = false; // Desmarcar o rádio anterior
+            
+        }
+        lastCheck = radio; // Liga radio
     }
     OcultConteiner(n)
 }
@@ -21,3 +25,4 @@ function OcultConteiner(num){
         ocult.style.display = "none"
     }
 }
+

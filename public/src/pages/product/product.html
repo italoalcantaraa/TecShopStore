@@ -9,15 +9,17 @@
     <link rel="icon" href="../../assets/images/LogoIcon.png" type="image/x-icon">
     <script src="../../plugin/notify.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.11.2/Toastify.min.css">
-    <!-- Link para Toastify -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.11.2/Toastify.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Script para Toastify -->
+    <script src="../../components/prisma/loader.js"></script>
 </head>
 </head>
 
 <body>
-
+    <script>
+        loader();
+    </script>
     <!-- Logo do inicio da página -->
     
 
@@ -36,13 +38,13 @@
     <main>
 
         <figure class="imgProduto">
-            <img id="img" src="" alt="product">
+            <img id="img" src="" alt="product" class="animate__animated animate__fadeIn">
         </figure>
 
         <section class="body">
 
             <div class="nome">
-                <h2 id="name"></h2>
+                <h2 id="name" class="animate__animated animate__slideInDown"></h2>
             </div>
 
             <div class="tecshop">
@@ -50,7 +52,7 @@
             </div>
 
             <div class="preco1">
-                <h3 id="preco" class="animate__animated animate__lightSpeedInLeft"></h3>
+                <h3 id="preco" class="animate__animated animate__zoomIn"></h3>
             </div>
 
             </div>
@@ -65,7 +67,7 @@
                 <button class="botao" onclick="comprar()">COMPRAR</button>
                 <div class="addCarrinho">
                     <a href="">
-                        <img src="../../assets/icons/shopping-cart-add.png">
+                        <img src="../../assets/icons/shopping-cart-add.png" class="animate__animated animate__lightSpeedInLeft ">
                     </a>
                 </div>
             </div>
