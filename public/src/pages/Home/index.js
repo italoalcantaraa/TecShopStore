@@ -29,7 +29,6 @@ window.onload = function () {
 
     containerProdutct.innerHTML += product;
   });
-
 }
 
 function buy() {
@@ -72,7 +71,7 @@ function addCarrinho(event, element) {
   if (localStorage.produtoCarrinho)
     productCart = JSON.parse(localStorage.getItem('produtoCarrinho'))
 
-  // Adiciona todos os produtos na localStorage no array
+  // Adiciona todos os produtos da localStorage no array
   products = JSON.parse(localStorage.getItem('products'));
 
   products.forEach(element => {
@@ -83,8 +82,21 @@ function addCarrinho(event, element) {
     }
   });
 
+  let exists = false;
+
+  // verifica se o produto já existe no carrinho para incrementar na qtd
+  productCart.forEach(element => {
+    if(objProduct.id == element.id) {
+      element.quantityCart++;
+      objProduct = element;
+      exists = true;
+    }
+  });
+
   // Adiciona o produto no array
-  productCart.push(objProduct);
+  if(!exists)
+    productCart.push(objProduct);
+  
   
   // adiciona todos os produtos do array na localStorade de produtos
   localStorage.produtoCarrinho = JSON.stringify(productCart);
@@ -94,12 +106,13 @@ function addCarrinho(event, element) {
 function verificaProdutosCarrinho() {
   let emptyCart = document.querySelector('.carrinhoVazio');
   let checkoutButton = document.querySelector('.botaoCarrinho');
-  let productElementCard = [];
   const classContainerProdutos = document.getElementById('container_produtos');
 
-  if (localStorage.produtoCarrinho) {
+  let productElementCard = [];
+  if (localStorage.produtoCarrinho && localStorage.produtoCarrinho.length > 5) {
     emptyCart.style = "display:none;";
-    checkoutButton = "display: flex;"
+    checkoutButton.style = "display:flex;";
+    console.log(localStorage.produtoCarrinho.length);
 
     productElementCard = JSON.parse(localStorage.getItem('produtoCarrinho'));
 
@@ -126,6 +139,10 @@ function verificaProdutosCarrinho() {
   } else {
     emptyCart.style = "display:flex;";
     checkoutButton.style = "display:none;";
+    
+    if(document.querySelector(".produtoPopup")) 
+      document.querySelector(".produtoPopup").style = "display: none;"
+  
   }
 }
 

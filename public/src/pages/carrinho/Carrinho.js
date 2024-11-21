@@ -1,5 +1,10 @@
+let total = document.getElementById('total');
+let totalProcucts = document.getElementById('totalProcucts');
+
 window.onload = () => {
     checkProductsCart();
+    totalProcucts.innerHTML = `R$ ${totalPriceProducts()}`;
+    total.innerHTML = `R$ ${totalPrice()}`;
 };
 
 function checkProductsCart() {
@@ -25,7 +30,7 @@ function checkProductsCart() {
                         </div>
                         <div>
                             <p>À vista ou no pix por:</p>
-                            <strong>R$ ${element.price}</strong>
+                            <strong>R$ ${(parseFloat(element.price) * parseInt(element.quantityCart)).toFixed(2)}</strong>
                         </div>
                     </div>
                     <div class="servicos">
@@ -34,25 +39,37 @@ function checkProductsCart() {
     
                         <div class="opcoes">
                             <div>
-                                <input type="radio" name="assurance">
+                                <input onclick='assurance(0)' type="radio" checked name="assurance">
                                 <p>Sem garantia</p>
                             </div>
                             <div>
-                                <input type="radio" name="assurance">
+                                <input type="radio" onclick='assurance(150)' name="assurance">
                                 <p>12 meses de garantia estendida</p>
                             </div>
                             <div>
-                                <input type="radio" name="assurance">
+                                <input type="radio" onclick='assurance(200)' name="assurance">
                                 <p>24 meses de garantia estendida</p>
                             </div>
                         </div>
-                        <p>Subtotal de serviços: <strong>R$ 200,00</strong></p>
+                        <p id='subtotal'>Subtotal de serviços: <strong id="assuranceValue">R$ 0.00</strong></p>
                     </div>
                 </div>
         `;
 
         classProductsCart.innerHTML += product;
     });
+}
+
+// Adiciona o valor dos serviços adiconais
+function assurance(value) {
+    let additionalServices = parseFloat(value) == NaN ? 0.00 : parseFloat(value);
+
+    let assuranceValue = document.getElementById('assuranceValue'); 
+    let assuranceValue2 = document.getElementById('assuranceValue2');
+
+    assuranceValue.innerHTML = `R$ ${additionalServices.toFixed(2)}`;
+    assuranceValue2.innerHTML = `R$ ${additionalServices.toFixed(2)}`;
+    
 }
 
 function alterQuantity(operation, id) {
@@ -78,4 +95,34 @@ function alterQuantity(operation, id) {
 
     localStorage.produtoCarrinho = JSON.stringify(products);
     checkProductsCart();
+    location.reload();
+}
+
+
+// função para remover os produtos do carrinho
+function removeProduts() {
+    var productsCart = [];
+    localStorage.produtoCarrinho = JSON.stringify(productsCart); // atribui o array vazio na localStorage
+    location.reload(); // recarrega a página para exibir o carrinho vazio
+}
+
+function totalPriceProducts() {
+    let sum = 0;
+
+    let productsCart = JSON.parse(localStorage.getItem('produtoCarrinho'));
+
+    productsCart.forEach(product => {
+        let price = parseFloat(product.price);
+        let quantity = parseInt(product.quantityCart);
+ 
+        sum += price * quantity;
+
+    });
+
+    return sum.toFixed(2);
+}
+
+function totalPrice() {
+
+    return totalPriceProducts();
 }

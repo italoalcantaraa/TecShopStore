@@ -285,12 +285,22 @@
             // Adiciona um produto ao carrinho
             produto.quantityCart++;
 
-            produtosCarrinho.push(produto);
+            let exists = false;
+
+            produtosCarrinho.forEach(element => {
+                if (element.id == produto.id) {
+                    element.quantityCart++;
+                    exists = true;
+                    return;
+                }
+            });
+
+            if (!exists)
+                produtosCarrinho.push(produto);
+
             localStorage.produtoCarrinho = JSON.stringify(produtosCarrinho);
 
             window.location.href = "../carrinho/Carrinho.html";
-
-
         }
     </script>
 
