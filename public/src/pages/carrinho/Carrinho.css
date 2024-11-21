@@ -33,10 +33,47 @@ body{
 }
 main{
     display:  flex;
-
     justify-content: center;
     gap: 15px;
     padding: 20px;
+}
+
+@media (max-width: 850px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resumo{
+        min-width: 90%;
+    }
+
+    .detalhes_produto{
+        min-width: 90%;
+    }
+
+    .produtos-carrinho{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 710px) {
+    
+        .produtos-carrinho .carrinho_produto .informacoes_produto{
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: start;
+        flex-direction: column;
+        gap: 30px;
+    }
+    #subtotal{
+        padding-top: 20px;
+    }
+    
+    .estado{
+        display: none;
+    }
 }
 
 nav #linha{

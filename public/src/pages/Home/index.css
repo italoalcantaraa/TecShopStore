@@ -216,6 +216,8 @@ a {
     display: none;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
+    height: 45%;
 }
 
 .fechar p {
