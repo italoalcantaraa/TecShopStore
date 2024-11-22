@@ -112,7 +112,7 @@ a {
 }
 
 .title {
-    margin: 80px;
+    padding: 80px;
     gap: 20px;
     align-items: center;
     display: flex;
@@ -126,8 +126,9 @@ a {
 }
 
 .text{
-    padding-bottom: 500px;
-    margin: 160px;
+    text-align: start;
+    font-size: 16px;
+    padding: 100px;
 }
 
 .meio{
@@ -154,4 +155,25 @@ a {
 
 .info h3{
     padding: 10px;
+}
+
+.titulo h2 {
+    justify-items: center;
+    color: black;
+    text-align: center;
+    padding: 100px;
+    font-size: 40px;             
+}
+
+.titulo img{
+    justify-items: center;
+    padding: 10px;
+}
+
+.lojafora img{
+    width: 80%;
+}
+
+.lojaInt img{
+    width: 40%; 
 }
