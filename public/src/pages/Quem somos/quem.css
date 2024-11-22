@@ -165,8 +165,20 @@ a {
     font-size: 40px;             
 }
 
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo div{
+    display: flex; 
+    justify-content: center;
+}
+
 .titulo img{
-    justify-items: center;
+    
     padding: 10px;
 }
 
