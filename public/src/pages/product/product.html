@@ -21,7 +21,84 @@
         loader();
     </script>
     <!-- Logo do inicio da página -->
-    
+    <!-- Logo do inicio da página -->
+    <header class="header-container">
+        <a href="../Home/Home.html">
+            <div class="logo">
+                <img src="../../assets/images/logoP1.png" alt="" class="animate__animated animate__bounceInLeft">
+            </div>
+        </a>
+
+        <!-- Barra de pesquisa -->
+        <div class="search">
+            <input placeholder="Nome do produto" type="text">
+            <img src="../../assets/images/adm/search.svg" alt="">
+        </div>
+
+        <!-- Icone e botão de login -->
+        <div class="icon">
+            <img src="../../assets/images/user-svgrepo-com.svg">
+            <p class="animate__animated animate__flash">
+                <a class="login" href="../login/Login.html">Entrar</a>
+                ou
+                <a class="login" href="../cadastro/Cadastro.html">Cadastre-se</a>
+            </p>
+        </div>
+
+        <!-- Popup com carrinho de produtos e botão de abrir -->
+        <button class="carrinho" onclick="abrirPopup()">
+            <img src="../../assets/icons/shopping-cart.png" class="animate__animated animate__backInRight">
+        </button>
+
+        <!-- Opção para fechar o popup -->
+        <div id="meuPopup" class="popup">
+            <div class="popup-conteudo">
+                <span class="fechar" onclick="fecharPopup()">
+                    &times;
+                    <p>MEU CARRINHO</p>
+                </span>
+
+                <div class="container_produtos" id="container_produtos">
+
+                </div>
+
+                <button class="botaoCarrinho" onclick="buy()" type="button">Finalizar Compra</button>
+
+
+                <div class="carrinhoVazio">
+                    <h2>Seu carrinho está vazio</h2>
+                    <a href="../Home/Home.html">
+                        <button class="car">COMPRAR</button>
+                    </a>
+                </div>
+
+            </div>
+
+    </header>
+
+    <!-- Categorias de produtos -->
+    <div class="categorias">
+
+        <a class="menu-item" href="javascript:void(0);" onclick="toggleDropdown()">
+            DEPARTAMENTOS
+        </a>
+
+        <div id="dropdown" class="dropdown-content">
+            <a href="">GABINETE</a>
+            <a href="">PLACA DE VIDEO</a>
+            <a href="">MEMORIA RAM</a>
+            <a href="">SSD</a>
+            <a href="">TECLADO</a>
+            <a href="">PROCESSADOR</a>
+        </div>
+
+        <a class="menu-item" href="">OFERTAS</a>
+
+        <a class="menu-item" href="">CUPONS</a>
+
+        <a class="menu-item" href="../Quem somos/quem.html">QUEM SOMOS ?</a>
+    </div>
+
 
     <div class="nav">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F318%2F793%2Fpng-transparent-amd-logo-logos-logos-and-brands-icon.png&f=1&nofb=1&ipt=16bc6ee85242e22d5bc168df2f06ddcccf706db787b32ef0759ab319892eb0ad&ipo=images"
@@ -67,7 +144,8 @@
                 <button class="botao" onclick="comprar()">COMPRAR</button>
                 <div class="addCarrinho">
                     <a href="">
-                        <img src="../../assets/icons/shopping-cart-add.png" class="animate__animated animate__lightSpeedInLeft ">
+                        <img src="../../assets/icons/shopping-cart-add.png"
+                            class="animate__animated animate__lightSpeedInLeft ">
                     </a>
                 </div>
             </div>
@@ -101,6 +179,7 @@
 
     </article>
 
+    <div id="footer"></div>
 
     <script>
 
@@ -235,6 +314,10 @@
 
             window.location.href = "../carrinho/Carrinho.html";
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            CarregarComponente('../../components/footer/footer.html', 'footer'); // Chama a função após o carregamento do DOM
+        });
     </script>
 
 </body>

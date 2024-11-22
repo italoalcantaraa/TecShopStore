@@ -7,55 +7,37 @@
     <title>Quem Somos ?</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='quem.css'>
-    <link rel="icon" href="../Img/LogoIcon.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/images/LogoIcon.png" type="image/x-icon">
     <script src='quem.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
 
+  <!-- Logo do inicio da página -->
   <header class="header-container">
     <a href="../Home/Home.html">
       <div class="logo">
-        <img src="../../assets/images/logoP1.png" alt="">
+        <img src="../../assets/images/logoP1.png" alt="" class="animate__animated animate__bounceInLeft">
       </div>
     </a>
 
+    <!-- Barra de pesquisa -->
     <div class="search">
       <input placeholder="Nome do produto" type="text">
       <img src="../../assets/images/adm/search.svg" alt="">
-  </div>
+    </div>
 
+    <!-- Icone e botão de login -->
     <div class="icon">
       <img src="../../assets/images/user-svgrepo-com.svg">
-
-      <p>
-        <a class="login" href="">Entrar</a>
+      <p class="animate__animated animate__flash">
+        <a class="login" href="../login/Login.html">Entrar</a>
         ou
-        <a class="login" href="">Cadastre-se</a>
+        <a class="login" href="../cadastro/Cadastro.html">Cadastre-se</a>
       </p>
-
     </div>
-
-    <button class="carrinho" onclick="abrirPopup()">
-      <img src="../../assets/icons/shopping-cart.png">
-    </button>
-
-    <div id="meuPopup" class="popup">
-      <div class="popup-conteudo">
-        <span class="fechar" onclick="fecharPopup()">&times;<p>MEU CARRINHO</p></span>
-          
-        <div class="teste">
-          <h2>Seu carrinho está vazio</h2>  
-          <a href="../Home/Home.html">
-            <button class="car">COMPRAR</button>
-          </a>
-  
-        </div>
-      </div>
-    </div>
-
-    </header>
+  </header>
 
     <div>
 
@@ -90,12 +72,40 @@
                 <br>
                 <br>
                 Escolher a Tecshop é optar por uma experiência diferenciada, onde tecnologia é mais do que um
-                produto – é nossa paixão e compromisso com você. Aqui, nos dedicamos a ser mais que uma loja;
+                produto é nossa paixão e compromisso com você. Aqui, nos dedicamos a ser mais que uma loja;
                 somos seu parceiro na construção de ideias e inovações.
                 <br>
                 <br>
                 Tecshop - Tudo o que você precisa para levar seu projeto ao próximo nível!
             </p>
+
+            <h2 class="meio">Desde 2003, o maior E-commerce de Tecnologia e Games da América Latina</h2>
+
+            <div class="info">
+            <div class="colab">
+              <img src="../../assets/icons/users.png">
+              <h3>+ 500</h3>
+              <p>Colaboradores</p>
+            </div>
+
+            <div class="loc">
+              <img src="../../assets/icons/map-marker.png">
+              <h3>+ 1.000</h3>
+              <p>Cidades Atendidas</p>
+            </div>
+
+            <div class="client">
+              <img src="../../assets/icons/handshake.png">
+              <h3>+ 1 milhão</h3>
+              <p>de Clientes</p>
+            </div>
+
+            <div class="pedidos">
+              <img src="../../assets/icons/truck-side.png">
+              <h3>+ 8 milhões</h3>
+              <p>de Pedidos</p>
+            </div>
+          </div>
         </div>
     </div>
 

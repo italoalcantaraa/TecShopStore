@@ -10,11 +10,47 @@
 }
 
 
+@media (max-width: 770px) {
+
+    .header-container {
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .search {
+        width: 60%;
+        padding: 4px;
+    }
+
+    .icon {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .categorias {
+        flex-direction: row;
+    }
+
+    .dropdown-content {
+        position: relative;
+        left: 2%;
+        width: 31%;
+    }
+}
+
 .header-container {
     padding: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    min-width: 400px;
     background: linear-gradient(145deg, #EFEFEF, #afcfeb);
     box-shadow: 9px 9px 29px #939393,
         -9px -9px 29px #ffffff;
@@ -22,8 +58,8 @@
 }
 
 .logo img {
-    width: 100%;
-    max-width: 130px;
+    margin-left: 50px;
+    width: 130px;
 }
 
 .search img {
@@ -38,13 +74,11 @@
     background-color: white;
     padding: 12px 20px;
     width: 40%;
-    min-width: 200px;
-    min-width: 400px;
     border-radius: 10px;
 }
 
 .search input {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     border: none;
     outline: none;
     width: 100%;
@@ -68,12 +102,12 @@
     text-decoration: underline;
 }
 
-
 .header-container p,
 a {
     color: black;
     text-decoration: none;
 }
+
 
 .carrinho {
     background: none;
@@ -111,8 +145,8 @@ a {
     position: static;
     top: 8%;
     right: 15%;
-    font-size: 20px;
-    gap: 10px;
+    font-size: 25px;
+    gap: 20px;
     display: flex;
     font-weight: bold;
     cursor: pointer;
@@ -132,7 +166,6 @@ a {
 
 .infoPopup div {
     display: flex;
-    gap: 25px;
 }
 
 #produto {
@@ -143,7 +176,51 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #105773;
+}
+
+.produtoPopup p,
+strong {
+    color: white;
+}
+
+.produtoPopup div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 20px;
+}
+
+
+.produtoPopup #img {
+    height: 80px;
+}
+
+.produtoPopup button {
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    border: none;
+    padding: 0px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 25px;
+    color: #105773;
+}
+
+.produtoPopup button:hover {
+    box-shadow: -1px -1px 15px rgb(255, 255, 255);
+}
+
+.produtoPopup button:active {
+    box-shadow: inset 0px 4px 5px 0px #838383a8;
+}
+
+.produtoPopup button img {
+    width: 25px;
+
 }
 
 .produtoPopup strong {
@@ -169,14 +246,16 @@ a {
 }
 
 .carrinhoVazio {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-end;
-    height: 50%;
+    align-items: center;
+    height: 45%;
 }
 
 .fechar p {
     color: #125671;
+    margin-bottom: 25px;
 }
 
 .popup h2 {
@@ -200,6 +279,7 @@ a {
 
 }
 
+
 .car:hover {
     opacity: 80%;
 }
@@ -208,6 +288,63 @@ a {
     overflow: hidden;
 }
 
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    font-size: clamp(10px, 2vw, 18px);
+    min-width: 400px;
+}
+
+.categorias a {
+    margin-top: 20px;
+    color: black;
+}
+
+.menu-item {
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    border-radius: 6px;
+
+}
+
+.menu-item:hover {
+    background-color: #125671;
+    color: white;
+    box-shadow: -2px 6px 5px 0px #838383;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 18%;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: #125671;
+    box-shadow: -1px 2px 15px 0px #838383;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #011526;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+}
 
 main {
     width: 100%;
@@ -262,6 +399,7 @@ main {
     height: 30%;
     padding: 30px;
     display: flex;
+    min-width: 400px;
     justify-content: space-around;
     background: linear-gradient(67deg, #EFEFEF, #afcfeb);
     box-shadow:
@@ -281,9 +419,11 @@ main {
     }
 
     figure, section{
-        min-width: 80%;
+        min-width: 90%;
     }
 }
+
+
 
 figure {
     display: flex;
@@ -417,7 +557,7 @@ button:hover {
 article {
     display: flex;
     flex-direction: column;
-    min-width: 600px;
+    min-width: 400px;
     gap: 40px;
     background-color: #125671;
     padding: 70px 50px;
