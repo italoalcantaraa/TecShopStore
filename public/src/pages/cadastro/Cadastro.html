@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="Cadastro.css">
+    <link rel="icon" href="../../assets/images/LogoIcon.png" type="image/x-icon">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <script src="Cadastro.js"></script>
     <script src="../../components/prisma/loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <script>
     loader();
@@ -17,7 +19,7 @@
 <body>
     <div id="erro"></div>
     <section>
-        <img id="img" src="../../assets/images/logo.png" alt="">
+        <img id="img" src="../../assets/images/logo.png" alt="" class="animate__animated animate__fadeIn">
         <div id="form">
             <p>Nome completo</p>
             <input id="name" type="text" placeholder="nome">
@@ -31,7 +33,7 @@
             <input id="password" type="password" placeholder="Senha">
         </div>
         <div id="confirm">
-            <button type="submit" onclick="register()">Cadastrar</button>
+            <button type="submit" onclick="register()" class="animate__animated animate__lightSpeedInLeft">Cadastrar</button>
             <p>Já possui uma conta? <strong><a href="../login/Login.html">Login</a></strong></p>
         </div>
 
