@@ -1,11 +1,16 @@
 function loader(){
-       // Verifica se o loader já foi exibido alguma vez
-       const url = window.location.href; //public/src/pages/cadastro/Cadastro.html
-       localStorage.setItem('urlDestino', url);
-       if (!sessionStorage.getItem("loaderExibido")) {
-           //loader foi exibido
-           sessionStorage.setItem("loaderExibido", "true");
-   
-           window.location.href = "/public/src/components/prisma/loader.html";
-       }
+    // Salva a URL da página atual para redirecionar depois
+    const url = window.location.href; 
+    localStorage.setItem('urlDestino', url);
+    console.log(url)
+
+    // Verifica se o loader já foi exibido na sessão atual
+    if (!sessionStorage.getItem("loaderExibido")) {
+        sessionStorage.setItem("loaderExibido", "true"); // Marca que o loader foi exibido
+        window.location.href = "/public/src/components/prisma/loader.html";
+    }
+    else {
+        // Se o loader já foi exibido
+        sessionStorage.removeItem("loaderExibido"); //Então reseta o estado aparecer dnv
+    }
 }

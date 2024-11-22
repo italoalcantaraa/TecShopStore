@@ -7,8 +7,13 @@
     <script src='../../plugin/components.js'></script>
     <script src="pagamento.js"></script>
     <link rel="stylesheet" href="pagamento.css">
+    <script src="../../components/prisma/loader.js"></script>
 </head>
 <body>
+
+    <script>
+        loader();
+    </script>
 
     <header>
         <h6>[CARRINHO]</h6>
@@ -22,7 +27,7 @@
 
     <main>
         <section class="pagamentos">
-            <input type="radio" onclick="radioOn(this, 1)">
+            <input type="radio" id="1" onclick="radioOn(this, 1)">
             <label for="option1">Pix:</label>
 
             <div id="ocult1">
@@ -37,8 +42,8 @@
             </div>
         </section>
             
-        <section class="pagamentos">
-            <input type="radio" onclick="radioOn(this, 2)">
+        <section id="boleto" class="pagamentos">
+            <input type="radio" id="2" onclick="radioOn(this, 2)">
             <label for="option2">BOLETO:</label>
 
             <div id="ocult2">
@@ -50,26 +55,26 @@
             <div class="cartao">
                 <label for="option3">CARTÃO:</label>
                 <p>DEBITO</p>
-                <input type="radio" onclick="radioOn(this, 3)">
+                <input type="radio" id="3" onclick="radioOn(this, 3)">
                 <p>CREDITO</p>
-                <input type="radio" onclick="radioOn(this, 4)">
+                <input type="radio" id="4" onclick="radioOn(this, 4)">
             </div>
 
             <div id="ocult3">
                 <p>DEBITO</p>
 
-                    <input type="text" placeholder="NOME">
-                    <input type="number" placeholder="N°">
-                    <input type="number" placeholder="CV">
+                    <input type="text" placeholder="NOME" required>
+                    <input type="number" placeholder="N°" required>
+                    <input type="number" placeholder="CV" required>
 
             </div>
             <div id="ocult4">
                 <p>CRÉDITO</p>
                 <div class="credito-f">
-                    <input type="text" placeholder="NOME">
-                    <input type="number" placeholder="N°">
-                    <input type="number" placeholder="CV">
-                    <input type="number" placeholder="Parcelas">
+                    <input type="text" placeholder="NOME" required>
+                    <input type="number" placeholder="N°" required>
+                    <input type="number" placeholder="CV" required>
+                    <input type="number" placeholder="Parcelas" required>
                 </div>
             </div>
         </section>
@@ -106,6 +111,7 @@
     document.addEventListener('DOMContentLoaded', () => {
     CarregarComponente('../../components/footer/footer.html', 'footer'); // Chama a função após o carregamento do DOM
 });
+
 </script>
 </html>
 

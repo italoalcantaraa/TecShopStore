@@ -83,7 +83,7 @@ main{
 
 #ocult2{
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .qrcode{
@@ -223,7 +223,7 @@ article button {
     font-size: 16px; 
     border: 2px solid #ccc; 
     border-radius: 8px; 
-    outline: none; /* Remove o contorno padrão */
+    outline: none; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -241,7 +241,7 @@ input[type="number"]{
     font-size: 16px; 
     border: 2px solid #ccc; 
     border-radius: 8px; 
-    outline: none; /* Remove o contorno padrão */
+    outline: none; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 input[type="number"]:hover {
@@ -285,3 +285,45 @@ input[type="number"]:focus {
      box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
     }
    }
+
+   @media (max-width: 840px) {
+    .cartao {
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center; 
+        gap: 10px; 
+    }
+
+    .cartao p, 
+    .cartao input {
+        display: inline-block; 
+        margin: 0; 
+    }
+
+    .cartao input {
+        margin-left: 5px; 
+    }
+
+    #boleto{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ocult2{
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 320px) {
+    .cartao{
+        background-color: red;
+        padding: 0px 50px 0px 0px;
+    }
+
+    .cartao input {
+        padding-left: 20px;
+    }
+
+
+}
