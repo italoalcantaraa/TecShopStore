@@ -312,7 +312,8 @@ nav #linha{
     flex-direction: column;
 }
 
-.resumo .finalizar_compra button{
+.resumo .finalizar_compra a{
+    text-align: center;
     padding: 15px 0px;
     border-radius: 5px;
     border: none;
@@ -323,6 +324,6 @@ nav #linha{
     cursor: pointer;
 }
 
-.resumo .finalizar_compra button:hover{
+.resumo .finalizar_compra a:hover{
     opacity: 80%;
 }

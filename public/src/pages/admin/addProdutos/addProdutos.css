@@ -68,10 +68,14 @@ select option:nth-child(1){
     color: #959595;
 }
 
+.container .linha2{
+    padding: 0px;
+}
+
 .linha2 div {
     display: flex;
     gap: 5px;
-    width: 106%;
+    width: 100%;
 }
 
 .linha3 textarea{

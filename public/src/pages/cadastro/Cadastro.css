@@ -36,6 +36,7 @@ a{
     visibility: hidden;
     position: absolute;
     transition: all 0.4s;
+    min-width: 200px;
 }
 
 
