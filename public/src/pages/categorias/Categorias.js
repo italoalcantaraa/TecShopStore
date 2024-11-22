@@ -1,9 +1,9 @@
-window.onload = function () {
-
+window.onload = function () {  
     const params = new URLSearchParams(window.location.search);
-    idProduct = params.get('id');
+    let category = params.get('category'); 
 
-    
+    document.getElementById('title').innerHTML = category;
+
     let containerProdutct = document.querySelector('.produtos-grid');
   
     let arrayProducts = [];
@@ -12,7 +12,8 @@ window.onload = function () {
       arrayProducts = JSON.parse(localStorage.getItem('products'));
   
     arrayProducts.forEach(element => {
-      const product = `
+      if(category == element.category) {
+        const product = `
                 <span class="luz">
                   <div class="produto" id="${element.id}" onclick="EnvioProduto(${element.id})">
                       <div class="imgProduto">
@@ -31,7 +32,146 @@ window.onload = function () {
                   </div>
                 </span>`;
   
-      containerProdutct.innerHTML += product;
+      containerProdutct.innerHTML += product;  
+      }
     });
   }
+
+  // função para abrir o popup
+function abrirPopup() {
+  document.getElementById("meuPopup").style.display = "flex";
+  document.body.classList.add("bloqueado");
+
+  verificaProdutosCarrinho();
+}
+// função para fechar o popup
+function fecharPopup() {
+  document.getElementById("meuPopup").style.display = "none";
+  document.body.classList.remove("bloqueado");
+}
+// função para abrir as opções de categorias 
+function toggleDropdown() {
+  var dropdown = document.getElementById("dropdown");
+  dropdown.classList.toggle("show");
+}
+
+var productCart = [];
+
+function addCarrinho(event, element) {
+  let objProduct;
+
+  let products = [];
+
+  // Impede que outros elementos executem (função da div pai)
+  event.stopPropagation();
+
+  // Pega o id do card de produto
+  let id = parseInt(element.closest('.produto').id);
+
+  // Verifica se existe a lovalStora de produtoCarrinho
+  if (localStorage.produtoCarrinho)
+    productCart = JSON.parse(localStorage.getItem('produtoCarrinho'))
+
+  // Adiciona todos os produtos da localStorage no array
+  products = JSON.parse(localStorage.getItem('products'));
+
+  products.forEach(element => {
+    if (element.id == id) {
+      element.quantityCart++;
+      objProduct = element;
+      return;
+    }
+  });
+
+  let exists = false;
+
+  // verifica se o produto já existe no carrinho para incrementar na qtd
+  productCart.forEach(element => {
+    if(objProduct.id == element.id) {
+      element.quantityCart++;
+      objProduct = element;
+      exists = true;
+    }
+  });
+
+  // Adiciona o produto no array
+  if(!exists)
+    productCart.push(objProduct);
   
+  
+  // adiciona todos os produtos do array na localStorade de produtos
+  localStorage.produtoCarrinho = JSON.stringify(productCart);
+  abrirPopup();
+}
+
+function verificaProdutosCarrinho() {
+  let emptyCart = document.querySelector('.carrinhoVazio');
+  let checkoutButton = document.querySelector('.botaoCarrinho');
+  const classContainerProdutos = document.getElementById('container_produtos');
+
+  let productElementCard = [];
+  if (localStorage.produtoCarrinho && localStorage.produtoCarrinho.length > 5) {
+    emptyCart.style = "display:none;";
+    checkoutButton.style = "display:flex;";
+    console.log(localStorage.produtoCarrinho.length);
+
+    productElementCard = JSON.parse(localStorage.getItem('produtoCarrinho'));
+
+    classContainerProdutos.innerHTML = "";
+
+    productElementCard.forEach(element => {
+      const produtoHTML = `
+          <div class="produtoPopup" id=${element.id}">
+                <div id="img">
+                  <img id="produto" src="${element.img}">
+                </div>
+                  <strong>${element.name}</strong>
+                  <p>R$${element.price}</p>
+                  <div>
+                  <button onclick='alterQuantity("decrement", ${element.id})'>-</button>
+                    <p>${element.quantityCart}</p>
+                    <button onclick='alterQuantity("increment", ${element.id})'>+</button>
+                  </div>
+                </div>
+            </div>`
+
+      classContainerProdutos.innerHTML += produtoHTML;
+    });
+  } else {
+    emptyCart.style = "display:flex;";
+    checkoutButton.style = "display:none;";
+    
+    if(document.querySelector(".produtoPopup")) 
+      document.querySelector(".produtoPopup").style = "display: none;"
+  
+  }
+}
+
+function alterQuantity(operation, id) {
+  let products = [];
+
+  products = JSON.parse(localStorage.getItem('produtoCarrinho'));
+
+  products.forEach(element => {
+    if (id == element.id) {
+
+      if (operation == "increment")
+        element.quantityCart++;
+      else {
+        element.quantityCart--;
+
+        if (element.quantityCart <= 0)
+          products.splice(products.indexOf(element), 1);
+
+      }
+      return;
+    }
+  });
+
+  localStorage.produtoCarrinho = JSON.stringify(products);
+  verificaProdutosCarrinho();
+}
+  
+function buy() {
+  window.location.href = "../carrinho/Carrinho.html";
+}

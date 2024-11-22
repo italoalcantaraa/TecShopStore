@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Categoria.css">
     <title>Categoria</title>
 </head>
+
 <body>
-    
+    <header class="header-container">
+        <a href="../Home/Home.html">
+            <div class="logo">
+                <img src="../../assets/images/logoP1.png" alt="" class="animate__animated animate__bounceInLeft">
+            </div>
+        </a>
+
+        <!-- Barra de pesquisa -->
+        <div class="search">
+            <input placeholder="Nome do produto" type="text">
+            <img src="../../assets/images/adm/search.svg" alt="">
+        </div>
+
+        <!-- Icone e botão de login -->
+        <div class="icon">
+            <img src="../../assets/images/user-svgrepo-com.svg">
+            <p class="animate__animated animate__flash">
+                <a class="login" href="../login/Login.html">Entrar</a>
+                ou
+                <a class="login" href="../cadastro/Cadastro.html">Cadastre-se</a>
+            </p>
+        </div>
+
+        <!-- Popup com carrinho de produtos e botão de abrir -->
+        <button class="carrinho" onclick="abrirPopup()">
+            <img src="../../assets/icons/shopping-cart.png" class="animate__animated animate__backInRight">
+        </button>
+
+        <!-- Opção para fechar o popup -->
+        <div id="meuPopup" class="popup">
+            <div class="popup-conteudo">
+                <span class="fechar" onclick="fecharPopup()">
+                    &times;
+                    <p>MEU CARRINHO</p>
+                </span>
+
+                <div class="container_produtos" id="container_produtos">
+
+                </div>
+
+                <button class="botaoCarrinho" onclick="buy()" type="button">Finalizar Compra</button>
+
+
+                <div class="carrinhoVazio">
+                    <h2>Seu carrinho está vazio</h2>
+                    <a href="../Home/Home.html">
+                        <button class="car">COMPRAR</button>
+                    </a>
+                </div>
+
+            </div>
+
+    </header>
+    <div class="title">
+        <div id="barra-reta"></div>
+        <h2 id="title"></h2>
+    </div>
+        
+    <div class="produtos-grid">
+
+    </div>
 </body>
+<script src="Categorias.js"></script>
+
 </html>

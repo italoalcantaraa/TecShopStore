@@ -8,14 +8,18 @@ function toEnter() {
     if (validateFields(email, password)) {
         message.innerHTML = "Cadastro realizado com sucesso!";
         message.style = "visibility: visible; top: 0px; background: rgb(0, 255, 0)";
-        
+
         setTimeout(() => {
-            window.location.href = "../Home/Home.html";
+            if (email == "adm")
+                window.location.href = "../admin/produtos/Produtos.html";
+            else
+                window.location.href = "../Home/Home.html";
+
         }, 1000);
     } else {
         message.innerHTML = "Login e/ou senha inválidos.";
         message.style = "visibility: visible; top: 0px; background: red;";
-        
+
         setTimeout(() => {
             message.style = "top:-60px; visibility: hidden;";
         }, 1000);

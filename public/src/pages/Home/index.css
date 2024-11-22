@@ -322,13 +322,13 @@ strong {
     text-decoration: none;
 }
 
-.departamentos{
+.departamentos {
     display: flex;
     justify-content: center;
 }
 
 .dropdown-content {
-    margin-top:70px;
+    margin-top: 70px;
     display: none;
     position: absolute;
     border-radius: 5px;
@@ -511,5 +511,3 @@ button {
     background: none;
     padding: 0;
 }
-
-@media (max-width: 500px) {}
