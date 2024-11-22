@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,17 @@
 
             <input id="name" class="name" type="text" placeholder="Nome">
 
-            <input id="manufacturer" class="fabricante" type="text" placeholder="Fabricante">
+            <select class="logo" name="Logo" id="logo">
+                <option id="logo" selected disabled>Logo</option>
+                <option value="AMD">AMD</option>
+                <option value="Corsair">Corsair</option>
+                <option value="Intel">Intel</option>
+                <option value="Kingston">Kingston</option>
+                <option value="Nvidia">Nvidia</option>
+                <option value="Redragon">Redragon</option>
+                <option value="Risemode">Risemode</option>
+                <option value="Mancer">Mancer</option>
+            </select>
         </div>
 
         <div class="linha2">
@@ -42,7 +53,7 @@
 
                 <input id="stock" class="estoque" type="number" placeholder="Estoque">
             </div>
-            
+
             <select class="images" style="max-height: 50px; overflow-y: auto;" name="" id="img">
                 <option id="titulo" selected disabled>Imagem</option>
                 <option value="AMD_Ryzen_7">AMD Ryzen 7</option>
@@ -78,4 +89,5 @@
         CarregarComponente('../../../components/menu/menu.html', 'menu');
     });
 </script>
+
 </html>

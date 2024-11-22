@@ -35,7 +35,7 @@ function fillInFields(idProduct) {
     // preenche os campos de acordo o produto capturado pelo id
     document.getElementById('category').value = product.category;
     document.getElementById('name').value = product.name;
-    document.getElementById('manufacturer').value = product.manufacturer;
+    document.getElementById('logo').value = product.logo;
     document.getElementById('condition').value = product.condition;
     document.getElementById('price').value = product.price;
     document.getElementById('stock').value = product.stock;
@@ -47,7 +47,7 @@ function fillInFields(idProduct) {
 function modifyProduct() {
     let newCategory = document.getElementById('category').value;
     let newName = document.getElementById('name').value;
-    let newManofacture = document.getElementById('manufacturer').value;
+    let newLogo = document.getElementById('logo').value;
     let newCondition = document.getElementById('condition').value;
     let newPrice = document.getElementById('price').value;
     let newStock = document.getElementById('stock').value;
@@ -56,7 +56,7 @@ function modifyProduct() {
     let newInfoTehc = document.getElementById('infoTech').value;
 
     // faz a validação dos campos;
-    if(validation(newCategory, newName, newManofacture, newCondition, newPrice, newStock, newDescription, newInfoTehc)) {
+    if(validation(newCategory, newName, newLogo, newCondition, newPrice, newStock, newDescription, newInfoTehc)) {
         
         let index;
         
@@ -66,7 +66,7 @@ function modifyProduct() {
                 index = i;
         }
 
-        arrayProducts[index] = new Product(idProduct, newCategory, newName, newManofacture, newCondition, newPrice, newStock, newImg, newDescription, newInfoTehc);
+        arrayProducts[index] = new Product(idProduct, newCategory, newName, newLogo, newCondition, newPrice, newStock, newImg, newDescription, newInfoTehc);
         localStorage.products = JSON.stringify(arrayProducts);
     }
 }
@@ -82,7 +82,7 @@ function addProduct() {
     let id = Math.trunc((Math.random() * (2000 - 0) + 0));
     let category = document.getElementById('category').value;
     let name = document.getElementById('name').value;
-    let manufacturer = document.getElementById('manufacturer').value;
+    let logo = document.getElementById('logo').value;
     let condition = document.getElementById('condition').value;
     let price = document.getElementById('price').value;
     let stock = document.getElementById('stock').value;
@@ -92,7 +92,7 @@ function addProduct() {
 
     let products = [];
 
-    if (validation(category, name, manufacturer, condition, price, stock, img, description, infoTech)) {
+    if (validation(category, name, logo, condition, price, stock, img, description, infoTech)) {
 
         // Verifica se existe a localStorage de produtos
         if (localStorage.products)
@@ -100,7 +100,7 @@ function addProduct() {
             products = JSON.parse(localStorage.getItem('products'));
 
         // Cria um objeto produto     
-        let product = new Product(id, category, name, manufacturer, condition, price, stock, img, description, infoTech);
+        let product = new Product(id, category, name, logo, condition, price, stock, img, description, infoTech);
 
         // Armazena o produto dentro do array
         products.push(product);
@@ -115,7 +115,7 @@ function addProduct() {
 }
 
 // Fazer melhorias nas
-function validation(category, name, manufacturer, condition, price, stock, img, description, infoTech) {
+function validation(category, name, logo, condition, price, stock, img, description, infoTech) {
     let message = document.getElementById('erro');
 
     let error;
@@ -124,7 +124,7 @@ function validation(category, name, manufacturer, condition, price, stock, img, 
         error = "Informe a categoria.";
     else if (name == '')
         error = "Informe o nome.";
-    else if (manufacturer == '')
+    else if (logo == '')
         error = "Informe o fornecedor.";
     else if (condition == '')
         error = "Informe a condição.";
@@ -163,7 +163,7 @@ function validation(category, name, manufacturer, condition, price, stock, img, 
 function clearFields() {
     document.getElementById('category').value = '';
     document.getElementById('name').value = '';
-    document.getElementById('manufacturer').value = '';
+    document.getElementById('logo').value = '';
     document.getElementById('price').value = '';
     document.getElementById('stock').value = '';
     document.getElementById('img').value = '';
@@ -173,12 +173,12 @@ function clearFields() {
 
 // Classe do produto
 class Product {
-    constructor(id, category, name, manufacturer, condition, price, stock, img, description, infoTech) {
+    constructor(id, category, name, logo, condition, price, stock, img, description, infoTech) {
         this.id = id;
         this.quantityCart = 0;
         this.category = category;
         this.name = name;
-        this.manufacturer = manufacturer;
+        this.logo = `/public/src/assets/images/logoProduto/${logo}.png`;
         this.condition = condition;
         this.price = price;
         this.stock = stock; 
